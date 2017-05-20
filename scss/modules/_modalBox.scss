@@ -1,0 +1,150 @@
+/**
+ * @Desc：
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by qiangkailiang on 2017/2/22
+ */
+
+.maskers {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  transition: all 0.3s linear;
+  opacity: 0;
+  &.show {
+    opacity: 1;
+  }
+
+}
+
+.alertBox-inner {
+  background-color: #fff;
+  position: absolute;
+  border-radius: rem(24px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alertBox-content {
+  min-width: rem(440px);
+  padding: rem(50px);
+  @include font-dpr(17px);
+  line-height: 1.5;
+  border-bottom: 1px solid #dfdfdf;
+  color: #222;
+}
+
+.alertBox-btns {
+  @include font-dpr(17px);
+  padding: rem(17px) 0;
+  text-align: center;
+  .alertBox-ensureBtn {
+    color: #00BEAF;
+  }
+}
+
+.confirmBox-inner {
+  background-color: #fff;
+  position: absolute;
+  border-radius: rem(24px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.confirmBox-content {
+  min-width: rem(440px);
+  padding: rem(50px);
+  @include font-dpr(17px);
+  line-height: 1.5;
+  border-bottom: 1px solid #dfdfdf;
+  color: #222;
+  h2 {
+    font-weight: normal;
+    text-align: center;
+    @include font-dpr(17px);
+    color: #222;
+  }
+  p {
+    text-align: center;
+    margin-top:rem(5px);
+    @include font-dpr(13px);
+  }
+}
+
+.confirmBox-btns {
+  @include font-dpr(17px);
+
+  text-align: center;
+  button {
+    color: #00BEAF;
+    width: 50%;
+    padding: rem(17px) 0;
+
+  }
+  .confirmBox-cancelBtn {
+    border-right: rem(1px) solid #dfdfdf;
+  }
+  .confirmBox-ensureBtn{
+    font-weight: bold;
+  }
+}
+
+//新问诊询问
+.vertical-box {
+  background: #FFFFFF;
+  box-shadow: 0 rem(2px) rem(10px) 0 rgba(0, 0, 0, 0.07);
+  border-radius: rem(12px);
+  min-width: rem(540px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: rem(48px) rem(82px);
+  box-sizing: border-box;
+  h2 {
+    font-weight: normal;
+    @include font-dpr(17px);
+    text-align: center;
+  }
+  & > a {
+    display: inline-block;
+    width: rem(172px);
+
+    margin-top: rem(52px);
+    &:nth-child(2n+1) {
+      margin-left: rem(26px);
+    }
+  }
+}
+
+.horizontal-box {
+  background: #FFFFFF;
+  box-shadow: 0 rem(2px) rem(10px) 0 rgba(0, 0, 0, 0.07);
+  border-radius: rem(12px);
+  min-width: rem(540px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: rem(48px) rem(82px);
+  box-sizing: border-box;
+  h2 {
+    font-weight: normal;
+    @include font-dpr(17px);
+    text-align: center;
+    margin-bottom: rem(80px);
+  }
+  & > a, button {
+    display: block;
+    width: 100%;
+    margin: rem(52px) 0;
+  }
+}

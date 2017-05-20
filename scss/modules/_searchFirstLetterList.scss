@@ -1,0 +1,59 @@
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+@import "../library/_common-modules";
+.al-mainInner {
+  overflow-x: hidden;
+}
+
+.searchTypeSelect {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: rem(225px);
+  padding: rem(10px) 0 rem(5px) 0;
+}
+
+.searchTypeSelectItem {
+  display: block;
+  @include font-dpr(13px);
+  color: #666;
+  text-align: center;
+  position: relative;
+  background-color: #f4f4f4;
+  padding-left: rem(10px);
+  padding-right: rem(10px);
+  border-right: rem(20px) solid transparent;
+  border-left: 2rem solid transparent;
+  background-clip: padding-box;
+  &:before {
+    content: attr(data-toolTips);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: rem(-140px);
+    top: 55%;
+    width: rem(104px);
+    margin-top: rem(-32px);
+    height: rem(62px);
+    line-height: rem(62px);
+    background: transparent url('/images/img50/pages/discover/tips_bg.png') center center no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    @include font-dpr(20px);
+    color: #3598db;
+  }
+}
+
+.searchTypeSelectItem.selected {
+  color: #3598db;
+  &:before {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,394 @@
+@import "../../library/common-modules";
+@import "../../modules/_searchCommTop";
+@import "../../modules/_searchResult";
+
+$main-color:#5BD7CF;
+
+//凯亮的前五题样式需要修改冲突所以单独提过来，没有引用
+.symptom-desc-form {
+
+}
+
+.symptom-desc-title {
+
+  color: #222;
+  @include font-dpr(17px);
+  padding: rem(57px) rem(48px) rem(5px);
+//line-height: 1;
+  & > h4 {
+    font-weight: normal;
+  }
+  .num {
+    padding-right: rem(8px);
+    em {
+      color: #00bedf;
+      font-style: normal;
+    }
+  }
+  .tips {
+    color: #7f858e;
+    @include font-dpr(15px);
+  }
+}
+
+.symptom-desc-item {
+  &.multiple-choices{
+    margin: rem(40px) 0;
+    box-sizing: border-box;
+  }
+  &.single-choices{
+    margin: rem(40px) 0;
+    box-sizing: border-box;
+  }
+  .icon-select {
+    margin-right: rem(24px);
+  }
+  &.selected.multiple-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_square_sel@1x.svg") no-repeat center;
+        background-size: contain;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+
+  }
+  &.selected.single-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_circle_sel@1x.svg") no-repeat center;
+        background-size: contain;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+  }
+  &.selected .symptom-desc-second-form {
+
+    display: block;
+  }
+  & > p {
+    color: #555;
+    padding-left: rem(84px);
+    @include font-dpr(15px);
+    @include clearfix();
+    .icon-arrow {
+      float: right;
+      background: url("/image/img00/patientConsult/symptom_pack_up@1x.svg") no-repeat;
+      @include square(rem(28px));
+      display: none;
+    }
+    & > span {
+      vertical-align: text-top;
+      display: inline-block;
+      width: 81%;
+      word-break: break-all;
+    }
+  }
+  &.selected > p {
+    color: #63C7BF;
+  }
+
+}
+
+.multiple-choices {
+  .icon-select {
+    display: inline-block;
+    @include square(rem(30px));
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: rem(4px);
+    vertical-align: text-bottom;
+
+  }
+
+}
+
+.single-choices {
+  .icon-select {
+    display: inline-block;
+    @include circle(rem(30px));
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+  }
+}
+
+.symptom-desc-controller {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(100px);
+  margin-top: rem(-115px);
+  box-sizing: border-box;
+  & > a {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(240px);
+
+  }
+}
+
+.symptom-desc-second-form {
+  overflow: hidden;
+  padding-left: rem(30px);
+  box-sizing: border-box;
+  margin-top: rem(38px);
+  padding-top: rem(44px);
+  background: #F9FBFB;
+  box-shadow: 0 rem(3px) rem(4px) 0 #F4F8FD;
+  display: none;
+  .symptom-desc-title {
+    @include font-dpr(13px);
+    margin: 0 0 0 rem(84px);
+    padding: 0;
+    color: #B3B9C4;
+  }
+  .util-selector + .util-selector{
+    padding-top: rem(30px);
+  }
+  .symptom-desc-item {
+    p > span {
+      color: #777;
+      padding-right: rem(52px);
+    }
+  }
+}
+
+.icon-pain-detail {
+  &:after {
+    content: '';
+    display: inline-block;
+    @include square(rem(28px));
+    background: url("/image/img00/patientConsult/symptom_prompt@1x.svg") no-repeat;
+    vertical-align: middle;
+    margin-left: rem(19px);
+  }
+  & > em {
+    font-style: normal;
+    vertical-align: middle;
+  }
+
+}
+
+.symptom-detail-desc {
+  $w: rem(540px);
+  position: absolute;
+  width: $w;
+  left: 50%;
+  margin-left: -$w/2;
+  background: #FFFFFF;
+  border-radius: rem(12px);
+  padding: rem(60px) rem(50px);
+  box-shadow: 0 rem(2px) rem(10px) 0 rgba(0, 190, 175, 0.25);
+  box-sizing: border-box;
+  display: none;
+  & > figure {
+    width: 100%;
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  & > figcaption {
+    margin-top: rem(60px);
+    @include font-dpr(15px);
+    color: #555;
+  }
+}
+
+.symptom-desc-others-content{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  margin-left:rem(-30px);
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.au-main{
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: rem(185px);
+  .au-infoBox{
+    //第六题样式
+    .au-cureHisList{
+        padding-top: rem(52px);
+      li+li{
+        margin-top: rem(72px);
+      }
+      .au-cureHisItem{
+        .au-cureHisItemTop{
+          color: #222222;
+          @include font-dpr(16px);
+          line-height: 1;
+          padding: 0 rem(48px);
+        }
+        .au-cureHisItemBottom{
+          padding: 0 rem(48px);
+          @include clearfix();
+          font-size: 0;
+          span{
+            //box-sizing: border-box;
+            border: rem(1px) solid #BDBDBD;
+            border-radius: 100px;
+            display: table;
+            float: left;
+            margin-right: rem(18px);
+            margin-top:rem(32px);
+            @include font-dpr(14px);
+            color: #808080;
+            padding: rem(10px) rem(22px);
+            line-height: 1;
+            &.selected{
+              color: $main-color;
+              border: rem(1px) solid $main-color;
+              background: #E4FDFC;
+            }
+          }
+        }
+        .au-cureHisItemInfo{
+          display: none;
+          width: 100%;
+          height: rem(284px);
+          box-sizing: border-box;
+          margin-top:  rem(46px);
+          background-color: #F9FBFB;
+          padding: rem(40px) rem(48px);
+          textarea{
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: justify;
+            @include font-dpr(15px);
+            color: #222222;
+            line-height: 1.5;
+            background-color: #F9FBFB;
+          }
+        }
+      }
+    }
+
+    //第七题样式
+    .au-perfectInfoList{
+        padding-top: rem(52px);
+      .au-perfectInfoItem{
+        padding: 0 rem(48px);
+        display: table;
+        height: rem(120px);
+        @include font-dpr(15px);
+        .au-perfectInfoItemLeft{
+          display: table-cell;
+          width:rem(248px);
+          color: #222222;
+          vertical-align:top;
+
+        }
+        .au-perfectInfoItemRight{
+          display: table-cell;
+          width: rem(405px);
+          color: #CCCCCC;
+          position: relative;
+          &.hasSelect{
+            span.show{
+              position: absolute;
+              z-index: 1;
+              &.selected{
+                color: #555555;
+              }
+            }
+            select{
+              position: absolute;
+              z-index: 2;
+              opacity: 0;
+              display: block;
+              height: 50%;
+              width: 100%;
+            }
+          }
+          &.hasAfter::after{
+            display: table;
+            content: '';
+            width: rem(12px);
+            height: rem(20px);
+            position: absolute;
+            top: rem(10px);
+            right: 0;
+            background: url("/image/img00/healthInfo/right_icon.png") no-repeat center;
+            background-size: contain;
+          }
+        }
+        .au-perfectInfoItemTop{
+
+        }
+        .au-perfectInfoItemBottom{
+          margin-top: rem(38px);
+          margin-bottom: rem(50px);
+          background-color: #F9FBFB;
+          width: rem(654px);
+          height: rem(276px);
+          box-sizing: border-box;
+          padding: rem(40px);
+          textarea{
+            display: block;
+            height: 100%;
+            background-color: #F9FBFB;
+          }
+        }
+        input,textarea{
+          border: none;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.alertBox-content{
+  text-align: center;
+}
+
+.se-main{
+  padding-bottom:rem(115px);
+}
+
+.au-controller{
+  display: none;
+  &.active{
+    display: flex;
+  }
+  position: absolute;
+  bottom: rem(60px);
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0 rem(100px);
+  //margin-top: rem(-115px);
+  & > a {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(240px);
+    &.disabled{
+      background-color: #DFDFDF;
+    }
+  }
+}
+
+.symptom-desc-inner{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

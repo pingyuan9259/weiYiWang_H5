@@ -1,0 +1,162 @@
+@import "../../base.scss";
+
+$main-color:#5BD7CF;
+
+.pat-main{
+    @include font-dpr(16px);
+    color: #ABABAB;
+    .pat-navbar{
+        display: flex;
+        .pat-navbar-item{
+            flex: 1;
+            text-align: center;
+            padding: rem(20px);
+            border-bottom: rem(5px) solid #F8F8F8;
+        }
+        .active{
+            border-bottom: rem(5px) solid $main-color;
+            color:$main-color;
+        }    
+    }
+    .pat-basicInfo{
+        .pat-patientList{
+            padding: rem(40px);
+            @include clearfix;
+            .pat-patientListItem{
+                float: left;
+                width: rem(140px);
+                margin: rem(10px) rem(20px);
+                padding: rem(10px) rem(20px);
+                text-align: center;
+                border-radius: rem(31px); 
+                border: rem(1px) solid #ABABAB;
+                @include font-dpr(14px);
+                color: #585858;
+            }
+            .active{
+                border: rem(1px) solid $main-color;
+                color: $main-color;
+                background-color: rgba(76,211,203,0.1);
+            }
+        }
+        .pat-basAddMyCare{
+            .pat-basAddText{
+                text-align: center;
+                padding: rem(30px);
+                @include font-dpr(13px);
+            }
+            .pat-basAddMyCareList{
+                padding: rem(40px);
+                .pat-basAddMyCareItem{
+                    @include clearfix;
+                    padding: rem(40px) rem(20px);
+                    .pat-basAddMyCareItem-l{
+                        float: left;
+                        width: rem(100px);
+                    }
+                    .pat-basAddMyCareItem-r{
+                        float: left;
+                        width: rem(500px);
+                    }
+                }
+                .pat-basAddMyCareItem + .pat-basAddMyCareItem{
+                    border-top: rem(2px) solid #ABABAB;
+                }
+            }
+            .pat-basAddMyCareSubmit{
+                padding: rem(80px) rem(100px);
+                button{
+                    display: block;
+                    width: 100%;
+                    line-height: rem(90px);
+                    @include font-dpr(18px);
+                    text-align: center;
+                    background-color: $main-color;
+                    color: white;
+                    border-radius: rem(45px);
+                }
+            }
+        }
+    }
+    .pat-symptomDescription{
+        .pat-symConfirm{
+            padding: rem(100px);
+            .pat-symConfirmTitle{
+                padding: rem(50px) 0;
+                @include font-dpr(18px);
+            }
+            .pat-symConfirmList{
+                @include font-dpr(16px);
+                .pat-symConfirmItem{
+                    margin: rem(30px) 0;
+                    input{
+                        width: rem(25px);
+                        height: rem(25px);
+                        border-radius: 0;
+                    }
+                    span{
+                        display: inline-block;
+                        margin-left: rem(20px);
+                    }
+                }
+            }
+            .pat-symConfirmSubmit{
+                padding: rem(80px) 0;
+                text-align: center;
+                button{
+                    display: inline-block;
+                    margin-top: rem(50px);
+                    width: 80%;
+                    line-height: rem(90px);
+                    @include font-dpr(18px);
+                    text-align: center;
+                    background-color: $main-color;
+                    color: white;
+                    border-radius: rem(45px);
+                }
+            }
+        }
+        .pat-symQuestionSelect{
+            .pat-symConfirmTitle{
+                padding: rem(50px);
+                @include font-dpr(15px);
+            }
+            .pat-symQuestionList{
+                .pat-symQuestionItem{
+                    margin: rem(30px) 0;
+                    input{
+                        width: rem(25px);
+                        height: rem(25px);
+                        border-radius: 0;
+                        margin-left: rem(50px);
+                    }
+                    span{
+                        display: inline-block;
+                        margin-left: rem(20px);
+                    }
+                    .pat-symQuestionListTwo{
+                        background-color: #F9F9F9;
+                        .pat-symQuestionItemTwo{
+                            margin-left: rem(50px);
+                        }
+                    }
+                }
+            }
+        }
+        .pat-symQuestionSubmit{
+            padding: rem(80px) 0;
+                text-align: center;
+                button{
+                    display: inline-block;
+                    margin-top: rem(50px);
+                    width: rem(280px);
+                    line-height: rem(70px);
+                    @include font-dpr(16px);
+                    text-align: center;
+                    background-color: $main-color;
+                    color: white;
+                    border-radius: rem(45px);
+                }
+        }
+    }
+}

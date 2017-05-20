@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+/**
+ * @name:处置建议和患教文章
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/3/6
+ * @author: 王井荣
+ */
+.tc-articleDetails {
+  padding: 0 0.53333rem;
+  background: #FFF; }
+  .tc-articleDetails .tc-articlTitle {
+    padding: 0.72rem 0 0.53333rem 0;
+    font-size: 20px;
+    color: #222222;
+    font-weight: normal; }
+    [data-dpr="2"] .tc-articleDetails .tc-articlTitle {
+      font-size: 40px; }
+    [data-dpr="3"] .tc-articleDetails .tc-articlTitle {
+      font-size: 60px; }
+  .tc-articleDetails .tc-articlOrigin {
+    padding-top: 0.4rem;
+    font-size: 14px;
+    color: #979AA6; }
+    [data-dpr="2"] .tc-articleDetails .tc-articlOrigin {
+      font-size: 28px; }
+    [data-dpr="3"] .tc-articleDetails .tc-articlOrigin {
+      font-size: 42px; }
+    .tc-articleDetails .tc-articlOrigin span:first-child {
+      margin-right: 0.26667rem; }
+    .tc-articleDetails .tc-articlOrigin:before {
+      display: block;
+      width: 0.48rem;
+      height: 1px;
+      border-top: 1px solid #ccc; }
+  .tc-articleDetails .tc-articleMain > p {
+    padding-top: 0.74667rem;
+    color: #444;
+    font-size: 16px;
+    line-height: 0.61333rem; }
+    [data-dpr="2"] .tc-articleDetails .tc-articleMain > p {
+      font-size: 32px; }
+    [data-dpr="3"] .tc-articleDetails .tc-articleMain > p {
+      font-size: 48px; }
+  .tc-articleDetails .tc-articleMain > figure {
+    padding-top: 0.74667rem; }
+    .tc-articleDetails .tc-articleMain > figure img {
+      display: block;
+      width: 100%;
+      height: 4.53333rem; }
+    .tc-articleDetails .tc-articleMain > figure figcaption {
+      margin-top: 0.32rem;
+      color: #aaa;
+      text-align: center;
+      font-size: 13px; }
+      [data-dpr="2"] .tc-articleDetails .tc-articleMain > figure figcaption {
+        font-size: 26px; }
+      [data-dpr="3"] .tc-articleDetails .tc-articleMain > figure figcaption {
+        font-size: 39px; }
+
+.tc-share {
+  padding: 1.06667rem 0.53333rem 0 0.53333rem; }
+  .tc-share .tc-shareTitle {
+    font-weight: normal;
+    text-align: center; }
+    .tc-share .tc-shareTitle span {
+      display: inline-block; }
+      .tc-share .tc-shareTitle span:nth-child(1), .tc-share .tc-shareTitle span:nth-child(3) {
+        width: 26%;
+        height: 0.10667rem;
+        border-top: 1px solid #dfdfdf; }
+      .tc-share .tc-shareTitle span:nth-child(2) {
+        width: 48%;
+        font-size: 12px;
+        color: #aaa; }
+        [data-dpr="2"] .tc-share .tc-shareTitle span:nth-child(2) {
+          font-size: 24px; }
+        [data-dpr="3"] .tc-share .tc-shareTitle span:nth-child(2) {
+          font-size: 36px; }
+  .tc-share .tc-shareMain {
+    padding: 0.8rem 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .tc-share .tc-shareMain li {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto; }
+      .tc-share .tc-shareMain li img {
+        display: block;
+        width: 0.96rem;
+        height: 0.96rem;
+        margin: 0 auto; }
+      .tc-share .tc-shareMain li span {
+        display: block;
+        padding-top: 0.37333rem;
+        font-size: 13px;
+        color: #909090;
+        text-align: center; }
+        [data-dpr="2"] .tc-share .tc-shareMain li span {
+          font-size: 26px; }
+        [data-dpr="3"] .tc-share .tc-shareMain li span {
+          font-size: 39px; }

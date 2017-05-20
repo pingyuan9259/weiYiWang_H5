@@ -1,0 +1,29 @@
+// @component-name: Sass common-modules
+// @desc: 通用CSS样式工具库
+// @example:
+// @include reset(mobile)
+// @depend:nothing
+
+// Created by qiangkailiang on 2016/07/13
+@charset "UTF-8";
+
+//base
+@import 'reset/_normalize';
+
+//animation
+@import 'animation/_animation';
+
+//layout
+@import 'layout/_layout';
+
+//shapes
+@import 'shapes/_shapes';
+
+//utilities
+@import 'utilities/_utilities';
+
+//typography
+@import 'typography/_typography';
+
+//compatibility
+@import 'compatibility/_compatibility';

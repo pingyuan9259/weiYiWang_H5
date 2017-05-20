@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加患者</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/patientConsult/add_patient.css">
+</head>
+<body>
+<section class="main-inner">
+    <header class="main-header">
+        <figure class="main-header-item">
+            <a href="">
+                <img src="/image/img00/myServices/backPerson.jpg" alt="">
+            </a>
+        </figure>
+        <figure class="main-header-item doctor-name">
+            <h3>问诊信息</h3>
+        </figure>
+        <figure class="main-header-item">
+        </figure>
+    </header>
+
+    <section class="main-inner-content">
+        <!--进度条-->
+        <header class="patient-consult-rate">
+            <figure class="patient-consult-rate-item on">
+                <span>1</span>
+            </figure>
+            <figure class="patient-consult-rate-item">
+                <span>2</span>
+            </figure>
+            <figure class="patient-consult-rate-item">
+                <span>3</span>
+            </figure>
+        </header>
+        <!--患者列表-->
+        <section class="patient-list">
+            <section class="patient-list-item">
+                <figcaption>喵星人</figcaption>
+            </section>
+            <section class="patient-list-item">
+                <figcaption>喵星人</figcaption>
+            </section>
+            <section class="patient-list-item on">
+                <figcaption>喵星人</figcaption>
+            </section>
+            <section class="patient-list-item patient-list-item-plus">
+                <figcaption>+</figcaption>
+            </section>
+        </section>
+        <!--添加患者-->
+        <section class="add-patient-content">
+            <nav class="add-patient-content-title">
+                <h4><span>您为谁咨询</span></h4>
+            </nav>
+            <section class="add-patient-content-form">
+                <article class="add-patient-content-item">
+                    <figcaption>患者姓名</figcaption>
+                    <figure class="add-patient-input">
+                        <input type="text" placeholder="自己/爸妈/爷奶等">
+                    </figure>
+                </article>
+                <article class="add-patient-content-item">
+                    <figcaption>患者年龄</figcaption>
+                    <figure class="add-patient-input">
+                        <input type="text" placeholder="年龄">
+                    </figure>
+                </article>
+                <article class="add-patient-content-item">
+                    <figcaption>患者性别</figcaption>
+                    <figure class="add-patient-input">
+                        <section class="add-patient-sex-selector">
+                            <i class="add-patient-selector"></i>
+                            <span>男</span>
+                        </section>
+                        <section class="add-patient-sex-selector on">
+                            <i class="add-patient-selector"></i>
+                            <span>女</span>
+                        </section>
+                    </figure>
+                </article>
+                <article class="add-patient-content-item">
+                    <figcaption>与患者关系</figcaption>
+                    <figure class="add-patient-input">
+                        <select>
+                            <option value="0"></option>
+                            <option value="1">父亲</option>
+                            <option value="2">母亲</option>
+                        </select>
+                    </figure>
+                </article>
+            </section>
+            <footer class="add-patient-submit off">
+                <button class="btn-primary">确定</button>
+            </footer>
+            <footer class="add-patient-save off">
+                <button class="btn-primary cancel">取消</button>
+                <button class="btn-primary save">保存</button>
+            </footer>
+        </section>
+        <!--无患者提示-->
+
+    </section>
+
+</section>
+<figure class="no-patient-tips top-tips">
+    <span>您还未添加任何问诊人，请先添加</span>
+</figure>
+
+<script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+<script src="/js/common.js"></script>
+<script>
+    $(function () {
+        $(".no-patient-tips").addClass("on");
+        setTimeout(function () {
+            $(".no-patient-tips").removeClass("on");
+        }, 3000);
+
+//        common.alertBox({
+//            content:"嗨，我是小唯，请随我完善几个小问题以了解您的病情，回答的越仔细越有助于我们帮您更快康复哟",
+//            ensure:"好的"
+//        })
+    });
+
+</script>
+</body>
+
+</html>

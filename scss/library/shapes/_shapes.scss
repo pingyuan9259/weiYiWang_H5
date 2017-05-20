@@ -1,0 +1,59 @@
+//  @component-name: shapes 
+//  @desc: 图形绘制模块
+@charset 'UTF-8';
+//	@method-name:square 
+//	@desc: 绘制正方形
+//	@param: $width 边长
+@mixin square($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+//	@method-name:circle 
+//	@desc: 绘制圆形
+//	@param: $r 直径
+@mixin circle($r, $color:null) {
+    $color: #ffffff !default;
+    @include square($r);
+    border-radius: 50%;
+    background-color: $color;
+}
+
+// @method-name:triangle
+// @desc:绘制等腰三角形
+// @param:$size 三角形底边长度
+//		  $color 图形颜色
+//		  $direction 尖角朝向
+@mixin triangle($size, $color, $direction) {
+    height: 0;
+    width: 0;
+    $size: $size/2;
+    @if ($direction==up) or ($direction==down) or ($direction==right) or ($direction==left) {
+        @if $direction==down {
+            border-top: $size solid $color;
+            border-bottom: $size solid transparent;
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+        }
+        @else if $direction==right {
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-left: $size solid $color;
+            border-right: $size solid transparent;
+        }
+        @else if $direction==up {
+            border-top: $size solid transparent;
+            border-bottom: $size solid $color;
+            border-left: $size solid transparent;
+            border-right: $size solid transparent;
+        }
+        @else if $direction==left {
+            border-top: $size solid transparent;
+            border-bottom: $size solid transparent;
+            border-left: $size solid transparent;
+            border-right: $size solid $color;
+            
+        }
+    }
+}
+

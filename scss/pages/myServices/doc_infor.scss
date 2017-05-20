@@ -1,0 +1,95 @@
+@import "../../base.scss";
+.ct-main{
+  $font-color:#9C9CA2;
+  background-color: #F2F6F7;
+  .ct-docInforToPerson{
+    @include clearfix();
+    background-color: #ffffff;
+    padding:rem(30px) rem(40px) rem(60px);
+    .ct-docInforPerLeft{
+      float: left;
+      width: 20%;
+      img{
+        width:rem(103px);
+        height:rem(103px);
+      }
+    }
+    .ct-docInforPerRight{
+      float: right;
+      width: 80%;
+      .ct-docInforPerName{
+        @include font-dpr(24px);
+        color: #000000;
+      }
+      .ct-docInforPerPost{
+        color: #8A8A8C;
+        margin-left: rem(15px);
+      }
+      .ct-docInforPerHospital{
+        @include font-dpr(14px);
+        color: #595A5E;
+        padding:rem(10px) 0;
+      }
+      .ct-docInforPerOthBox{
+        .ct-docInforPerOthList{
+          @include font-dpr(16px);
+          color: #595A5E;
+        }
+        .ct-docInforPerOthVertical{
+          @include font-dpr(16px);
+          display: inline-block;
+          padding:0 rem(10px);
+        }
+      }
+    }
+  }
+  .ct-docInforToLabel{
+    background-color: #ffffff;
+    padding:rem(30px) rem(40px) rem(30px);
+    .ct-docInforToLabelTitle{
+      @include font-dpr(16px);
+      display: block;
+      color: #9C9CA2;
+    }
+  }
+  //预约成功提示样式
+  .ct-docInforBookSuccess{
+    @include font-dpr(16px);
+    background-color: #ffffff;
+    padding:0 rem(40px) rem(50px) rem(70px);
+    p{
+      position: relative;
+      word-break: break-all;
+      color: $font-color;
+      &:before{
+        position: absolute;
+        content: '';
+        left:rem(-40px);
+        top:rem(5px);
+        width: rem(30px);
+        height: rem(30px);
+        background: sandybrown;
+        border-radius: 50%;
+      }
+    }
+  }
+  //日历样式
+  .calender-caption,.calender-content{
+    @include clearfix();
+  }
+  .calender-cell{
+    width:14%;
+    float: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

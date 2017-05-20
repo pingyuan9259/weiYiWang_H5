@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/**
+ * @name:问诊单
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/27
+ * @author: JuKun
+ */
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+.main-inner .main-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-inner .tc-baseInfo {
+  background-color: #ffffff;
+  width: 100%; }
+  .main-inner .tc-baseInfo .tc-baseInfoList {
+    padding: 0.53333rem 0 0.6rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+      margin-bottom: 0.50667rem;
+      font-size: 14px; }
+      [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+        font-size: 28px; }
+      [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+        font-size: 42px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+        font-size: 15px;
+        width: 3.04rem;
+        padding-left: 0.64rem;
+        padding-right: 0.8rem;
+        float: left;
+        box-sizing: border-box;
+        color: #909090; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+          font-size: 30px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+          font-size: 45px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft img {
+          display: block;
+          width: 1.6rem;
+          height: 1.6rem;
+          margin: 0 auto; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft.tc-caseAreaLeft {
+          padding-right: 0;
+          width: 3.14667rem; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft.tc-caseTimeLeft {
+          padding-right: 0;
+          width: 3.14667rem; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+        display: inline-block;
+        font-size: 16px;
+        color: #555555;
+        width: 6.05333rem; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+          font-size: 48px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+        display: inline-block;
+        font-size: 16px;
+        color: #555555;
+        width: 6.05333rem; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+          font-size: 48px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+        width: 6.8rem;
+        float: left;
+        position: relative;
+        color: #555555;
+        box-sizing: border-box;
+        padding-right: 0.46667rem;
+        font-size: 16px; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+          font-size: 48px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+          font-size: 17px;
+          display: block;
+          line-height: 0.45333rem;
+          margin-top: 0.58667rem; }
+          [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+            font-size: 34px; }
+          [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+            font-size: 51px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+          display: block;
+          font-size: 13px;
+          line-height: 0.34667rem;
+          color: #909090;
+          margin-top: 0.21333rem; }
+          [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+            font-size: 26px; }
+          [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+            font-size: 39px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-recommendUserMain {
+        line-height: 0.64rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:first-child {
+      margin-bottom: 0.70667rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:last-child {
+      margin-bottom: 0; }
+
+.main-inner .tc-caseContentBox {
+  background-color: #F3F6F7; }
+  .main-inner .tc-caseContentBox .tc-baseInfo {
+    margin-bottom: 0.18667rem; }
+  .main-inner .tc-caseContentBox .tc-module {
+    margin: 0.18667rem 0;
+    padding: 0 0.53333rem;
+    background-color: #ffffff; }
+    .main-inner .tc-caseContentBox .tc-module .title {
+      padding-top: 0.66667rem; }
+      .main-inner .tc-caseContentBox .tc-module .title h3 {
+        position: relative;
+        font-weight: 100;
+        color: #555555;
+        font-size: 16px; }
+        [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .title h3 {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .title h3 {
+          font-size: 48px; }
+        .main-inner .tc-caseContentBox .tc-module .title h3:after {
+          position: absolute;
+          content: '';
+          width: 0.05333rem;
+          height: 0.32rem;
+          left: -0.10667rem;
+          top: 50%;
+          margin-top: -0.16rem;
+          background-color: #4CD3C6; }
+    .main-inner .tc-caseContentBox .tc-module .tc-recommendRightComm {
+      font-size: 14px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 2.66667rem;
+      text-align: right;
+      color: #9798A6;
+      padding-right: 0.32rem; }
+      [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-recommendRightComm {
+        font-size: 28px; }
+      [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-recommendRightComm {
+        font-size: 42px; }
+      .main-inner .tc-caseContentBox .tc-module .tc-recommendRightComm:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 0;
+        margin-top: -0.16rem;
+        display: inline-block;
+        width: 0.16rem;
+        height: 0.26667rem;
+        background: url("/image/img00/patientConsult/suggestion_enter@2x.png");
+        background-size: 100% 100%;
+        vertical-align: middle; }
+    .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList {
+      padding-top: 0.13333rem;
+      padding-bottom: 0.58667rem; }
+      .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem {
+        padding: 0.50667rem 0; }
+        .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+          position: relative;
+          display: inline-block;
+          width: 2.50667rem;
+          font-size: 15px;
+          color: #909090;
+          padding-right: 0.90667rem; }
+          [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+            font-size: 30px; }
+          [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+            font-size: 45px; }
+          .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft .tc-caseDescribeUpTip {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            width: 100%; }
+        .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+          position: relative;
+          display: inline-block;
+          font-size: 16px;
+          width: 5.49333rem;
+          color: #555555;
+          vertical-align: top; }
+          [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+            font-size: 32px; }
+          [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+            font-size: 48px; }
+          .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight.tc-caseDescribeItemMore:after {
+            display: inline-block;
+            position: absolute;
+            content: '';
+            width: 0.10667rem;
+            height: 0.21333rem;
+            background: url("/image/img00/recoveryReport/suggestion_enter@2x.png");
+            background-size: 100% 100%;
+            right: 0;
+            top: 50%;
+            margin-top: -0.10667rem; }
+    .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox {
+      text-align: center;
+      margin-top: 0.53333rem; }
+      .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseOtherList {
+        font-size: 14px;
+        color: #555555;
+        padding: 0 0.10667rem;
+        text-align: left; }
+        [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseOtherList {
+          font-size: 28px; }
+        [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseOtherList {
+          font-size: 42px; }

@@ -1,0 +1,315 @@
+@charset "UTF-8";
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.noFriendText {
+  padding: 4.53333rem 1.25333rem 0;
+  background: url("/image/img00/myServices/no_friend.png") no-repeat center 0.64rem; }
+  .noFriendText p:nth-child(1) {
+    font-size: 17px;
+    color: #222;
+    text-align: center; }
+    [data-dpr="2"] .noFriendText p:nth-child(1) {
+      font-size: 34px; }
+    [data-dpr="3"] .noFriendText p:nth-child(1) {
+      font-size: 51px; }
+  .noFriendText p:nth-child(2) {
+    margin-top: 0.4rem;
+    font-size: 14px;
+    color: #AAA;
+    line-height: 0.53333rem; }
+    [data-dpr="2"] .noFriendText p:nth-child(2) {
+      font-size: 28px; }
+    [data-dpr="3"] .noFriendText p:nth-child(2) {
+      font-size: 42px; }
+
+.noFriendHref a {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: #00beaf;
+  display: block;
+  font-size: 16px; }
+  [data-dpr="2"] .noFriendHref a {
+    font-size: 32px; }
+  [data-dpr="3"] .noFriendHref a {
+    font-size: 48px; }
+
+.orderList {
+  background: #f3f6f7; }
+  .orderList .orderHistoryItem {
+    padding: 0 0.53333rem;
+    margin-bottom: 0.18667rem;
+    background: #fff; }
+    .orderList .orderHistoryItem .orderHisItemTop {
+      padding-top: 0.72rem; }
+      .orderList .orderHistoryItem .orderHisItemTop:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .orderList .orderHistoryItem .orderHisItemTop img {
+        width: 0.8rem;
+        height: 0.8rem;
+        margin-right: 0.26667rem;
+        border-radius: 50%;
+        vertical-align: middle; }
+      .orderList .orderHistoryItem .orderHisItemTop span {
+        display: inline-block;
+        font-size: 15px;
+        color: #aaa;
+        vertical-align: middle; }
+        [data-dpr="2"] .orderList .orderHistoryItem .orderHisItemTop span {
+          font-size: 30px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .orderHisItemTop span {
+          font-size: 45px; }
+      .orderList .orderHistoryItem .orderHisItemTop .doctorState {
+        font-size: 14px;
+        color: #f08954;
+        line-height: 0.8rem; }
+        [data-dpr="2"] .orderList .orderHistoryItem .orderHisItemTop .doctorState {
+          font-size: 28px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .orderHisItemTop .doctorState {
+          font-size: 42px; }
+      .orderList .orderHistoryItem .orderHisItemTop .font-gray {
+        color: #ccc; }
+    .orderList .orderHistoryItem .bookingHisItemTop {
+      padding-top: 0.72rem; }
+      .orderList .orderHistoryItem .bookingHisItemTop:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .orderList .orderHistoryItem .bookingHisItemTop img {
+        width: 0.42667rem;
+        height: 0.42667rem;
+        margin-right: 0.26667rem;
+        vertical-align: middle; }
+      .orderList .orderHistoryItem .bookingHisItemTop span {
+        display: inline-block;
+        font-size: 15px;
+        color: #555;
+        vertical-align: middle; }
+        [data-dpr="2"] .orderList .orderHistoryItem .bookingHisItemTop span {
+          font-size: 30px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .bookingHisItemTop span {
+          font-size: 45px; }
+      .orderList .orderHistoryItem .bookingHisItemTop .doctorState {
+        font-size: 14px;
+        color: #f08954; }
+        [data-dpr="2"] .orderList .orderHistoryItem .bookingHisItemTop .doctorState {
+          font-size: 28px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .bookingHisItemTop .doctorState {
+          font-size: 42px; }
+    .orderList .orderHistoryItem .orderHistoryItemCenter {
+      padding-top: 0.53333rem;
+      font-size: 15px;
+      color: #555; }
+      [data-dpr="2"] .orderList .orderHistoryItem .orderHistoryItemCenter {
+        font-size: 30px; }
+      [data-dpr="3"] .orderList .orderHistoryItem .orderHistoryItemCenter {
+        font-size: 45px; }
+      .orderList .orderHistoryItem .orderHistoryItemCenter p:nth-child(2) {
+        padding: 0.26667rem 0 0.58667rem;
+        border-bottom: 1px solid #f3f6f7; }
+      .orderList .orderHistoryItem .orderHistoryItemCenter p span {
+        color: #222; }
+    .orderList .orderHistoryItem .bookingHistoryItemCenter {
+      padding-top: 0.53333rem;
+      font-size: 15px;
+      color: #222; }
+      [data-dpr="2"] .orderList .orderHistoryItem .bookingHistoryItemCenter {
+        font-size: 30px; }
+      [data-dpr="3"] .orderList .orderHistoryItem .bookingHistoryItemCenter {
+        font-size: 45px; }
+      .orderList .orderHistoryItem .bookingHistoryItemCenter p:nth-child(2) {
+        padding: 0.26667rem 0 0.58667rem;
+        border-bottom: 1px solid #f3f6f7;
+        color: #555; }
+      .orderList .orderHistoryItem .bookingHistoryItemCenter p span {
+        margin-right: 0.4rem; }
+    .orderList .orderHistoryItem .orderHistoryItemBottom {
+      line-height: 1.49333rem; }
+      .orderList .orderHistoryItem .orderHistoryItemBottom:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .orderList .orderHistoryItem .orderHistoryItemBottom .orderHisItemBottomLeft {
+        font-size: 12px;
+        color: #BDBDBD; }
+        [data-dpr="2"] .orderList .orderHistoryItem .orderHistoryItemBottom .orderHisItemBottomLeft {
+          font-size: 24px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .orderHistoryItemBottom .orderHisItemBottomLeft {
+          font-size: 36px; }
+        .orderList .orderHistoryItem .orderHistoryItemBottom .orderHisItemBottomLeft span {
+          margin-right: 0.2rem; }
+    .orderList .orderHistoryItem .bookingHistoryItemBottom {
+      line-height: 1.86667rem; }
+      .orderList .orderHistoryItem .bookingHistoryItemBottom:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft {
+        font-size: 12px;
+        color: #909090; }
+        [data-dpr="2"] .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft {
+          font-size: 24px; }
+        [data-dpr="3"] .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft {
+          font-size: 36px; }
+        .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft p {
+          padding-top: 0.42667rem;
+          line-height: 0.32rem; }
+          .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft p:nth-child(2) {
+            padding-top: 0.26667rem; }
+          .orderList .orderHistoryItem .bookingHistoryItemBottom .orderHisItemBottomLeft p span {
+            margin-right: 0.2rem; }
+
+.orderDetailsBox {
+  background: #f3f6f7; }
+  .orderDetailsBox .orderDetailsUp {
+    padding: 0 0.53333rem;
+    margin-bottom: 0.18667rem;
+    background: #fff; }
+    .orderDetailsBox .orderDetailsUp:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .orderDetailsBox .orderDetailsUp h3 {
+      font-weight: normal;
+      padding: 0.53333rem 0;
+      font-size: 14px;
+      color: #909090; }
+      [data-dpr="2"] .orderDetailsBox .orderDetailsUp h3 {
+        font-size: 28px; }
+      [data-dpr="3"] .orderDetailsBox .orderDetailsUp h3 {
+        font-size: 42px; }
+    .orderDetailsBox .orderDetailsUp figure {
+      margin-top: 0.21333rem; }
+      .orderDetailsBox .orderDetailsUp figure figcaption {
+        width: 1.6rem;
+        height: 1.6rem; }
+        .orderDetailsBox .orderDetailsUp figure figcaption img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .orderDetailsBox .orderDetailsUp figure .doctorInforBox {
+        margin-left: 0.64rem; }
+        .orderDetailsBox .orderDetailsUp figure .doctorInforBox h4 {
+          font-size: 18px;
+          color: #222;
+          padding-top: 0.06667rem; }
+          [data-dpr="2"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox h4 {
+            font-size: 36px; }
+          [data-dpr="3"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox h4 {
+            font-size: 54px; }
+        .orderDetailsBox .orderDetailsUp figure .doctorInforBox div {
+          font-size: 15px;
+          color: #7f858e;
+          padding-top: 0.33333rem; }
+          [data-dpr="2"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox div {
+            font-size: 30px; }
+          [data-dpr="3"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox div {
+            font-size: 45px; }
+        .orderDetailsBox .orderDetailsUp figure .doctorInforBox p {
+          font-size: 15px;
+          color: #3f4249;
+          padding: 0.64rem 0 0.8rem; }
+          [data-dpr="2"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox p {
+            font-size: 30px; }
+          [data-dpr="3"] .orderDetailsBox .orderDetailsUp figure .doctorInforBox p {
+            font-size: 45px; }
+  .orderDetailsBox .orderDetailsDown {
+    background: #fff;
+    padding: 0 0.53333rem; }
+    .orderDetailsBox .orderDetailsDown p {
+      padding-top: 0.93333rem;
+      font-size: 15px;
+      color: #7f858e; }
+      [data-dpr="2"] .orderDetailsBox .orderDetailsDown p {
+        font-size: 30px; }
+      [data-dpr="3"] .orderDetailsBox .orderDetailsDown p {
+        font-size: 45px; }
+      .orderDetailsBox .orderDetailsDown p span:nth-child(1) {
+        display: inline-block;
+        width: 2.50667rem; }
+    .orderDetailsBox .orderDetailsDown div {
+      padding-top: 1.33333rem; }
+      .orderDetailsBox .orderDetailsDown div button {
+        display: inline-block;
+        margin-left: 0.8rem;
+        width: 3.2rem;
+        line-height: 0.93333rem;
+        font-size: 14px;
+        border-radius: 2.66667rem;
+        border: 1px solid #00d6c6;
+        color: #00d6c6; }
+        [data-dpr="2"] .orderDetailsBox .orderDetailsDown div button {
+          font-size: 28px; }
+        [data-dpr="3"] .orderDetailsBox .orderDetailsDown div button {
+          font-size: 42px; }
+      .orderDetailsBox .orderDetailsDown div .bg-green {
+        background: #00d6c6;
+        color: #fff; }

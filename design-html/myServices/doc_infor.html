@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>医生简介</title>
+    <script src="../../js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="../../css/pages/myServices/docInfor.css">
+</head>
+<body>
+     <section class="ct-main">
+         <section class="ct-docInforToPerson">
+             <section class="ct-docInforPerLeft">
+                 <img src="../../image/img00/myServices/backPerson.jpg" alt="">
+             </section>
+             <section class="ct-docInforPerRight">
+                 <span class="ct-docInforPerName">张国强</span><span class="ct-docInforPerPost">主任医师</span>
+                 <p class="ct-docInforPerHospital">新疆乌龙木齐市第一人民医院</p>
+                 <div class="ct-docInforPerOthBox">
+                     <span class="ct-docInforPerOthList">骨科</span><span class="ct-docInforPerOthVertical">|</span><span class="ct-docInforPerOthList">关节</span>
+                 </div>
+             </section>
+         </section>
+         <section class="ct-docInforToLabel">
+             <title class="ct-docInforToLabelTitle theDisease">医生综合得分</title>
+             <div class="ct-docInforChart">
+                 <img style="width: 100%" src="../../image/img00/myServices/chart.png" alt="">
+             </div>
+         </section>
+         <section class="ct-docInforToLabel">
+             <title class="ct-docInforToLabelTitle theDisease">门诊时间</title>
+             <div class="ct-docInforTime" id="calend">
+
+             </div>
+         </section>
+         <section class="ct-docInforBookSuccess">
+             <p>恭喜您已成功预约张国强医生的门诊，请于2016年12月26日上午新疆乌鲁木齐市第一人民医院按时就医</p>
+         </section>
+
+     </section>
+
+     <script src="../../js/third-party/jquery/jquery-2.1.0.min.js"></script>
+     <script src="../../js/third-party/jquery/jquery.json-2.4.js"></script>
+     <script src="../../js/common/commonMain.js"></script>
+     <script src="../../js/common/commonPrototype.js"></script>
+     <script src="../../js/common/commonString.js"></script>
+     <script src="../../js/common/commonTips.js"></script>
+     <script src="../../js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+     <script src="../../js/plugins/plugins.calender.js"></script>
+
+     <script type="text/javascript">
+         calender('#calend').init({
+             format: 'MM', //设置显示格式
+             button: false, //是否显示按钮
+             insertEle: [{  //要塞入的内容
+                 month:2, //指定月份..
+                 day:3, //的几号..
+                 text: "已满",     //要插入什么内容..
+                 className:"full"  //添加Class，样式将有如何变化...
+             }, {
+                 month:2,
+                 day:5,
+                 text: "已满",
+                 className:"full"
+             }, {
+                 month:3,
+                 day:7 ,
+                 text: "余喵人",
+                 className:"last"
+             }],
+             onload: function () {
+             }, //初始化完成执行，this为当前创建的日历对象
+             clickCallback: function (ev) { //点击日历上任意一项的回调
+                 console.log("喵...");
+                 console.log(ev)
+             }
+         });
+     </script>
+</body>
+</html>

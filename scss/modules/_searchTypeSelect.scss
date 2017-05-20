@@ -1,0 +1,240 @@
+@charset "UTF-8";
+//搜索侧边栏首字母匹配组件
+//Created by qiangkailiang on 2016/08/15
+//公共方法模块调用
+@import "../library/_common-modules";
+.al-mainInner {
+    overflow-x: hidden;
+}
+
+.searchTypeSelect {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: rem(225px);
+
+    padding: rem(10px) 0 rem(5px) 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // -webkit-transform: translateY(-50%);
+}
+
+.searchTypeSelectItem {
+    display: block;
+    @include font-dpr(13px);
+    color: #666;
+    text-align: center;
+    position: relative;
+    background-color: #f4f4f4;
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+    border-right: rem(20px) solid transparent;
+    border-left: 2rem solid transparent;
+    background-clip: padding-box;
+    &:before {
+        content: attr(data-toolTips);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: rem(-140px);
+        top: 55%;
+        width: rem(104px);
+        margin-top: rem(-32px);
+        height: rem(62px);
+        line-height: rem(62px);
+        background: transparent url('/images/img50/pages/discover/tips_bg.png') center center no-repeat;
+        background-size: 100% 100%;
+        font-weight: bold;
+        @include font-dpr(20px);
+        color: #3598db;
+    }
+}
+
+.searchTypeSelectItem.selected {
+    color: #3598db;
+    &:before {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.al-searchHead {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.searchResult {
+    margin-bottom: rem(20px);
+    background-color: #fff;
+}
+
+.searchResultTitle {
+    @include font-dpr(13px);
+    color: #222;
+    padding: rem(10px) rem(30px);
+    border-bottom: 1px solid #666;
+}
+
+.searchResultItem em {
+    font-style: normal;
+    color: #3598db;
+}
+
+.al-searchInputBar {
+    background-color: #EFF4F8;
+    padding: rem(20px);
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    width: 115%;
+    input {
+        -webkit-appearance: none;
+        height: rem(80px);
+        line-height: rem(70px);
+        padding: 0;
+        padding-left: rem(65px);
+        box-shadow: none;
+        border: 1px solid #666;
+        background: #fff;
+        border-radius: rem(5px);
+        box-sizing:border-box;
+        width: 87%;
+        box-sizing: border-box;
+        @include font-dpr(14px);
+        color: #222;
+        font-family: "microsoft yahei";
+        border-radius: rem(4px);
+        vertical-align: middle;
+        overflow: visible;
+        transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        &:focus{
+            line-height: rem(30px);
+        }
+    }
+    input.focus {
+        width: 75%;
+        outline: none;
+    }
+    .al-searchCancel.show {
+        display: inline-block;
+        color: #3598db !important;
+    }
+    input::-webkit-input-placeholder {
+        @include font-dpr(14px);
+        color: #222;
+        vertical-align: rem(-3px);
+        display: inline-block;
+        font-family: "microsoft yahei";
+
+    }
+    .icon-searchWhite {
+        position: absolute;
+        left: rem(45px);
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+    }
+    .al-searchCancel {
+        @include font-dpr(15px);
+        color: #3598db !important;
+        margin-left: rem(25px);
+        vertical-align: middle;
+        display: none;
+        padding: 0;
+        .icon-searchCancel {
+            position: absolute;
+            left: 69%;
+            display: none;
+            &:before {
+                vertical-align: baseline;
+            }
+        }
+    }
+}
+
+.al-searchTips {
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    @include font-dpr(13px);
+    color: #222;
+    padding-left: rem(30px);
+    height: rem(50px);
+    line-height: rem(50px);
+    background-color: #fff;
+    .icon-backArrow:before {
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+    }
+}
+
+.searchResultItem {
+    margin-left: rem(30px);
+    padding-right: rem(30px);
+    border-bottom: 1px solid #666;
+    background-color: #fff;
+    @include font-dpr(15px);
+    color: #333;
+    height: rem(100px);
+    line-height: rem(100px);
+    display: block;
+    @include ellipsis();
+    .icon-selected {
+        float: right;
+        display: none;
+        margin-right: rem(30px);
+    }
+}
+
+.al-searchResultItem.selected {
+    .icon-selected {
+        display: block;
+    }
+}
+
+.al-searchFailed {
+    margin-top: rem(70px);
+    text-align: center;
+    @include font-dpr(14px);
+    color: #5f6f8f;
+    a {
+        display: inline-block;
+        margin-top: rem(20px);
+        padding: rem(10px) rem(45px)
+    }
+}
+
+.al-noResult {
+    margin: rem(200px) 0;
+}
+
+.al-searchFocusMask {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+.al-searchFocusMaskShow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.al-searchHeadShow {
+    margin-top: rem(-97.5px)
+}
+
+// 获取焦点——头部隐藏
+.al-searchHead {
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}

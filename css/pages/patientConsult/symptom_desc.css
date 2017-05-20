@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/21
+ * @author: qiangkailiang
+ */
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+/**
+ * @name:患者咨询进度条
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/21
+ * @author: qiangkailiang
+ */
+.patient-consult-rate {
+  padding: 0 0.64rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.45333rem;
+  position: relative;
+  box-sizing: border-box; }
+  .patient-consult-rate:after {
+    content: '';
+    height: 0.01333rem;
+    background-color: #f0f0f0;
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    top: 50%;
+    margin-top: -0.00667rem;
+    z-index: 1; }
+  .patient-consult-rate-item {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    border-left: 0.26667rem solid #fff;
+    border-right: 0.26667rem solid #fff; }
+    [data-dpr="2"] .patient-consult-rate-item {
+      font-size: 24px; }
+    [data-dpr="3"] .patient-consult-rate-item {
+      font-size: 36px; }
+    .patient-consult-rate-item.complete {
+      background: url("/image/img00/patientConsult/inquiry_progress_complete@1x.svg") no-repeat; }
+      .patient-consult-rate-item.complete span {
+        display: none; }
+    .patient-consult-rate-item:before {
+      content: '为谁咨询';
+      position: absolute;
+      font-size: 13px;
+      color: #ccc;
+      display: block;
+      bottom: 0;
+      width: 2rem;
+      text-align: center;
+      left: 50%;
+      margin-left: -1rem;
+      margin-bottom: -0.53333rem; }
+      [data-dpr="2"] .patient-consult-rate-item:before {
+        font-size: 26px; }
+      [data-dpr="3"] .patient-consult-rate-item:before {
+        font-size: 39px; }
+    .patient-consult-rate-item:nth-child(2):before {
+      content: '选择部位'; }
+    .patient-consult-rate-item:nth-child(3):before {
+      content: '描述症状'; }
+    .patient-consult-rate-item.on {
+      background-color: #00d6c6; }
+      .patient-consult-rate-item.on:before {
+        color: #00beaf; }
+
+/**
+ * @Desc：
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by qiangkailiang on 2017/2/23
+ */
+.symptom-desc-title {
+  color: #222;
+  font-size: 17px;
+  padding-left: 0.64rem;
+  margin: 0.53333rem 0; }
+  [data-dpr="2"] .symptom-desc-title {
+    font-size: 34px; }
+  [data-dpr="3"] .symptom-desc-title {
+    font-size: 51px; }
+  .symptom-desc-title > h4 {
+    font-weight: normal; }
+  .symptom-desc-title .num {
+    padding-right: 0.10667rem; }
+    .symptom-desc-title .num em {
+      color: #00bedf;
+      font-style: normal; }
+  .symptom-desc-title .tips {
+    color: #7f858e;
+    font-size: 15px; }
+    [data-dpr="2"] .symptom-desc-title .tips {
+      font-size: 30px; }
+    [data-dpr="3"] .symptom-desc-title .tips {
+      font-size: 45px; }
+
+.symptom-desc-item {
+  margin: 0.53333rem 0;
+  box-sizing: border-box; }
+  .symptom-desc-item .icon-select {
+    margin-right: 0.32rem; }
+  .symptom-desc-item.selected.multiple-choices > p .icon-select {
+    background: url("/image/img00/patientConsult/symptom_square_sel@1x.svg") no-repeat; }
+  .symptom-desc-item.selected.multiple-choices > p .icon-arrow {
+    display: block; }
+  .symptom-desc-item.selected.single-choices > p .icon-select {
+    background: url("/image/img00/patientConsult/symptom_circle_sel@1x.svg") no-repeat; }
+  .symptom-desc-item.selected.single-choices > p .icon-arrow {
+    display: block; }
+  .symptom-desc-item.selected .symptom-desc-second-form {
+    display: block; }
+  .symptom-desc-item > p {
+    color: #555;
+    padding-left: 1.12rem;
+    font-size: 15px; }
+    [data-dpr="2"] .symptom-desc-item > p {
+      font-size: 30px; }
+    [data-dpr="3"] .symptom-desc-item > p {
+      font-size: 45px; }
+    .symptom-desc-item > p:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .symptom-desc-item > p .icon-arrow {
+      float: right;
+      background: url("/image/img00/patientConsult/symptom_pack_up@1x.svg") no-repeat;
+      width: 0.37333rem;
+      height: 0.37333rem;
+      display: none; }
+    .symptom-desc-item > p > span {
+      vertical-align: text-top;
+      display: inline-block;
+      width: 81%;
+      word-break: break-all; }
+  .symptom-desc-item.selected > p {
+    color: #63C7BF; }
+
+.multiple-choices .icon-select {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 0.05333rem;
+  vertical-align: text-bottom; }
+
+.single-choices .icon-select {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  vertical-align: middle; }
+
+.symptom-desc-controller {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.33333rem;
+  margin-top: -1.53333rem;
+  box-sizing: border-box; }
+  .symptom-desc-controller > a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3.2rem; }
+    .symptom-desc-controller > a.unfinish {
+      background: #DFDFDF; }
+
+.symptom-desc-second-form {
+  overflow: hidden;
+  padding-left: 0.4rem;
+  box-sizing: border-box;
+  background: #F9FBFB;
+  box-shadow: 0 0.04rem 0.05333rem 0 #F4F8FD;
+  display: none; }
+  .symptom-desc-second-form:nth-child(2) {
+    margin-top: 0.53333rem; }
+  .symptom-desc-second-form .symptom-desc-title {
+    font-size: 13px;
+    color: #B3B9C4; }
+    [data-dpr="2"] .symptom-desc-second-form .symptom-desc-title {
+      font-size: 26px; }
+    [data-dpr="3"] .symptom-desc-second-form .symptom-desc-title {
+      font-size: 39px; }
+  .symptom-desc-second-form .symptom-desc-item p > span {
+    color: #777;
+    padding-right: 0.69333rem; }
+
+.icon-pain-detail:after {
+  content: '';
+  display: inline-block;
+  width: 0.37333rem;
+  height: 0.37333rem;
+  background: url("/image/img00/patientConsult/symptom_prompt@1x.svg") no-repeat;
+  vertical-align: middle;
+  margin-left: 0.25333rem; }
+
+.icon-pain-detail > em {
+  font-style: normal;
+  vertical-align: middle; }
+
+.symptom-detail-desc {
+  position: absolute;
+  width: 7.2rem;
+  left: 50%;
+  margin-left: -3.6rem;
+  background: #FFFFFF;
+  border-radius: 0.16rem;
+  padding: 0.8rem 0.66667rem;
+  box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 190, 175, 0.25);
+  box-sizing: border-box;
+  display: none; }
+  .symptom-detail-desc > figure {
+    width: 100%; }
+    .symptom-detail-desc > figure img {
+      width: 100%;
+      vertical-align: top; }
+  .symptom-detail-desc > figcaption {
+    margin-top: 0.8rem;
+    font-size: 15px;
+    color: #555; }
+    [data-dpr="2"] .symptom-detail-desc > figcaption {
+      font-size: 30px; }
+    [data-dpr="3"] .symptom-detail-desc > figcaption {
+      font-size: 45px; }
+
+.symptom-desc-others-content {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  margin-left: -0.4rem; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.sticky-wrapper {
+  height: auto;
+  min-height: 100%; }
+
+.main-inner {
+  padding-bottom: 1.53333rem; }
+
+.symptom-desc-inner {
+  margin-top: 1.33333rem;
+  display: none; }
+  .symptom-desc-inner.active {
+    display: block; }
+
+.alertBox-content {
+  text-align: center; }
+
+.has-others {
+  background: none;
+  color: #909090; }
+
+.btn-primary.no-others {
+  width: 3.73333rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.symptom-desc-controller {
+  display: none; }
+  .symptom-desc-controller.active {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }

@@ -1,0 +1,642 @@
+@charset "UTF-8";
+.commonHeader {
+  position: fixed;
+  width: 100%;
+  height: 1.17333rem;
+  background-color: #FFFFFF;
+  opacity: 1;
+  top: 0;
+  z-index: 5;
+  border-bottom: 0.01333rem solid #DFE2E7; }
+  .commonHeader .commonHeaderLeft a {
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url(../../../image/arrow_back.png) no-repeat;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -0.4rem;
+    left: 0.13333rem; }
+  .commonHeader .commonHeaderCentre {
+    width: 100%;
+    height: 100%; }
+    .commonHeader .commonHeaderCentre p {
+      width: 5rem;
+      height: 1.17333rem;
+      line-height: 1.17333rem;
+      margin: 0 auto;
+      color: #333333;
+      font-size: 17px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center; }
+      [data-dpr="2"] .commonHeader .commonHeaderCentre p {
+        font-size: 34px; }
+      [data-dpr="3"] .commonHeader .commonHeaderCentre p {
+        font-size: 51px; }
+  .commonHeader .commonHeaderRight a {
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url("/image/img00/patientConsult/share_hide.png") no-repeat center;
+    background-size: 0.46667rem;
+    top: 50%;
+    margin-top: -0.4rem;
+    right: 0.13333rem; }
+
+.tc-main {
+  padding-top: 1.17333rem;
+  width: 100%;
+  background-color: #F2F2F2; }
+  .tc-main .tc-module {
+    margin: 0.18667rem 0;
+    padding: 0 0.53333rem;
+    background-color: #ffffff; }
+    .tc-main .tc-module .title {
+      padding-top: 0.66667rem; }
+      .tc-main .tc-module .title h3 {
+        position: relative;
+        font-weight: 100;
+        color: #555555;
+        font-size: 16px; }
+        [data-dpr="2"] .tc-main .tc-module .title h3 {
+          font-size: 32px; }
+        [data-dpr="3"] .tc-main .tc-module .title h3 {
+          font-size: 48px; }
+        .tc-main .tc-module .title h3:after {
+          position: absolute;
+          content: '';
+          width: 0.05333rem;
+          height: 0.32rem;
+          left: -0.10667rem;
+          top: 50%;
+          margin-top: -0.16rem;
+          background-color: #4CD3C6; }
+    .tc-main .tc-module .tc-recommendRightComm {
+      font-size: 14px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+      width: 2.66667rem;
+      text-align: right;
+      color: #9798A6;
+      padding-right: 0.32rem; }
+      [data-dpr="2"] .tc-main .tc-module .tc-recommendRightComm {
+        font-size: 28px; }
+      [data-dpr="3"] .tc-main .tc-module .tc-recommendRightComm {
+        font-size: 42px; }
+      .tc-main .tc-module .tc-recommendRightComm:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 0;
+        margin-top: -0.13333rem;
+        display: inline-block;
+        width: 0.26667rem;
+        height: 0.26667rem;
+        background: url("/image/img00/patientConsult/suggestion_enter@2x.png");
+        background-size: 100% 100%;
+        vertical-align: middle; }
+  .tc-main .tc-boxTitle {
+    font-size: 13px;
+    padding: 0.26667rem;
+    color: #AAAAAA;
+    background-color: #F9FBFB;
+    border-radius: 12px;
+    margin-top: 0.53333rem; }
+    [data-dpr="2"] .tc-main .tc-boxTitle {
+      font-size: 26px; }
+    [data-dpr="3"] .tc-main .tc-boxTitle {
+      font-size: 39px; }
+    .tc-main .tc-boxTitle .tc-surgeryCheck {
+      font-size: 13px;
+      color: #00BEAF; }
+      [data-dpr="2"] .tc-main .tc-boxTitle .tc-surgeryCheck {
+        font-size: 26px; }
+      [data-dpr="3"] .tc-main .tc-boxTitle .tc-surgeryCheck {
+        font-size: 39px; }
+  .tc-main .tc-recommendLoadMoreBtn {
+    padding-bottom: 0.53333rem; }
+    .tc-main .tc-recommendLoadMoreBtn img {
+      display: block;
+      width: 0.34667rem;
+      height: 0.34667rem;
+      margin: 0 auto; }
+  .tc-main .tc-baseInfo {
+    background-color: #ffffff;
+    width: 100%; }
+    .tc-main .tc-baseInfo .tc-baseInfoList {
+      padding: 0.53333rem 0 0.6rem; }
+      .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+        margin-bottom: 0.50667rem;
+        font-size: 14px; }
+        [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+          font-size: 28px; }
+        [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+          font-size: 42px; }
+        .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:after {
+          content: '';
+          display: table;
+          clear: both; }
+        .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+          font-size: 15px;
+          width: 3.2rem;
+          padding: 0 0.64rem;
+          float: left;
+          box-sizing: border-box;
+          color: #909090; }
+          [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+            font-size: 30px; }
+          [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+            font-size: 45px; }
+          .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft img {
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0 auto; }
+        .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+          width: 6.8rem;
+          float: left;
+          position: relative;
+          color: #555555;
+          box-sizing: border-box;
+          padding-right: 0.46667rem;
+          font-size: 16px; }
+          [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+            font-size: 32px; }
+          [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+            font-size: 48px; }
+          .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+            font-size: 17px;
+            display: block;
+            line-height: 0.45333rem;
+            margin-top: 0.58667rem; }
+            [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+              font-size: 34px; }
+            [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+              font-size: 51px; }
+          .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+            display: block;
+            font-size: 13px;
+            line-height: 0.34667rem;
+            color: #909090;
+            margin-top: 0.21333rem; }
+            [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+              font-size: 26px; }
+            [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoDate {
+              font-size: 39px; }
+          .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-goCase {
+            font-size: 14px;
+            position: absolute;
+            right: 0.93333rem;
+            top: 0.61333rem;
+            color: #78849C;
+            line-height: 0.37333rem; }
+            [data-dpr="2"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-goCase {
+              font-size: 28px; }
+            [data-dpr="3"] .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-goCase {
+              font-size: 42px; }
+            .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-goCase::after {
+              display: inline-block;
+              content: "";
+              width: 0.16rem;
+              height: 0.26667rem;
+              position: absolute;
+              top: 50%;
+              margin-top: -0.16rem;
+              right: -0.36rem;
+              background: url("/image/img00/patientConsult/arrow_right.png") no-repeat center;
+              background-size: 100% 100%; }
+        .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-recommendUserMain {
+          line-height: 0.64rem; }
+      .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:first-child {
+        margin-bottom: 0.70667rem; }
+      .tc-main .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:last-child {
+        margin-bottom: 0; }
+  .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem {
+    margin-top: 0.66667rem;
+    padding-bottom: 0.64rem;
+    border-bottom: 1px solid #F3F6F7; }
+    .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem:last-child {
+      border-bottom: none; }
+    .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendReason {
+      position: relative;
+      font-size: 15px;
+      line-height: 0.4rem;
+      color: #555555;
+      margin-bottom: 0.64rem;
+      padding-left: 0.4rem; }
+      [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendReason {
+        font-size: 30px; }
+      [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendReason {
+        font-size: 45px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendReason:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 0.29333rem;
+        height: 0.26667rem;
+        top: 50%;
+        margin-top: -0.13333rem;
+        background: url("/image/img00/recoveryReport/suggestion_reason@2x.png") no-repeat center;
+        background-size: 100% 100%; }
+    .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-l {
+      float: left;
+      width: 1.33333rem; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-l img {
+        width: 1.01333rem;
+        height: 1.01333rem; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-l a {
+        display: inline-block;
+        width: 1.01333rem;
+        height: 1.01333rem; }
+    .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r {
+      float: right;
+      width: 7.6rem; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorName {
+        font-size: 16px;
+        color: #222222;
+        padding-right: 0.37333rem; }
+        [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorName {
+          font-size: 32px; }
+        [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorName {
+          font-size: 48px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorPost {
+        font-size: 15px;
+        color: #777777; }
+        [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorPost {
+          font-size: 30px; }
+        [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorPost {
+          font-size: 45px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorTipList:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorTipList span {
+        display: table;
+        font-size: 12px;
+        color: #8DAED9;
+        float: left;
+        background-color: #EEF6FF;
+        padding: 0.10667rem 0.21333rem;
+        margin-right: 0.21333rem;
+        margin-top: 0.32rem;
+        border-radius: 2px; }
+        [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorTipList span {
+          font-size: 24px; }
+        [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendDoctorTipList span {
+          font-size: 36px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem {
+        display: table; }
+        .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorHospital {
+          font-size: 15px;
+          display: block;
+          margin-top: 0.21333rem;
+          color: #555555;
+          width: 4.96rem;
+          overflow: hidden;
+          /*自动隐藏文字*/
+          text-overflow: ellipsis;
+          /*文字隐藏后添加省略号*/
+          white-space: nowrap;
+          /*强制不换行*/
+          margin-right: 0.37333rem; }
+          [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorHospital {
+            font-size: 30px; }
+          [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorHospital {
+            font-size: 45px; }
+        .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorPostPosition {
+          display: table-cell;
+          font-size: 14px;
+          color: #B3B9C4; }
+          [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorPostPosition {
+            font-size: 28px; }
+          [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorInfo .tc-recommendHospitalItem .tc-recommendDoctorPostPosition {
+            font-size: 42px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorGood {
+        font-size: 15px;
+        color: #909090;
+        padding-top: 0.29333rem;
+        padding-bottom: 0.61333rem; }
+        [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorGood {
+          font-size: 30px; }
+        [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorGood {
+          font-size: 45px; }
+      .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox {
+        padding-bottom: 0.50667rem; }
+        .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox:after {
+          content: '';
+          display: table;
+          clear: both; }
+        .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney {
+          font-size: 13px;
+          color: #B3B9C4;
+          float: left;
+          width: 4.66667rem;
+          height: 0.69333rem;
+          line-height: 0.69333rem; }
+          [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney {
+            font-size: 26px; }
+          [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney {
+            font-size: 39px; }
+          .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendMoneyNum {
+            font-size: 17px;
+            color: #FA787A; }
+            [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendMoneyNum {
+              font-size: 34px; }
+            [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendMoneyNum {
+              font-size: 51px; }
+          .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendText {
+            margin-right: 0.37333rem;
+            margin-left: -0.09333rem;
+            font-size: 13px;
+            color: #B3B9C4; }
+            [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendText {
+              font-size: 26px; }
+            [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommendMoney .tc-recommendText {
+              font-size: 39px; }
+        .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend {
+          float: right; }
+          .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow {
+            font-size: 13px;
+            position: relative;
+            width: 2.56rem;
+            text-align: center;
+            color: #00BEAF;
+            padding: 0.13333rem 0;
+            border: 1px solid #00BEAF;
+            border-radius: 24px; }
+            [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow {
+              font-size: 26px; }
+            [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow {
+              font-size: 39px; }
+            .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow span {
+              font-size: 11px;
+              position: absolute;
+              bottom: -0.58667rem;
+              left: 0;
+              width: 100%;
+              color: #B3B9C4; }
+              [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow span {
+                font-size: 22px; }
+              [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow span {
+                font-size: 33px; }
+              .tc-main .tc-recommendDoctorBox .tc-recommendDoctorList .tc-recommendDoctorItem .tc-recommendDoctor-r .tc-recommendDoctorOtherBox .tc-recommend .tc-recommendConsultNow span i {
+                color: #00BEAF; }
+  .tc-main .tc-recommendDoctorBox .tc-lookBySelf {
+    text-align: center; }
+    .tc-main .tc-recommendDoctorBox .tc-lookBySelf span {
+      position: relative;
+      font-size: 14px;
+      color: #00BEAF;
+      display: block;
+      margin: 0 auto; }
+      [data-dpr="2"] .tc-main .tc-recommendDoctorBox .tc-lookBySelf span {
+        font-size: 28px; }
+      [data-dpr="3"] .tc-main .tc-recommendDoctorBox .tc-lookBySelf span {
+        font-size: 42px; }
+      .tc-main .tc-recommendDoctorBox .tc-lookBySelf span i {
+        position: absolute;
+        top: 50%;
+        margin-left: 0.13333rem;
+        margin-top: -0.16rem;
+        display: inline-block;
+        width: 0.26667rem;
+        height: 0.26667rem;
+        background: url("/image/img00/recoveryReport/dialog_overtime_arrow.png");
+        background-size: 100% 100%;
+        vertical-align: middle; }
+  .tc-main .tc-suggestChecking .tc-suggestCheckingList {
+    padding-bottom: 0.21333rem;
+    padding-top: 0.32rem; }
+    .tc-main .tc-suggestChecking .tc-suggestCheckingList:after {
+      content: '';
+      display: table;
+      clear: both; }
+    .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem {
+      font-size: 15px;
+      color: #222222;
+      float: left;
+      width: 50%;
+      padding: 0.32rem 0; }
+      [data-dpr="2"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem {
+        font-size: 30px; }
+      [data-dpr="3"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem {
+        font-size: 45px; }
+      .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingOver {
+        font-size: 14px;
+        color: #BDBDBD; }
+        [data-dpr="2"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingOver {
+          font-size: 28px; }
+        [data-dpr="3"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingOver {
+          font-size: 42px; }
+      .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingWait {
+        font-size: 14px;
+        color: #00BEAF; }
+        [data-dpr="2"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingWait {
+          font-size: 28px; }
+        [data-dpr="3"] .tc-main .tc-suggestChecking .tc-suggestCheckingList .tc-suggestCheckingItem .tc-suggestCheckingWait {
+          font-size: 42px; }
+  .tc-main .tc-teachingKnowledgeBox {
+    margin-bottom: 0.32rem; }
+    .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList {
+      padding-top: 0.74667rem;
+      display: table; }
+      .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgePic {
+        display: table-cell;
+        width: 2.8rem;
+        height: 1.86667rem; }
+        .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgePic img {
+          width: 100%;
+          height: 100%; }
+      .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgeText {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 0.41333rem;
+        position: relative; }
+        .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgeText .tc-teachingKnowledgeTitle {
+          font-size: 16px;
+          color: #555555; }
+          [data-dpr="2"] .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgeText .tc-teachingKnowledgeTitle {
+            font-size: 32px; }
+          [data-dpr="3"] .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgeText .tc-teachingKnowledgeTitle {
+            font-size: 48px; }
+        .tc-main .tc-teachingKnowledgeBox .tc-teachingKnowledgeList .tc-tc-teachingKnowledgeText .tc-teachingKnowledgeTime {
+          position: absolute;
+          bottom: 0.16rem;
+          color: #CDCDCD; }
+  .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList {
+    padding-top: 0.21333rem;
+    padding-bottom: 0.10667rem; }
+    .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem {
+      display: table;
+      padding: 0.53333rem 0; }
+      .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-l {
+        display: table-cell; }
+        .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-l img {
+          width: 2.13333rem;
+          height: 2.13333rem; }
+      .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r {
+        width: 100%;
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 0.53333rem; }
+        .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-medicineName {
+          font-size: 15px;
+          color: #222222; }
+          [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-medicineName {
+            font-size: 30px; }
+          [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-medicineName {
+            font-size: 45px; }
+        .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugInfo {
+          font-size: 14px;
+          color: #909090;
+          margin-top: 0.26667rem; }
+          [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugInfo {
+            font-size: 28px; }
+          [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugInfo {
+            font-size: 42px; }
+          .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugInfo .tc-medicineMade {
+            padding-right: 0.36rem; }
+        .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy {
+          font-size: 14px;
+          color: #000;
+          margin-top: 0.26667rem; }
+          [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy {
+            font-size: 28px; }
+          [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy {
+            font-size: 42px; }
+          .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugPrice {
+            font-size: 17px;
+            color: #FA787A;
+            margin-right: 0.21333rem; }
+            [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugPrice {
+              font-size: 34px; }
+            [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugPrice {
+              font-size: 51px; }
+          .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugNumCal {
+            font-size: 13px;
+            color: #B3B9C4; }
+            [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugNumCal {
+              font-size: 26px; }
+            [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugNumCal {
+              font-size: 39px; }
+          .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugBuyBtn {
+            position: relative;
+            font-size: 14px;
+            float: right;
+            color: #00BEAF;
+            display: table;
+            margin-top: 0.06667rem; }
+            [data-dpr="2"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugBuyBtn {
+              font-size: 28px; }
+            [data-dpr="3"] .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugBuyBtn {
+              font-size: 42px; }
+            .tc-main .tc-medicineSuggested .tc-medicineSuggestedBox .tc-medicineSuggestedList .tc-medicineSuggestedItem .tc-medicineSuggested-r .tc-drugBuy .tc-drugBuyBtn:after {
+              position: absolute;
+              content: '';
+              width: 0.34667rem;
+              height: 0.34667rem;
+              background: url("/image/img00/recoveryReport/suggestion_add@2x.png") no-repeat center;
+              background-size: 100% 100%;
+              left: -0.4rem;
+              top: 50%;
+              margin-top: -0.21333rem; }
+  .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList {
+    padding-top: 0.34667rem;
+    padding-bottom: 0.32rem; }
+    .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem {
+      padding: 0.32rem 0; }
+      .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-l {
+        float: left;
+        font-size: 15px;
+        color: #222222; }
+        [data-dpr="2"] .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-l {
+          font-size: 30px; }
+        [data-dpr="3"] .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-l {
+          font-size: 45px; }
+      .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-r {
+        display: table;
+        position: relative;
+        font-size: 14px;
+        color: #9798A6;
+        float: right;
+        padding-right: 0.24rem; }
+        [data-dpr="2"] .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-r {
+          font-size: 28px; }
+        [data-dpr="3"] .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-r {
+          font-size: 42px; }
+        .tc-main .tc-disposalAdvice .tc-disposalAdviceBox .tc-disposalAdviceList .tc-disposalAdviceItem .tc-disposalAdvice-r:after {
+          position: absolute;
+          content: '';
+          width: 0.10667rem;
+          height: 0.21333rem;
+          background: url("/image/img00/recoveryReport/suggestion_enter@2x.png");
+          background-size: 100% 100%;
+          right: 0;
+          top: 50%;
+          margin-top: -0.08rem; }
+  .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList {
+    padding-top: 0.2rem;
+    padding-bottom: 0.22667rem; }
+    .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem {
+      padding: 0.2rem 0; }
+      .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-l {
+        font-size: 15px;
+        float: left;
+        color: #222222; }
+        [data-dpr="2"] .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-l {
+          font-size: 30px; }
+        [data-dpr="3"] .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-l {
+          font-size: 45px; }
+      .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-r {
+        float: right;
+        font-size: 13px;
+        color: #00BEAF;
+        padding: 0.09333rem 0.33333rem;
+        border: 1px solid #00BEAF;
+        border-radius: 30px;
+        text-align: center; }
+        [data-dpr="2"] .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-r {
+          font-size: 26px; }
+        [data-dpr="3"] .tc-main .tc-surgery .tc-surgeryBox .tc-surgeryList .tc-surgeryItem .tc-surgery-r {
+          font-size: 39px; }
+  .tc-main .tc-warmPrompt {
+    padding: 0.53333rem 0.69333rem 0.8rem; }
+    .tc-main .tc-warmPrompt .tc-tc-warmPromptText {
+      font-size: 12px;
+      color: #CCCCCC;
+      position: relative;
+      padding-left: 0.56rem; }
+      [data-dpr="2"] .tc-main .tc-warmPrompt .tc-tc-warmPromptText {
+        font-size: 24px; }
+      [data-dpr="3"] .tc-main .tc-warmPrompt .tc-tc-warmPromptText {
+        font-size: 36px; }
+      .tc-main .tc-warmPrompt .tc-tc-warmPromptText span {
+        display: inline-block; }
+      .tc-main .tc-warmPrompt .tc-tc-warmPromptText:after {
+        width: 0.42667rem;
+        height: 0.42667rem;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("/image/img00/recoveryReport/suggestion_prompt@2x.png");
+        background-size: 100% 100%; }

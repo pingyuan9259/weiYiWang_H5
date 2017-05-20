@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>健康信息</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<script src="/js/third-party/flexible.js"></script>
+    	<link rel="stylesheet" href="/css/base.css">
+    	<link rel="stylesheet" href="/css/pages/healthInfo/health_info.css">
+    	<link rel="stylesheet" href="/css/pages/patientConsult/file_upload.css">
+	</head>
+	<body>
+    <aside class="searchTypeSelect">
+
+    </aside>
+		<section class="he-main ev-fileUpHide">
+			<!--<header class="commonHeader">-->
+				<!--<figure class="commonHeaderLeft">-->
+					<!--<a href=""></a>-->
+				<!--</figure>-->
+				<!--<figure class="commonHeaderCentre">-->
+					<!--<p>健康信息</p>-->
+				<!--</figure>-->
+				<!--<figure class="commonHeaderRight">-->
+					<!--<a href=""></a>-->
+				<!--</figure>-->
+			<!--</header>-->
+			<section class="he-questionListBox">
+                <!--第一题-->
+                <section data-type="1" class="he-cureAsk he-questionListItem">
+                    <p class="he-cureAskQuestion">1、您之前看过医生吗？</p>
+                    <div class="he-cureAskConfirm">
+                        <div class="he-cureAskConfirmNo he-cureAskCheckViewBtn">
+                            <div class="he-cureAskCheckBtn">
+
+                            </div>
+                            <span>没看过</span>
+                        </div>
+                        <div class="he-cureAskConfirmYes he-cureAskCheckViewBtn">
+                            <div class="he-cureAskCheckBtn tc-selected">
+
+                            </div>
+                            <span>看过</span>
+                        </div>
+                    </div>
+                    <ul class="he-cureAskList">
+                        <li class="he-cureAskItem tc-hospital">
+                            <span class="he-cureAskItemLeft">曾就诊医院</span>
+                            <span class="he-cureAskItemRight" id="ev-go-to-select-hospital">请选择医院</span>
+                        </li>
+                        <li class="he-cureAskItem tc-illnessName">
+                            <span class="he-cureAskItemLeft">确诊疾病名称</span>
+                            <span class="he-cureAskItemRight" id="ev-go-to-select-disease">请按照确诊病例单准确选择</span>
+                        </li>
+                        <li class="he-cureAskItem tc-fileUp">
+                            <span class="he-cureAskItemLeft">上传就诊资料<i class="tips"></i></span>
+                            <span class="he-cureAskItemRight ev-upLoadBtn">片子、病例、检查报告等</span>
+                        </li>
+                    </ul>
+                    <section class="he-cureAskSubmit">
+                        <button class="usable downBtn">下一步</button>
+                        <button class="unusable">下一步</button>
+                    </section>
+                </section>
+                <!--第二题-->
+                <section data-type="2" class="he-cureHistory he-questionListItem" style="display: none;">
+                    <p class="he-cureHisQuestion">2、您有以下过往历史吗？若有，请详细填写，若无，可直接点击下一步</p>
+                    <ul class="he-cureHisList">
+                        <li class="he-cureHisItem" data-historyType="0">
+                            <div class="he-cureHisItemTop">疾病史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：2016年 患冠心病 服用XX药物进行治疗，目前已好转"></textarea>
+                            </div>
+                        </li>
+                        <li class="he-cureHisItem" data-historyType="1">
+                            <div class="he-cureHisItemTop">手术史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：2015年5月 积水潭医院 关节镜手术"></textarea>
+                            </div>
+                        </li>
+                        <li class="he-cureHisItem" data-historyType="2">
+                            <div class="he-cureHisItemTop">药物史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：阿莫西林 一天三次 一次两粒"></textarea>
+                            </div>
+                        </li>
+                        <li class="he-cureHisItem" data-historyType="3">
+                            <div class="he-cureHisItemTop">外伤史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：2015年5月 跌倒 骨折"></textarea>
+                            </div>
+                        </li>
+                        <li class="he-cureHisItem" data-historyType="4">
+                            <div class="he-cureHisItemTop">过敏史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：对花粉过敏 对青霉素过敏"></textarea>
+                            </div>
+                        </li>
+                        <li class="he-cureHisItem" data-historyType="5">
+                            <div class="he-cureHisItemTop">疫区接触史</div>
+                            <div class="he-cureHisItemBottom">
+                                <span class="he-cureOther">其他</span>
+                            </div>
+                            <div class="he-cureHisItemInfo">
+                                <textarea max="500" placeholder="填写示范：2015年5月 接触SARS疫区3天"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="he-cureHistorySubmit">
+                        <button class="previous upBtn">上一步</button>
+                        <button class="next downBtn">下一步</button>
+                    </div>
+                </section>
+                <!--第三题-->
+                <section data-type="3" class="he-perfectInfo he-questionListItem" style="display: none;">
+                    <p class="he-perfectInfoQuestion">3.为了方便患者就医，请您如实填写以下信息</p>
+                    <ul class="he-perfectInfoList">
+                        <li class="he-perfectInfoItem" data-required="1" data-type="1">
+                            <div class="he-cureHistoryItemLeft" >患者真实姓名</div>
+                            <div class="he-cureHistoryItemRight"><input type="text" placeholder="马丁"></div>
+                        </li>
+                        <li class="he-perfectInfoItem" data-type="2" data-required="1">
+                            <div class="he-cureHistoryItemLeft" >证件类型</div>
+                            <div class="he-cureHistoryItemRight he-cardTypeBox">
+                                <select name="idCard" id="idCard" data-check="1">
+                                    <option value="" style="display: none"></option>
+                                </select>
+                                <span class="he-cardType">身份证/军官证/护照</span>
+                            </div>
+                        </li>
+                        <li class="he-perfectInfoItem " data-type="3" data-required="1">
+                            <div class="he-cureHistoryItemLeft" >证件号码</div>
+                            <div class="he-cureHistoryItemRight"><input type="text" data-check="true"></div>
+                        </li>
+                        <li class="he-perfectInfoItem" data-type="4" data-required="1">
+                            <div class="he-cureHistoryItemLeft" >联系电话</div>
+                            <div class="he-cureHistoryItemRight"><input type="text"></div>
+                        </li>
+                        <li class="he-perfectInfoItem" data-type="5" data-required="1">
+                            <div class="he-cureHistoryItemLeft" >患者所在地</div>
+                            <div class="he-cureHistoryItemRight he-cureArea"><input type="text" id="ev-go-to-select-city"></div>
+                        </li>
+                        <li class="he-perfectInfoItem" data-type="6" data-required="0">
+                            <div class="he-cureHistoryItemLeft" >社保类型</div>
+                            <div class="he-cureHistoryItemRight he-protectTypeBox">
+                                <select name="protectType" id="protectType" data-check="2">
+                                    <option value="" style="display: none"></option>
+                                </select>
+                                <span class="he-protectType">城镇职工/城镇居民/新农合/商业保险/无</span>
+
+                            </div>
+                        </li>
+                        <li class="he-perfectInfoItem" data-type="7" data-required="0">
+                            <div class="he-cureHistoryItemLeft" >社保所在地</div>
+                            <div class="he-cureHistoryItemRight he-cureProtect"><input type="text" id="ev-go-to-select-perfect"></div>
+                        </li>
+                    </ul>
+                    <div class="he-perfectInfoSubmit">
+                        <button class="previous upBtn">上一步</button>
+                        <button class="next downBtn">提交</button>
+                    </div>
+                </section>
+            </section>
+		</section>
+
+        <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+        <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+        <script src="/js/plugins/plugins.firstLetter.js"></script>
+        <script src="/js/third-party/q.js"></script>
+
+        <script src="/js/common.js"></script>
+        <script src="/js/common/commonString.js"></script>
+
+        <script src="/js/modules/module.search.input.js"></script>
+        <script src="/js/modules/module.search.list.js"></script>
+        <script src="/js/modules/modules.upLoadFile.js"></script>
+        <script src="/js/plugins/plugins.validate.js"></script>
+        <script src="/js/third-party/uploadReplace.js"></script>
+
+        <script src="/js/scene/healthInfo/scene.healthInfo.healthInfo.js"></script>
+	</body>
+</html>

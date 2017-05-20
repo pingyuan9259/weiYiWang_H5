@@ -1,0 +1,51 @@
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/21
+ * @author: qiangkailiang
+ */
+@import "../../library/_common-modules";
+@import "../../modules/_mainHeader";
+@import "../../modules/_patientConsultRate";
+@import "../../modules/_selectList";
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.sticky-wrapper{
+  height: auto;
+  min-height: 100%;
+}
+.main-inner{
+  padding-bottom:rem(115px);
+}
+.symptom-desc-inner{
+  margin-top:rem(100px);
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.alertBox-content{
+  text-align: center;
+}
+
+.has-others{
+  background: none;
+  color: #909090;
+}
+
+.btn-primary.no-others{
+  width:rem(280px);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.symptom-desc-controller{
+  display: none;
+  &.active{
+    display: flex;
+  }
+}

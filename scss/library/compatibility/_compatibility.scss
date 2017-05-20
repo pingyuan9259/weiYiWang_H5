@@ -1,0 +1,71 @@
+//  @component-name: compatibility
+//  @desc: 兼容性模块
+//         考虑到autoprefixer的普及，在您的开发中可能不再需要这一部分进行CSS3前缀的填充，
+//         但该插件并非在所有编辑器下都可使用，因此本模块的功能请酌情选择。
+//         而这里也仅考虑目前尚需添加前缀的/需要HackIE8的属性，如border-radius这种早已被所有浏览器普及使用的属性，将不再本模块中做兼容处理。
+@charset 'UTF-8';
+//@method-name:opacity
+//@desc:透明度 兼容IE
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity=($opacity * 100))
+}
+
+//@method-name:transform;
+//@desc:2D变换兼容webkit浏览器
+@mixin transform($transform) {
+    transform: #{$transform};
+    -webkit-transform: #{$transform};
+}
+//@method-name:transform;
+//@desc:2D过渡兼容webkit浏览器
+@mixin transition($transition) {
+    transition:#{$transition};
+    -webkit-transition:#{$transition};
+}
+//@method-name:linear-gradient
+//@desc:线性渐变
+@mixin linear-gradient($pos, $g1, $g2: null, $g3: null, $g4: null, $g5: null, $g6: null, $g7: null, $g8: null, $g9: null, $g10: null, $fallback: null) {
+    // Detect what type of value exists in $pos
+    $pos-type: type-of(nth($pos, 1));
+    $pos-spec: null;
+    $pos-degree: null;
+    // If $pos is missing from mixin, reassign vars and add default position
+    @if ($pos-type==color) or (nth($pos, 1)=="transparent") {
+        $g10: $g9;
+        $g9: $g8;
+        $g8: $g7;
+        $g7: $g6;
+        $g6: $g5;
+        $g5: $g4;
+        $g4: $g3;
+        $g3: $g2;
+        $g2: $g1;
+        $g1: $pos;
+        $pos: null;
+    }
+    @if $pos {
+        $positions: _linear-positions-parser($pos);
+        $pos-degree: nth($positions, 1);
+        $pos-spec: nth($positions, 2);
+    }
+    $full: $g1,
+    $g2,
+    $g3,
+    $g4,
+    $g5,
+    $g6,
+    $g7,
+    $g8,
+    $g9,
+    $g10;
+    // Set $g1 as the default fallback color
+    $fallback-color: nth($g1, 1);
+    // If $fallback is a color use that color as the fallback color
+    @if (type-of($fallback)==color) or ($fallback=="transparent") {
+        $fallback-color: $fallback;
+    }
+    background-color: $fallback-color;
+    background-image: -webkit-linear-gradient($pos-degree $full); // Safari 5.1+, Chrome
+    background-image: unquote("linear-gradient(#{$pos-spec}#{$full})");
+}

@@ -1,0 +1,50 @@
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+@import "../library/_common-modules";
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: rem(20px) rem(30px);
+  border-bottom: 1px solid #d7dbde;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none;
+
+  &-item {
+    flex-shrink: 1;
+    flex:1;
+    text-align: center;
+    &:nth-last-child(1){
+      text-align: right;
+    }
+    &:nth-child(1){
+      text-align: left;
+    }
+    & > a {
+      @include font-dpr(17px);
+      &.main-header-item-pre {
+        color: #333;
+      }
+      & > img {
+        width: rem(60px);
+        height: rem(60px);
+        vertical-align: top;
+      }
+    }
+    & > h3 {
+      @include font-dpr(17px);
+      font-weight: normal;
+      color: #222;
+    }
+  }
+}

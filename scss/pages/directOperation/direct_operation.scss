@@ -1,0 +1,338 @@
+@import "../../library/common-modules";
+@import "../../modules/_statusBar.scss";
+@import "../../modules/_searchCommTop";
+@import "../../modules/_searchResult";
+$main-color:#a9e9e4;
+
+
+//公共头部样式
+.commonHeader{
+  position: fixed;
+  width: 100%;
+  height: rem(88px);
+  background-color: #FFFFFF;
+  opacity: 1;
+  top:0;
+  z-index: 5;
+  border-bottom: rem(1px) solid #DFE2E7;
+  .commonHeaderLeft{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url(../../../image/arrow_back.png) no-repeat;
+      background-size: 100% 100%;
+      top: 50%;
+      margin-top: rem(-30px);
+      left: rem(10px);
+    }
+  }
+  .commonHeaderCentre{
+    width: 100%;
+    height: 100%;
+    p{
+      width: rem(375px);
+      height: rem(88px);
+      line-height: rem(88px);
+      margin: 0 auto;
+      color: #333333;
+      @include font-dpr(17px);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      text-align: center;
+    }
+  }
+  .commonHeaderRight{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url(../../../image/img00/patientConsult/share_hide.png) no-repeat center;
+      background-size: rem(35px);
+      top: 50%;
+      margin-top: rem(-30px);
+      right: rem(10px);
+    }
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.sticky-wrapper{
+  height: auto;
+  min-height: 100%;
+}
+
+.main-inner {
+  width: 100%;
+  height: 100%;
+  padding-bottom:rem(115px);
+}
+
+.main-inner-content {
+  overflow: hidden;
+  position: relative;
+}
+
+
+//患者咨询
+.add-patient-content {
+  padding: 0 rem(70px);
+  margin-top: rem(67px);
+  display: none;
+  &-title {
+    text-align: center;
+    & > h4 {
+      font-weight: normal;
+      color: #909090;
+      @include font-dpr(14px);
+      & > span {
+        vertical-align: middle;
+      }
+      &:before, &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        @include circle(rem(6px), #00D6C6);
+        margin: 0 rem(14px);
+      }
+    }
+  }
+  .add-patient-content-form{
+    margin-top:rem(76px);
+  }
+  &-item {
+    margin-bottom:rem(90px);
+    font-size: 0;
+    & > figcaption {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(100px);
+      @include font-dpr(15px);
+    }
+    & > .add-patient-input {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: rem(250px);
+      & > input {
+        width: 100%;
+        border: none;
+        background: none;
+        @include font-dpr(16px);
+        color: #555;
+      }
+      & > select{
+        min-height:rem(60px);
+        @include font-dpr(16px);
+        font-family:"microsoft yahei";
+        background: none;
+        border: none;
+        width: 100%;
+      }
+    }
+    .add-patient-sex-selector {
+      display: inline-block;
+      vertical-align: middle;
+      @include font-dpr(16px);
+      margin-right: rem(80px);
+      .add-patient-selector {
+        @include circle(rem(30px), #fff);
+        background: url("/image/img00/directOperation/select_no.png") no-repeat center;
+        background-size: 100% 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(20px);
+      }
+      & > span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &.on {
+        .add-patient-selector {
+          @include circle(rem(30px));
+          background: url("/image/img00/directOperation/select_yes.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+//患者疾病信息填写样式
+.disease-info{
+  display: none;
+
+  //资料上传列表
+  .disease-info-list{
+    padding: rem(120px) rem(48px) rem(0px);
+    
+    //background: #F9FBFB;
+    .disease-info-item{
+      display: table;
+      @include font-dpr(15px);
+      line-height: 1;
+      .disease-info-item-left{
+        display: table-cell;
+        width: rem(248px);
+        color: #222222;
+        .tips{
+          vertical-align: top;
+          display: inline-block;
+          width:rem(28px);
+          height:rem(28px);
+          background: url("/image/img00/healthInfo/symptom_prompt@2x.png") no-repeat center;
+          background-size: contain;
+          margin-left: rem(10px);
+        }
+      }
+      .disease-info-item-right{
+        display: table-cell;
+        width: rem(405px);
+        color: #CCCCCC;
+        position: absolute;
+        &.selected{
+          color: #555555;
+        }
+        &::after{
+          display: table;
+          content: '';
+          width: rem(12px);
+          height:rem(20px);
+          position: absolute;
+          top:rem(5px);
+          right: 0;
+          background: url("/image/img00/healthInfo/right_icon.png") no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+    .disease-info-item + .disease-info-item{
+      margin-top: rem(90px);
+    }
+  }
+
+  //提示
+  .disease-info-prompt{
+    margin: rem(80px) rem(48px);
+    padding: rem(30px);
+    background: #F9FBFB;
+    border-radius: 4px;
+    @include font-dpr(14px);
+    color: #AAAAAA;
+    line-height: 1.5;
+    .go-consult{
+      color: #00BEAF;
+      border-bottom: rem(1px) solid #00BEAF;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+
+}
+
+//底部按钮样式
+.add-patient-submit {
+  padding:0 rem(90px);
+  margin-top:rem(-115px);
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: flex;
+  .btn-primary {
+    width:rem(240px);
+  }
+  .cancel{
+    background-color: #DFDFDF;
+  }
+  .delete{
+    background:#ffffff;
+    color:#00d6c6;
+    border:1px solid #00d6c6;
+  }
+  &.off{
+    .btn-primary {
+      background-color: #DFDFDF;
+    }
+    .delete{
+      background:#ffffff;
+      border:1px solid #00d6c6;
+    }
+  }
+  &.none{
+    .btn-primary{
+      width: 100%;
+    }
+  }
+}
+
+.patient-list {
+  text-align: left;
+  font-size: 0;
+}
+
+.patient-list-item {
+  padding: 0 rem(32px);
+  box-sizing: border-box;
+  margin-top: rem(60px);
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  vertical-align: middle;
+  & > figcaption {
+    $h: rem(60px);
+    text-align: center;
+    @include font-dpr(14px);
+    min-width: rem(164px);
+    height: $h;
+    line-height: $h;
+    border: rem(2px) solid #DFDFDF;
+    border-radius: 100px;
+
+  }
+  &.on {
+    color: #fff;
+    & > figcaption {
+      background-color: #00d6c6;
+    }
+    &.patient-list-item-plus{
+      & > figcaption{
+        background: url("/image/img00/patientConsult/add people_yet2@2x.png") no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+  &.patient-list-item-plus{
+    & > figcaption{
+      border: none;
+      background: url("/image/img00/patientConsult/add people_nor2@2x.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+.add-patient-save {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  .btn-primary {
+    width: rem(240px);
+    border: 1px solid #00d6c6;
+    &.cancel {
+      color: #00d6c6;
+      background-color: #fff;
+    }
+  }
+  &.off{
+    .save{
+      background-color: #dfdfdf;
+    }
+  }
+}
+.horizontal-box{
+  padding:rem(100px) rem(130px);
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>健康信息</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/healthInfo/health_info.css">
+</head>
+<body>
+<section class="he-main">
+    <!--    <header class="commonHeader">
+            <figure class="commonHeaderLeft">
+                <a href=""></a>
+            </figure>
+            <figure class="commonHeaderCentre">
+                <p>健康信息</p>
+            </figure>
+            <figure class="commonHeaderRight">
+                <a href=""></a>
+            </figure>
+        </header>-->
+    <!--第一题-->
+    <section class="he-cureAsk">
+        <p class="he-cureAskQuestion">1、您之前看过医生吗？</p>
+        <div class="he-cureAskConfirm">
+            <div class="he-cureAskConfirmNo">
+                <div class="he-cureAskCheckBtn">
+
+                </div>
+                <span>没看过</span>
+            </div>
+            <div class="he-cureAskConfirmYes">
+                <div class="he-cureAskCheckBtn tc-selected">
+
+                </div>
+                <span>看过</span>
+            </div>
+        </div>
+        <ul class="he-cureAskList">
+            <li class="he-cureAskItem">
+                <span class="he-cureAskItemLeft">曾就诊医院</span>
+                <span class="he-cureAskItemRight" id="ev-go-to-select-hospital">请选择医院</span>
+            </li>
+            <li class="he-cureAskItem">
+                <span class="he-cureAskItemLeft">确诊疾病名称</span>
+                <span class="he-cureAskItemRight" id="ev-go-to-select-disease">请按照确诊病例单准确选择</span>
+            </li>
+            <li class="he-cureAskItem">
+                <span class="he-cureAskItemLeft">上传就诊资料<i class="tips"></i></span>
+                <span class="he-cureAskItemRight">片子、病例、检查报告等</span>
+            </li>
+        </ul>
+        <section class="he-cureAskSubmit">
+            <button class="usable">下一步</button>
+            <button class="unusable">下一步</button>
+        </section>
+    </section>
+    <!--第二题-->
+    <section class="he-cureHistory" style="display: none;">
+        <p class="he-cureHisQuestion">2、您有以下过往历史吗？若有，请详细填写，若无，可直接点击下一步</p>
+        <ul class="he-cureHisList">
+            <!--<li class="he-cureHisItem">-->
+            <!--<div class="he-cureHistoryItem-l">疾病史</div>-->
+            <!--<div class="he-cureHistoryItem-r">-->
+            <!--<span>无</span><span>冠心病</span><span>糖尿病</span><span>肾衰</span><span>肝炎</span><span>结合</span><textarea></textarea></div></li>-->
+            <!--<li class="he-cureHisItem"><div class="he-cureHistoryItem-l">手术史</div><div class="he-cureHistoryItem-r"><span>无</span><span>冠心病</span><span>糖尿病</span><span>肾衰</span><span>肝炎</span><span>结合</span></div></li>-->
+            <!--<li class="he-cureHisItem"><div class="he-cureHistoryItem-l">药物史</div><div class="he-cureHistoryItem-r"><span>无</span><span>冠心病</span><span>糖尿病</span><span>肾衰</span><span>肝炎</span><span>结合</span></div></li>-->
+            <!--<li class="he-cureHisItem"><div class="he-cureHistoryItem-l">外伤史</div><div class="he-cureHistoryItem-r"><span>无</span><span>冠心病</span><span>糖尿病</span><span>肾衰</span><span>肝炎</span><span>结合</span></div></li>-->
+            <!--<li class="he-cureHisItem"><div class="he-cureHistoryItem-l">过敏史</div><div class="he-cureHistoryItem-r"><span>无</span><span>冠心病</span><span>糖尿病</span><span>肾衰</span><span>肝炎</span><span>结合</span></div></li>-->
+            <li class="he-cureHisItem">
+                <div class="he-cureHisItemTop">疾病史</div>
+                <div class="he-cureHisItemBottom">
+                    <span class="active">高血压</span>
+                    <span>肝炎</span>
+                    <span>高电压</span>
+                    <span>脑残</span>
+                    <span>其他</span>
+                    <span>高血压</span>
+                    <span>高血压</span>
+                </div>
+                <div class="he-cureHisItemInfo">
+                    <textarea>我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人</textarea>
+                </div>
+            </li>
+            <li class="he-cureHisItem">
+                <div class="he-cureHisItemTop">疾病史</div>
+                <div class="he-cureHisItemBottom">
+                    <span>高血压</span>
+                    <span>肝炎</span>
+                    <span>高电压</span>
+                    <span>脑残</span>
+                    <span>其他</span>
+                    <span>高血压</span>
+                    <span>高血压</span>
+                </div>
+                <div class="he-cureHisItemInfo">
+                    <textarea>我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人</textarea>
+                </div>
+            </li>
+            <li class="he-cureHisItem">
+                <div class="he-cureHisItemTop">疾病史</div>
+                <div class="he-cureHisItemBottom">
+                    <span>高血压</span>
+                    <span>肝炎</span>
+                    <span>高电压</span>
+                    <span>脑残</span>
+                    <span>其他</span>
+                    <span>高血压</span>
+                    <span>高血压</span>
+                </div>
+                <div class="he-cureHisItemInfo">
+                    <textarea>我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人</textarea>
+                </div>
+            </li>
+            <li class="he-cureHisItem">
+                <div class="he-cureHisItemTop">疾病史</div>
+                <div class="he-cureHisItemBottom">
+                    <span>高血压</span>
+                    <span>肝炎</span>
+                    <span>高电压</span>
+                    <span>脑残</span>
+                    <span>其他</span>
+                    <span>高血压</span>
+                    <span>高血压</span>
+                </div>
+                <div class="he-cureHisItemInfo">
+                    <textarea>我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人</textarea>
+                </div>
+            </li>
+            <li class="he-cureHisItem">
+                <div class="he-cureHisItemTop">疾病史</div>
+                <div class="he-cureHisItemBottom">
+                    <span>高血压</span>
+                    <span>肝炎</span>
+                    <span>高电压</span>
+                    <span>脑残</span>
+                    <span>其他</span>
+                    <span>高血压</span>
+                    <span>高血压</span>
+                </div>
+                <div class="he-cureHisItemInfo">
+                    <textarea>我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人</textarea>
+                </div>
+            </li>
+        </ul>
+        <div class="he-cureHistorySubmit">
+            <button class="previous">上一步</button>
+            <button class="next">下一步</button>
+        </div>
+    </section>
+    <!--第三题-->
+    <section class="he-perfectInfo" style="display: none;">
+        <p class="he-perfectInfoQuestion">3.为了方便患者就医，请您如实填写以下信息</p>
+        <ul class="he-perfectInfoList">
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">患者真实姓名</div>
+                <div class="he-cureHistoryItemRight"><input type="text" placeholder="马丁"></div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">证件类型</div>
+                <div class="he-cureHistoryItemRight"><input type="text" placeholder="身份证/军官证/护照"></div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">证件号码</div>
+                <div class="he-cureHistoryItemRight"><input type="number"></div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">联系电话</div>
+                <div class="he-cureHistoryItemRight"><input type="text"></div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">患者所在地</div>
+                <div class="he-cureHistoryItemRight"><input type="text"></div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">社保类型</div>
+                <div class="he-cureHistoryItemRight"><textarea type="text"
+                                                               placeholder="城镇职工 / 城镇居民 / 新农合 / 商业保险 / 无"></textarea>
+                </div>
+            </li>
+            <li class="he-perfectInfoItem">
+                <div class="he-cureHistoryItemLeft">社保所在地</div>
+                <div class="he-cureHistoryItemRight"><input type="text"></div>
+            </li>
+        </ul>
+        <div class="he-perfectInfoSubmit">
+            <button class="previous">上一步</button>
+            <button class="next">提交</button>
+        </div>
+    </section>
+</section>
+<aside class="searchTypeSelect">
+
+</aside>
+<script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/plugins/plugins.firstLetter.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/plugins/q.js"></script>
+<script src="/js/modules/module.search.input.js"></script>
+<script src="/js/modules/module.search.list.js"></script>
+<script>
+
+    /*    modules.searchList({
+     targetEle: "",
+     type: 1
+     })*/
+    $(function () {
+        Q.reg('index', function () {
+            console.log("进入主页...");
+        });
+        Q.reg('hospital', function () {
+            modules.searchList({
+                targetEle: $("#ev-go-to-select-hospital"),
+                type: "city",
+                level:"2",
+                finalLevel:"4",
+                noResultCallback:function () {
+                    console.log(2)
+                }
+            })
+        });
+        Q.reg('disease', function () {
+            modules.searchList({
+                targetEle: $("#ev-go-to-select-disease"),
+                type: "disease"
+            })
+        });
+        Q.go('index');
+        Q.init({
+            index: 'index'/* 首页地址 */,
+        });
+        $("#ev-go-to-select-hospital").on("click", function () {
+            Q.go('hospital', function () {
+
+            });
+        });
+        $("#ev-go-to-select-disease").on("click", function () {
+            Q.go('disease', function () {})
+        })
+    });
+</script>
+</body>
+</html>

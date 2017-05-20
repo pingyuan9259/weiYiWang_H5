@@ -1,0 +1,133 @@
+//  @component-name: layout 
+//  @desc: 布局技法
+//  Created by qiangkailiang on 2016/07/13
+//@charset 'UTF-8';
+  //@method-name:flex
+  //@desc:统一生成flex布局所需样式前缀，可选择是否进行居中
+  //      考虑目前flex兼容情况较复杂，故添加所有前缀，宁写多不写漏
+
+
+@mixin flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-direction($direction:null) {
+    $direction: "row" !default;
+    @if $direction=="row" {
+        -webkit-box-orient: horizontal;
+    }
+    @else if $direction=="column" {
+        -webkit-box-orient: vertical;
+    }
+    -webkit-flex-direction: #{$direction};
+    -moz-flex-direction: #{$direction};
+    -ms-flex-direction: #{$direction};
+    -o-flex-direction: #{$direction};
+    flex-direction: #{$direction};
+}
+
+@mixin justify-content($justify) {
+    -webkit-justify-content: #{$justify};
+    justify-content: #{$justify};
+    @if $justify==space-between {
+        -ms-flex-pack: justify;
+        -webkit-box-pack: justify;
+    }
+    @else {
+        -ms-flex-pack: #{$justify};
+        -webkit-box-pack: #{$justify};
+    }
+}
+
+@mixin align-items($align) {
+    -webkit-box-align: #{$align};
+    -webkit-align-items: #{$align};
+    -ms-flex-align: #{$align};
+    align-items: #{$align};
+}
+
+//@method-name:masker
+//@desc:全屏遮罩层
+//@param:$position 定位模式，absolute/fixed，默认absolute
+//       $opacity 背景透明度 默认0.5
+//       $z 层叠上下文等级 默认为2
+@mixin masker($position:null, $opacity:0.5, $z:2) {
+    $position: absolute !default;
+    $opacity: 0.5 !default;
+    $z: 2 !default;
+    position: $position;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, $opacity);
+    z-index: $z;
+}
+
+//@method-name:middle-unknown
+//@desc:绝对居中-高宽度未知
+//@param:$child 最邻近子元素的class，通常在该容器中仅有这一个子元素
+//       该参数若传入，则在父容器上调用本混合宏，将使用vertical-align对齐方式居中
+//       若该参数不传入，则在需要居中的子元素上调用混合宏，将使用CSS3进行定位。请注意兼容性
+@mixin middle-unknown($child:null) {
+    @if not $child {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    @else {
+        height: 100%;
+        text-align: center;
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        &>#{$child} {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+//@method-name:middle-known
+//@desc:绝对居中-高宽度均已知
+//@param:$w/$h 容器宽/高度
+@mixin middle-known($w, $h) {
+    width: $w;
+    height: $h;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -$w/2;
+    margin-top: -$h/2;
+}
+
+//@method-name:btn-color
+//@desc:按钮颜色修饰
+//@param:$bgColor 按钮背景色
+//       $textColor 按钮文本色
+@mixin btn-color($bgColor:#e6e6e6, $textColor:#333) {
+    color: $textColor;
+    background-color: $bgColor;
+    border: 1px solid darken($bgColor, 5%);
+    border-color: lighten($bgColor, 2%) darken($bgColor, 5%) darken($bgColor, 5%) lighten($bgColor, 2%);
+    &:hover {
+        background-color: darken($bgColor, 5%);
+        color: $textColor;
+    }
+}
+
+//@method-name:two-border
+//@desc:二层边框
+//由内向外声明边框的宽度与颜色
+@mixin two-border($width1, $color1, $width2, $color2) {
+    border: $width1 solid $color1;
+    box-shadow: 0 0 0 $width2 $color2;
+}

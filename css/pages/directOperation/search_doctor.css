@@ -1,0 +1,118 @@
+.searchDoctorItem {
+  padding: 0.58667rem 0.53333rem 0.42667rem; }
+  .searchDoctorItem:last-child {
+    border-bottom: none; }
+  .searchDoctorItem:after {
+    content: '';
+    display: table;
+    clear: both; }
+  .searchDoctorItem .searchDoctor-l {
+    float: left;
+    width: 1.33333rem; }
+    .searchDoctorItem .searchDoctor-l img {
+      width: 1.01333rem;
+      height: 1.01333rem; }
+    .searchDoctorItem .searchDoctor-l a {
+      display: inline-block;
+      width: 1.01333rem;
+      height: 1.01333rem; }
+  .searchDoctorItem .searchDoctor-r {
+    float: right;
+    width: 7.6rem; }
+    .searchDoctorItem .searchDoctor-r .searchDoctorInfo {
+      display: table; }
+      .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorName {
+        font-size: 16px;
+        color: #222222;
+        display: table-cell;
+        padding-right: 0.37333rem;
+        max-width: 3.12rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+        [data-dpr="2"] .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorName {
+          font-size: 32px; }
+        [data-dpr="3"] .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorName {
+          font-size: 48px; }
+      .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorPost {
+        font-size: 14px;
+        display: table-cell;
+        color: #B3B9C4; }
+        [data-dpr="2"] .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorPost {
+          font-size: 28px; }
+        [data-dpr="3"] .searchDoctorItem .searchDoctor-r .searchDoctorInfo .searchDoctorPost {
+          font-size: 42px; }
+    .searchDoctorItem .searchDoctor-r .searchDoctorHospital {
+      font-size: 15px;
+      display: block;
+      margin-top: 0.13333rem;
+      color: #555555;
+      line-height: 1; }
+      [data-dpr="2"] .searchDoctorItem .searchDoctor-r .searchDoctorHospital {
+        font-size: 30px; }
+      [data-dpr="3"] .searchDoctorItem .searchDoctor-r .searchDoctorHospital {
+        font-size: 45px; }
+    .searchDoctorItem .searchDoctor-r .searchDoctorGood {
+      font-size: 15px;
+      color: #909090;
+      padding-top: 0.26667rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; }
+      [data-dpr="2"] .searchDoctorItem .searchDoctor-r .searchDoctorGood {
+        font-size: 30px; }
+      [data-dpr="3"] .searchDoctorItem .searchDoctor-r .searchDoctorGood {
+        font-size: 45px; }
+
+.searchFooter {
+  position: fixed;
+  height: 1.17333rem;
+  width: 10rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0 -0.01333rem 0.05333rem 0 #EFF1F6;
+  bottom: 0px; }
+  .searchFooter div {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    line-height: 1.17333rem;
+    text-align: center; }
+    .searchFooter div span {
+      font-size: 14px;
+      color: #546481; }
+      [data-dpr="2"] .searchFooter div span {
+        font-size: 28px; }
+      [data-dpr="3"] .searchFooter div span {
+        font-size: 42px; }
+      .searchFooter div span::after {
+        display: inline-block;
+        width: 0.10667rem;
+        height: 0.21333rem;
+        content: "";
+        margin-left: 0.16rem;
+        background: url("/image/img00/directOperation/search doctor_default@2x.png") no-repeat center;
+        background-size: contain; }
+    .searchFooter div.active span {
+      color: #00D6C6; }
+      .searchFooter div.active span::after {
+        background: url("/image/img00/directOperation/search doctor_activate@2x.png") no-repeat center;
+        background-size: contain; }
+  .searchFooter div + div {
+    position: relative; }
+    .searchFooter div + div::before {
+      display: inline-block;
+      content: "";
+      width: 0.01333rem;
+      height: 0.4rem;
+      background: #F3F6F7;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -0.2rem; }

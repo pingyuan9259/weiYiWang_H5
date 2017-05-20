@@ -1,0 +1,118 @@
+//  @component-name: utilities 
+//  @desc: 辅助工具
+@charset 'UTF-8';
+//@method-name:clearfix
+//@desc:清除浮动
+@mixin clearfix() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin cursor() {
+    cursor: pointer;
+}
+
+
+
+//@method-name:rem
+//@desc:px-rem单位换算函数
+//	    默认换算比1:75，基于lib-flexible.js自适应库使用
+//		比例为设计图宽度十分之一，若有改动，请依照本函数格式重写，以免多次重设基础值而增大工作量
+@function rem($px, $base-font-size: 75px) {
+    @return ($px / $base-font-size) * 1rem;
+}
+
+//@method-name:font-dpr
+//@desc:基于lib-flexible.js自适应库设置段落字号
+//@param:$font-size 未缩放情况下段落字号（即从设计稿得来的字号大小
+@mixin font-dpr($font-size) {
+    font-size: $font-size;
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+//@method-name:hidpi
+//@desc:高清分辨率下样式变化
+
+//@param:清晰度比率，原则上等于DPR值
+@mixin hidpi($ratio:null) {
+    $ratio: 1.3 !default;;
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratio), only screen and (min--moz-device-pixel-ratio: $ratio), only screen and (-o-min-device-pixel-ratio: #{$ratio}/1), only screen and (min-resolution: round($ratio * 96dpi)), only screen and (min-resolution: $ratio * 1dppx) {
+        @content;
+    }
+}
+@mixin query($process:null){
+    $process:750px !default;
+    @media (max-width:$process){
+        @content;
+    }
+}
+//@method-name:_linear-positions-parser，_position-flipper
+//@desc:转换线性渐变中的方位描述字符串
+@function _linear-positions-parser($pos) {
+    $type: type-of(nth($pos, 1));
+    $spec: null;
+    $degree: null;
+    $side: null;
+    $corner: null;
+    $length: length($pos);
+    // Parse Side and corner positions
+    @if ($length > 1) {
+        @if nth($pos, 1)=="to" {
+            // Newer syntax
+            $side: nth($pos, 2);
+            @if $length==2 {
+                // eg. to top
+                // Swap for backwards compatibility
+                $degree: _position-flipper(nth($pos, 2));
+            }
+            @else if $length==3 {
+                // eg. to top left
+                $corner: nth($pos, 3);
+            }
+        }
+        @else if $length==2 {
+            // Older syntax ("top left")
+            $side: _position-flipper(nth($pos, 1));
+            $corner: _position-flipper(nth($pos, 2));
+        }
+        @if ("#{$side} #{$corner}"=="left top") or ("#{$side} #{$corner}"=="top left") {
+            $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+        }
+        @else if ("#{$side} #{$corner}"=="right top") or ("#{$side} #{$corner}"=="top right") {
+            $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+        }
+        @else if ("#{$side} #{$corner}"=="right bottom") or ("#{$side} #{$corner}"=="bottom right") {
+            $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+        }
+        @else if ("#{$side} #{$corner}"=="left bottom") or ("#{$side} #{$corner}"=="bottom left") {
+            $degree: _position-flipper(#{$side}) _position-flipper(#{$corner});
+        }
+        $spec: to $side $corner;
+    }
+    @else if $length==1 {
+        // Swap for backwards compatibility
+        @if $type==string {
+            $degree: $pos;
+            $spec: to _position-flipper($pos);
+        }
+        @else {
+            $degree: -270 - $pos; //rotate the gradient opposite from spec
+            $spec: $pos;
+        }
+    }
+    $degree: unquote($degree + ",");
+    $spec: unquote($spec + ",");
+    @return $degree $spec;
+}
+
+@function _position-flipper($pos) {
+    @return if($pos==left, right, null) if($pos==right, left, null) if($pos==top, bottom, null) if($pos==bottom, top, null);
+}

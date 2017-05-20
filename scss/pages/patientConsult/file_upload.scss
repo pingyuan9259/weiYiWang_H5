@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/**
+ * @name:资料上传
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/27
+ * @author: JuKun
+ */
+
+@import "../../modules/_mainHeader";
+
+.main-header.fileUpload{
+  display: flex;
+}
+.main-inner{
+  $colorTwo:#222222;
+  .tc-upLoadBox{
+    padding-top: rem(22px);
+    .tc-upFormBox{
+      overflow: hidden;
+      .tc-upLoadInput{
+
+      }
+    }
+    .tc-upLoadTitle{
+      padding:rem(30px) rem(48px) 0 rem(48px);
+      margin-bottom: rem(30px);
+      .tc-upLoadTitleName{
+        display: inline-block;
+        @include font-dpr(16px);
+        color: $colorTwo;
+
+      }
+      .tc-upLoadRightIcon{
+        float: right;
+        display: inline-block;
+        width: rem(26px);
+        height: rem(26px);
+        background: url("/image/img00/patientConsult/file_upload@2x.png");
+        background-size: 100% 100%;
+      }
+    }
+    .tc-upLoadItemBox{
+      display: none;
+      padding-left: rem(32px);
+      padding-right: rem(30px);
+      padding-bottom: rem(36px);
+      @include clearfix();
+      .tc-upLoadItemList{
+        position: relative;
+        width: rem(152px);
+        height: rem(152px);
+        float: left;
+        padding:rem(8px);
+        img{
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+        }
+        .tc-upLoadCover{
+          position: absolute;
+          display: inline-block;
+          top:0;
+          left: 0;
+          width: rem(152px);
+          height: rem(152px);
+          margin-top:rem(8px);
+          margin-left:rem(8px);
+          background-color: #000000;
+          opacity:0.63;
+          z-index: 0;
+        }
+        .tc-upLoadDel{
+          display: none;
+          position: absolute;
+          //display: inline-block;
+          width: rem(38px);
+          height: rem(38px);
+          top:rem(8px);
+          right: rem(8px);
+          background: url("/image/img00/patientConsult/symptom_photo_delete@2x.png") no-repeat center;
+          background-size: 100% 100%;
+          z-index: 1;
+        }
+        &.tc-upLoadAdd{
+          width: rem(150px);
+          height: rem(150px);
+          text-align: center;
+          position: relative;
+          a{
+            display: block;
+            height: 100%;
+            border:1px solid #cccccc;
+          }
+        }
+        .tc-upLoadAddMore{
+          display: inline-block;
+          width: 0;
+          height: 0;
+          //position: relative;
+          &:before{
+            display: inline-block;
+            content: '';
+            position: absolute;
+            width: rem(64px);
+            height:rem(2px);
+            background: #D8D8D8;
+            top: 50%;
+            left: 50%;
+            margin-left: rem(-32px);
+          }
+          &:after{
+            display: inline-block;
+            content: '';
+            position: absolute;
+            width: rem(2px);
+            height:rem(64px);
+            background: #D8D8D8;
+            top:50%;
+            margin-top: rem(-32px);
+          }
+        }
+        .tc-upLoading{
+          position: absolute;
+          width: rem(40px);
+          height: rem(40px);
+          top:rem(44px);
+          left: 50%;
+          margin-left: rem(-20px);
+          background: url("/image/img00/patientConsult/symptom_photo_loading@2x.png") no-repeat center;
+          background-size: 100% 100%;
+          animation: submitIng 1s linear infinite;
+          -webkit-animation: submitIng 1s linear infinite;
+          @keyframes submitIng {
+            0% {-webkit-transform:rotate(0deg);}
+            100% {-webkit-transform:rotate(360deg);}
+          }
+        }
+        .tc-upLoadAfresh{
+          position: absolute;
+          width: rem(40px);
+          height: rem(40px);
+          top:rem(44px);
+          left: 50%;
+          margin-left: rem(-20px);
+          background: url("/image/img00/patientConsult/symptom_refresh_loading@2x.png") no-repeat center;
+          background-size: 100% 100%;
+        }
+        .tc-upLoadAfreshText{
+          @include font-dpr(13px);
+          display: inline-block;
+          position: absolute;
+          left: 50%;
+          margin-left: rem(-76px);
+          bottom: rem(30px);
+          color: #ffffff;
+          width: rem(152px);
+          text-align: center;
+          z-index: 1;
+        }
+        .ev-fileUpRefresh{
+          position: absolute;
+          display: inline-block;
+          top:0;
+          left: 0;
+          width: rem(152px);
+          height: rem(152px);
+          margin-top:rem(8px);
+          margin-left:rem(8px);
+          z-index: 2;
+        }
+      }
+      div{
+        margin-top: rem(8px);
+        margin-left: rem(8px);
+      }
+    }
+  }
+}

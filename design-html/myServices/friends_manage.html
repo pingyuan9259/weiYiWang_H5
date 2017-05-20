@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>亲友管理</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/myServices/my_service.css">
+    <link rel="stylesheet" href="/css/pages/directOperation/direct_operation.css">
+</head>
+<body>
+    <section class="sticky-wrapper">
+        <section class="main-inner">
+            <section class="main-inner-content">
+                <!--患者列表-->
+                <section class="patient-list">
+                <section class="patient-list-item patient-list-item-plus">
+                    <figcaption></figcaption>
+                </section>
+            </section>
+                <!--添加患者-->
+                <section class="add-patient-content" id="ev-add-patient">
+                    <nav class="add-patient-content-title">
+                        <h4><span>您为谁咨询</span></h4>
+                    </nav>
+                    <section class="add-patient-content-form">
+                        <article class="add-patient-content-item">
+                            <figcaption>患者姓名</figcaption>
+                            <figure class="add-patient-input">
+                                <input type="text" placeholder="自己/爸妈/爷奶等" id="ev-patient-name">
+                                <p class="error-text" style="font-size: 1rem;display: none;"></p>
+                            </figure>
+                        </article>
+                        <article class="add-patient-content-item">
+                            <figcaption>患者年龄</figcaption>
+                            <figure class="add-patient-input">
+                                <input type="text" placeholder="年龄" id="ev-patient-age">
+                                <p class="error-text" style="font-size: 1rem;display: none;"></p>
+                            </figure>
+                        </article>
+                        <article class="add-patient-content-item">
+                            <figcaption>患者性别</figcaption>
+                            <figure class="add-patient-input" id="ev-patient-sex">
+                                <section class="add-patient-sex-selector on" data-sex="1">
+                                    <i class="add-patient-selector"></i>
+                                    <span>男</span>
+                                </section>
+                                <section class="add-patient-sex-selector" data-sex="2">
+                                    <i class="add-patient-selector"></i>
+                                    <span>女</span>
+                                </section>
+                                <p class="error-text" style="font-size: 1rem;display: none;"></p>
+                            </figure>
+                        </article>
+                        <article class="add-patient-content-item">
+                            <figcaption>与患者关系</figcaption>
+                            <figure class="add-patient-input">
+                                <select id="ev-relationship">
+                                    <option value="0"></option>
+                                    <option value="1">父亲</option>
+                                    <option value="2">母亲</option>
+                                </select>
+                                <p class="error-text" style="font-size: 1rem;display: none;"></p>
+                            </figure>
+                        </article>
+                    </section>
+
+                </section>
+                <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+                <script src="/js/third-party/fastclick.js"></script>
+                <script src="/js/common.js"></script>
+                <script src="/js/modules/modules.patient.js"></script>
+                <script src="/js/scene/myServices/scene.myServices.friendsManage.js"></script>
+            </section>
+        </section>
+    </section>
+    <footer class="add-patient-submit" id="ev-delete-patient-btn" style="display: none;">
+        <button class="btn-primary delete">删除</button>
+        <button class="btn-primary save">保存</button>
+    </footer>
+    <footer class="add-patient-submit off" id="ev-add-patient-btn" style="display: none;">
+        <button class="btn-primary cancel">取消</button>
+        <button class="btn-primary save">保存</button>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/**
+ * @Desc：
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by qiangkailiang on 2017/2/23
+ */
+
+.symptom-desc-form {
+
+}
+
+.symptom-desc-title {
+  color: #222;
+  @include font-dpr(17px);
+  padding-left: rem(48px);
+  margin: rem(40px) 0;
+  & > h4 {
+    font-weight: normal;
+  }
+  .num {
+    padding-right: rem(8px);
+    em {
+      color: #00bedf;
+      font-style: normal;
+    }
+  }
+  .tips {
+    color: #7f858e;
+    @include font-dpr(15px)
+  }
+}
+
+.symptom-desc-item {
+  margin: rem(40px) 0;
+  box-sizing: border-box;
+  .icon-select {
+    margin-right: rem(24px);
+  }
+  &.selected.multiple-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_square_sel@1x.svg") no-repeat;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+
+  }
+  &.selected.single-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_circle_sel@1x.svg") no-repeat;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+  }
+  &.selected .symptom-desc-second-form {
+
+    display: block;
+  }
+  & > p {
+    color: #555;
+    padding-left: rem(84px);
+    @include font-dpr(15px);
+    @include clearfix();
+    .icon-arrow {
+      float: right;
+      background: url("/image/img00/patientConsult/symptom_pack_up@1x.svg") no-repeat;
+      @include square(rem(28px));
+      display: none;
+    }
+    & > span {
+      vertical-align: text-top;
+      display: inline-block;
+      width: 81%;
+      word-break: break-all;
+    }
+  }
+  &.selected > p {
+    color: #63C7BF;
+  }
+
+}
+
+.multiple-choices {
+  .icon-select {
+    display: inline-block;
+    @include square(rem(30px));
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: rem(4px);
+    vertical-align: text-bottom;
+
+  }
+
+}
+
+.single-choices {
+  .icon-select {
+    display: inline-block;
+    @include circle(rem(30px));
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    vertical-align: middle;
+  }
+}
+.symptom-desc-controller {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(100px);
+  margin-top: rem(-115px);
+  box-sizing: border-box;
+  & > a {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(240px);
+    &.unfinish{
+      background: #DFDFDF;
+    }
+  }
+}
+
+
+.symptom-desc-second-form {
+  overflow: hidden;
+  padding-left: rem(30px);
+  box-sizing: border-box;
+  background: #F9FBFB;
+  box-shadow: 0 rem(3px) rem(4px) 0 #F4F8FD;
+  display: none;
+  &:nth-child(2){
+    margin-top: rem(40px);
+  }
+  .symptom-desc-title {
+    @include font-dpr(13px);
+    color: #B3B9C4;
+  }
+  .symptom-desc-item {
+    p > span {
+      color: #777;
+      padding-right: rem(52px);
+    }
+  }
+}
+
+.icon-pain-detail {
+  &:after {
+    content: '';
+    display: inline-block;
+    @include square(rem(28px));
+    background: url("/image/img00/patientConsult/symptom_prompt@1x.svg") no-repeat;
+    vertical-align: middle;
+    margin-left: rem(19px);
+  }
+  & > em {
+    font-style: normal;
+    vertical-align: middle;
+  }
+
+}
+
+.symptom-detail-desc {
+  $w: rem(540px);
+  position: absolute;
+  width: $w;
+  left: 50%;
+  margin-left: -$w/2;
+  background: #FFFFFF;
+  border-radius: rem(12px);
+  padding: rem(60px) rem(50px);
+  box-shadow: 0 rem(2px) rem(10px) 0 rgba(0, 190, 175, 0.25);
+  box-sizing: border-box;
+  display: none;
+  & > figure {
+    width: 100%;
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  & > figcaption {
+    margin-top: rem(60px);
+    @include font-dpr(15px);
+    color: #555;
+  }
+}
+
+.symptom-desc-others-content{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  margin-left:rem(-30px);
+}

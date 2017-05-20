@@ -1,0 +1,505 @@
+@charset "UTF-8";
+/**
+ * @name:问诊单
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/3/6
+ * @author: 王井荣
+ */
+
+@import "../../modules/_mainHeader";
+@import "../../modules/_searchCommTop";
+@import "../../modules/_searchResult";
+@import "../patientConsult/symptom_desc";
+@import "../../library/common-modules";
+
+
+.main-inner{
+  .main-header{
+    display: flex;
+  }
+  //本页面地区本身的样式
+  .tc-baseInfo{
+    background-color: #ffffff;
+    width: 100%;
+    .tc-baseInfoList{
+      padding: rem(40px) 0 rem(45px);
+      .tc-baseInfoItem{
+        margin-bottom: rem(38px);
+        @include font-dpr(14px);
+        @include clearfix();
+        .tc-baseInfoItemLeft{
+          @include font-dpr(15px);
+          width:rem(240px);
+          padding:0 rem(48px);
+          float: left;
+          box-sizing: border-box;
+          color: #909090;
+          img{
+            display: block;
+            width: rem(120px);
+            height:rem(120px);
+            margin: 0 auto;
+          }
+          &.tc-caseAreaLeft{
+            padding-right: 0;
+            width: rem(296px);
+          }
+          &.tc-caseTimeLeft{
+            padding-right: 0;
+            width: rem(296px);
+          }
+        }
+        .tc-caseAreaRight{
+          display: inline-block;
+          @include font-dpr(16px);
+          color: #555555;
+          width: rem(454px);
+        }
+        .tc-caseTimeRight{
+          display: inline-block;
+          @include font-dpr(16px);
+          color: #555555;
+          width: rem(454px);
+        }
+        .tc-baseInfoItemRight{
+          width:rem(510px);
+          float: left;
+          position: relative;
+          color: #555555;
+          box-sizing: border-box;
+          padding-right: rem(35px);
+          @include font-dpr(16px);
+          .tc-baseInfoName{
+            @include font-dpr(17px);
+            display: block;
+            margin-top: rem(44px);
+          }
+          .tc-baseInfoDate{
+            display: block;
+            @include font-dpr(13px);
+            line-height: rem(26px);
+            color: #909090;
+            margin-top: rem(16px);
+          }
+          .tc-goCase{
+            @include font-dpr(14px);
+            position: absolute;
+            right: rem(70px);
+            top:rem(46px);
+            color: #78849C;
+            line-height: rem(28px);
+            &::after{
+              display:inline-block;
+              content: "";
+              width: rem(12px);
+              height: rem(20px);
+              position: absolute;
+              top:50%;
+              margin-top: rem(-14px);
+              right: rem(-27px);
+              background: url("/image/img00/patientConsult/arrow_right.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+
+        }
+        .tc-recommendUserMain{
+          line-height: rem(48px);
+        }
+      }
+      .tc-baseInfoItem:first-child{
+        margin-bottom: rem(53px);
+      }
+      .tc-baseInfoItem:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //基本信息以下模块样式
+  .tc-caseContentBox{
+    background-color: #F3F6F7;
+    .tc-baseInfo{
+      margin-bottom: rem(14px);
+    }
+    .tc-module{
+      margin: rem(14px) 0;
+      padding: 0 rem(40px);
+      background-color: #ffffff;
+      //border-radius: rem(20px);
+      .title{
+        padding-top: rem(50px);
+        h3{
+          position: relative;
+          font-weight: 100;
+          color: #555555;;
+          @include font-dpr(16px);
+          &:after{
+            position: absolute;
+            content: '';
+            width: rem(4px);
+            height:rem(24px);
+            left:rem(-8px);
+            top:50%;
+            margin-top: rem(-12px);
+            background-color: #4CD3C6;
+          }
+        }
+      }
+      .tc-recommendRightComm{
+        @include font-dpr(14px);
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+        width: rem(200px);
+        text-align: right;
+        color: #9798A6;
+        padding-right: rem(24px);
+        &:after{
+          position: absolute;
+          content: '';
+          top: 50%;
+          right: 0;
+          margin-top: rem(-12px);
+          display: inline-block;
+          width: rem(12px);
+          height: rem(20px);
+          background: url("/image/img00/patientConsult/suggestion_enter@2x.png");
+          background-size: 100% 100%;
+          vertical-align: middle;
+        }
+      }
+      .tc-caseDescribeList{
+        padding-top: rem(10px);
+        padding-bottom: rem(44px);
+        .tc-caseDescribeItem{
+          padding:rem(38px) 0;
+          .tc-caseDescribeItemLeft{
+            display: inline-block;
+            width: rem(188px);
+            @include font-dpr(15px);
+            color: #909090;
+            padding-right: rem(68px);
+          }
+          .tc-caseDescribeItemRight{
+            position: relative;
+            display: inline-block;
+            @include font-dpr(16px);
+            width: rem(412px);
+            color: #555;
+            vertical-align: top;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:after{
+              display: inline-block;
+              position: absolute;
+              content: '';
+              width: rem(20px);
+              height: rem(20px);
+              background: url("/image/img00/recoveryReport/suggestion_enter@2x.png");
+              background-size: 100% 100%;
+              right: 0;
+              top:50%;
+              margin-top: rem(-8px);
+            }
+          }
+          .tc-noRevice{
+            &:after{
+              display: inline-block;
+              position: absolute;
+              content: '';
+              width: rem(8px);
+              height: rem(16px);
+              background: url("");
+              background-size: 100% 100%;
+              right: 0;
+              top:50%;
+              margin-top: rem(-8px);
+            }
+          }
+        }
+      }
+      //输入框
+      .tc-caseOtherBox{
+        text-align: center;
+        padding:rem(40px);
+        margin-top: rem(60px);
+        background-color: #F9FBFB;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;;
+        .tc-caseDesOther{
+          width: rem(592px);
+          border-style: none;
+          background-color: #F9FBFB;
+        }
+      }
+    }
+    .tc-comment{
+      padding-bottom:rem(60px);
+    }
+    .submit_symptom_box{
+      padding:rem(60px) 0;
+      .submit_symptom{
+        display:block;
+        width:rem(570px);
+        line-height:rem(72px);
+        text-align:center;
+        color:#FFF;
+        background:#00d6c6;
+        margin:0 auto;
+        border-radius: 100px;
+        @include font-dpr(16px)
+      }
+    }
+  }
+}
+.au-main{
+  min-height: 100%;
+  height: auto;
+  //position: relative;
+  box-sizing: border-box;
+  padding-bottom: rem(184px);
+  .au-infoBox{
+    //第六题样式
+    .au-cureHisList{
+      padding-top: rem(52px);
+      li+li{
+        margin-top: rem(72px);
+      }
+      .au-cureHisItem{
+        .au-cureHisItemTop{
+          color: #222222;
+          @include font-dpr(16px);
+          line-height: 1;
+          padding: 0 rem(48px);
+        }
+        .au-cureHisItemBottom{
+          padding: 0 rem(48px);
+          @include clearfix();
+          font-size: 0;
+          span{
+            //box-sizing: border-box;
+            border: rem(1px) solid #BDBDBD;
+            border-radius: 100px;
+            display: table;
+            float: left;
+            margin-right: rem(18px);
+            margin-top:rem(32px);
+            @include font-dpr(14px);
+            color: #808080;
+            padding: rem(10px) rem(22px);
+            line-height: 1;
+            &.selected{
+              color: #5BD7CF;
+              border: rem(1px) solid #5BD7CF;
+              background: #E4FDFC;
+            }
+          }
+        }
+        .au-cureHisItemInfo{
+          display: none;
+          width: 100%;
+          height: rem(284px);
+          box-sizing: border-box;
+          margin-top:  rem(46px);
+          background-color: #F9FBFB;
+          padding: rem(40px) rem(48px);
+          textarea{
+            width: 100%;
+            height: 100%;
+            border: none;
+            text-align: justify;
+            @include font-dpr(15px);
+            color: #222;
+            line-height: 1.5;
+            background-color: #F9FBFB;
+          }
+        }
+      }
+    }
+
+    //第七题样式
+    .au-perfectInfoList{
+      padding-top: rem(52px);
+      .au-perfectInfoItem{
+        padding: 0 rem(48px);
+        display: table;
+        height: rem(120px);
+        @include font-dpr(15px);
+        .au-perfectInfoItemLeft{
+          display: table-cell;
+          width:rem(248px);
+          color: #222;
+          vertical-align:top;
+
+        }
+        .au-perfectInfoItemRight{
+          display: table-cell;
+          width: rem(405px);
+          color: #CCCCCC;
+          position: relative;
+          .fontGray{
+            color:#ccc;
+          }
+          .ev-change-city{
+            color:#222;
+            &:after{
+              display: inline-block;
+              position: absolute;
+              content: '';
+              width: 0.26667rem;
+              height: 0.26667rem;
+              background: url(/image/img00/recoveryReport/suggestion_enter@2x.png);
+              background-size: 100% 100%;
+              right: 0;
+              top: 10%;
+            }
+          }
+          &.hasSelect{
+            span.show{
+              position: absolute;
+              z-index: 1;
+              &.selected{
+                color: #555555;
+              }
+            }
+            select{
+              position: absolute;
+              z-index: 2;
+              opacity: 0;
+              display: block;
+              height: 50%;
+              width: 100%;
+            }
+          }
+        }
+        .au-perfectInfoItemTop{
+
+        }
+        .au-perfectInfoItemBottom{
+          margin-top: rem(38px);
+          margin-bottom: rem(50px);
+          background-color: #F9FBFB;
+          width: rem(654px);
+          height: rem(276px);
+          box-sizing: border-box;
+          padding: rem(40px);
+          textarea{
+            display: block;
+            height: 100%;
+            background-color: #F9FBFB;
+          }
+        }
+        input,textarea,span{
+          border: none;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.symptom-desc-title {
+
+  color: #222;
+  @include font-dpr(17px);
+  padding: 0 rem(48px);
+  //line-height: 1;
+  & > h4 {
+    font-weight: normal;
+  }
+  .num {
+    padding-right: rem(8px);
+    em {
+      color: #00bedf;
+      font-style: normal;
+    }
+  }
+  .tips {
+    color: #7f858e;
+    @include font-dpr(15px);
+  }
+}
+.symptom-desc-item {
+  &.multiple-choices{
+    margin: rem(40px) 0;
+    box-sizing: border-box;
+  }
+  &.single-choices{
+    margin: rem(40px) 0;
+    box-sizing: border-box;
+  }
+  .icon-select {
+    margin-right: rem(24px);
+  }
+  &.selected.multiple-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_square_sel@1x.svg") no-repeat center;
+        background-size: contain;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+
+  }
+  &.selected.single-choices {
+    & > p {
+      .icon-select {
+        background: url("/image/img00/patientConsult/symptom_circle_sel@1x.svg") no-repeat center;
+        background-size: contain;
+      }
+      .icon-arrow {
+        display: block;
+      }
+    }
+  }
+  &.selected .symptom-desc-second-form {
+
+    display: block;
+  }
+  & > p {
+    color: #555;
+    padding-left: rem(84px);
+    @include font-dpr(15px);
+    @include clearfix();
+    .icon-arrow {
+      float: right;
+      background: url("/image/img00/patientConsult/symptom_pack_up@1x.svg") no-repeat;
+      @include square(rem(28px));
+      display: none;
+    }
+    & > span {
+      vertical-align: text-top;
+      display: inline-block;
+      width: 81%;
+      word-break: break-all;
+    }
+  }
+  &.selected > p {
+    color: #63C7BF;
+  }
+
+}
+//选择列表弹层
+#ev-choiceList{
+  position:relative;
+  left:0;
+  top:0;
+  width:100%;
+  z-index: 1;
+  margin-top:0;
+  background:#fff;
+}
+section.symptom-list{
+  padding-bottom:0;
+}
+.symptom-desc-controller .disabled{
+  background:#ccc;
+}

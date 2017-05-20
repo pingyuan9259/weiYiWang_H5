@@ -1,0 +1,72 @@
+/**
+ * @Desc：直约手术状态条
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by lichenyang on 2017/2/28
+ */
+
+$main-color:#a9e9e4;
+.statusBar{
+  font-size: 0px;
+  text-align: center;
+  padding-top: rem(32px);
+  dl{
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    &:nth-child(1){
+      color: #00BEAF;
+      dt{
+        background: url("/image/img00/directOperation/status_one.png") no-repeat center;
+        background-size: contain;
+      }
+    }
+    &:nth-child(2){
+      color: #E5E5E5;
+      dt{
+        background: url("/image/img00/directOperation/status_two.png") no-repeat center;
+        background-size: contain;
+      }
+    }
+    dt{
+      height: rem(26px);
+    }
+    dd{
+      padding-top: rem(12px);
+      @include font-dpr(12px);
+      line-height: 1;
+    }
+  }
+  dl:not(.statusBarOne){
+    &::before{
+      display: inline-block;
+      content: '';
+      width: rem(224px);
+      height:rem(1px);
+      border-top: rem(1px) solid #8A8A8C;
+      position: absolute;
+      left: rem(-200px);
+      top:rem(13px);
+    }
+    margin-left: rem(177px);
+  }
+  dl.finish{
+    color: #00BEAF;
+    dt{
+      background: url("/image/img00/directOperation/status_finish.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+  .statusBarTwo.current{
+    color: #00BEAF;
+    dt{
+      background: url("/image/img00/directOperation/status_two_current.png") no-repeat center;
+      background-size: contain;
+    }
+  }
+  dl.finish + dl::before{
+    border-top: rem(1px) solid $main-color;
+  }
+}

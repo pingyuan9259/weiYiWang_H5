@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ * @name:头部搜索选择公共样式
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/24
+ * @Dev: JuKun
+ */
+@import "../library/_common-modules";
+@import "_mainHeader";
+
+//搜索头部样式
+.tc-mainInner{
+  .tc-searchCommFixedTop{
+    position: fixed;
+    //top:rem(101px);
+    width: 100%;
+  }
+  .tc-searchCommTop{
+    padding: rem(20px);
+    background-color: #F3F6F7;
+    position: relative;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .tc-searchCommInput{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      @include font-dpr(15px);
+      color: #555555;
+      width:100%;
+      height: rem(58px);
+      padding-left: rem(60px);
+      margin:0 auto;
+      outline: none;
+      border-style: none;
+      -webkit-border-radius: rem(8px);
+      -moz-border-radius: rem(8px);
+      border-radius: rem(8px);
+    }
+    .tc-searchBtnPic{
+      display: inline-block;
+      width: rem(30px);
+      height: rem(30px);
+      background: url("/image/img00/patientConsult/inquire_search@2x.png");
+      background-size:100% 100%;
+      position: absolute;
+      left: rem(40px);
+      top: 50%;
+      margin-top: rem(-15px);
+    }
+  }
+}

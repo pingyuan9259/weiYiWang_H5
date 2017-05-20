@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "../../modules/_mainHeader";
+/**
+ * @name:处置建议和患教文章
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/3/6
+ * @author: 王井荣
+ */
+
+
+.tc-articleDetails{
+  padding:0 rem(40px);
+  background:#FFF;
+  .tc-articlTitle{
+    padding:rem(54px) 0 rem(40px) 0;
+    @include font-dpr(20px);
+    color: #222222;
+    font-weight:normal;
+  }
+  .tc-articlOrigin{
+    padding-top:rem(30px);
+    @include font-dpr(14px);
+    color: #979AA6;
+    span{
+      &:first-child{
+        margin-right:rem(20px);
+      }
+    }
+    &:before{
+      display:block;
+      width:rem(36px);
+      height:1px;
+      border-top:1px solid #ccc;
+    }
+  }
+  .tc-articleMain>p{
+    padding-top:rem(56px);
+    color:#444;
+    @include font-dpr(16px);
+    line-height:rem(46px);
+  }
+  .tc-articleMain>figure{
+    padding-top:rem(56px);
+    img{
+      display:block;
+      width:100%;
+      height:rem(340px);
+    }
+    figcaption{
+      margin-top:rem(24px);
+      color:#aaa;
+      text-align:center;
+      @include font-dpr(13px);
+    }
+  }
+}
+//分享
+.tc-share{
+  padding:rem(80px) rem(40px) 0 rem(40px);
+  .tc-shareTitle{
+    font-weight:normal;
+    text-align: center;
+    span{
+      display:inline-block;
+      &:nth-child(1),&:nth-child(3){
+        width:26%;
+        height:rem(8px);
+        border-top:1px solid #dfdfdf;
+      }
+      &:nth-child(2){
+        width:48%;
+        @include font-dpr(12px);
+        color:#aaa;
+      }
+    }
+  }
+  .tc-shareMain{
+    padding:rem(60px) 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    li{
+      flex:1 1 auto;
+      img{
+        display:block;
+        width:rem(72px);
+        height:rem(72px);
+        margin:0 auto;
+      }
+      span{
+        display:block;
+        padding-top:rem(28px);
+        @include font-dpr(13px);
+        color:#909090;
+        text-align: center;
+      }
+    }
+  }
+}

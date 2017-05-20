@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择部位</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="../../js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/pages/patientConsult/select_parts.css">
+
+</head>
+<body>
+<section class="main-inner">
+    <header class="main-header">
+        <figure class="main-header-item">
+            <a href="">
+                <img src="../../image/arrow_back.png" alt="">
+            </a>
+        </figure>
+        <figure class="main-header-item doctor-name">
+            <h3>选择部位</h3>
+        </figure>
+        <figure class="main-header-item">
+        </figure>
+    </header>
+    <header class="patient-consult-rate">
+        <figure class="patient-consult-rate-item complete">
+            <span>1</span>
+        </figure>
+        <figure class="patient-consult-rate-item on">
+            <span>2</span>
+        </figure>
+        <figure class="patient-consult-rate-item">
+            <span>3</span>
+        </figure>
+    </header>
+    <section class="main-inner-content">
+        <section class="body-picture">
+            <figure class="body-picture-content">
+                <section class="pain-point-box">
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                    <div class="pain-point"></div>
+                </section>
+            </figure>
+        </section>
+        <button class="body-picture-overturn" data-dir="front"></button>
+    </section>
+
+</section>
+<figure class="symptom-tips top-tips">
+    <span>您哪里不舒服？</span>
+</figure>
+<script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/modules/modules.symptom.select.js"></script>
+<script>
+    $(function () {
+        $(".symptom-tips").addClass("on");
+        setTimeout(function () {
+            $(".symptom-tips").removeClass("on");
+        }, 3000);
+
+        $(".pain-point").on("click", function () {
+            $(this).addClass("on").siblings().removeClass("on");
+
+        });
+        modules.symptom_select.render("woman");
+/*        common.btnBox({
+            title:"请再确认一下不适部位",
+            btn: [
+                {
+                    className: "btn-hollow",
+                    id: "",
+                    content: "左侧不是"
+                },
+                {
+                    className: "btn-hollow",
+                    id: "",
+                    content: "234"
+                },{
+                    className: "btn-hollow",
+                    id: "",
+                    content: "123"
+                },
+
+            ]
+        })*/
+    });
+</script>
+</body>
+</html>

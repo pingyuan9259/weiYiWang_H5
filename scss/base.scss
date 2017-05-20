@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+
+@import "library/_common-modules";
+@include normalize(mobile);
+
+@import "modules/_modalBox";
+@import "modules/_buttonModule";
+@import "modules/_loadingStatus";
+button,input,textarea{
+  outline: medium;
+  font-family:"microsoft yahei";
+  resize:none;
+}
+.main-inner-content{
+  height: 100%;
+  border: 1px solid transparent;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+    </script>
+    <title>选择医院</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/patientConsult/search_doctor.css">
+</head>
+
+<body>
+<section class="tc-mainInner tc-searchMain">
+    <!-- start头部信息 -->
+    <header class="main-header">
+        <figure class="main-header-item">
+            <a href="">
+                <img src="../../image/arrow_back.png" alt="">
+            </a>
+            <span class="tc-searchBackBtn">返回</span>
+        </figure>
+        <figure class="main-header-item">
+            <h3>选择医院</h3>
+        </figure>
+        <figure class="main-header-item">
+            <a href="javascript:void(0)" class="main-header-item-pre"></a>
+        </figure>
+    </header>
+    <!--start搜索公共头部-->
+   <section class="tc-searchCommFixedTop" id="tc-searchHospitalTop">
+       <div class="tc-searchCommTop">
+           <i class="tc-searchBtnPic"></i><input class="tc-searchCommInput" type="text" placeholder="请填写医院的名称">
+       </div>
+   </section>
+    <!--end搜索公共头部-->
+
+    <!--start搜索医院列表-->
+    <section class="tc-searchContentInner" id="tc-searchHospitalBox">
+        <div class="tc-searchDocArea">
+            <i class="tc-searchDocAreaLeft"></i><span class="tc-searchAreaName">北京市</span>
+        </div>
+        <ul class="tc-searchListBox" id="tc-searchHospitalList">
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem selected">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+            <li class="tc-searchDocListItem">北京</li>
+        </ul>
+    </section>
+
+    <!--start搜索公共底部-->
+    <section class="tc-searchCommFixedBottom" id="tc-searchHospital">
+        <span class="tc-searchNoResult">未找到相关结果</span><span class="tc-searchAddBtn">添加医院</span>
+    </section>
+
+    <!--start搜索未找到相关结果-->
+    <section class="tc-searchCommNoResult" id="tc-searchHospitalNo">
+        <span class="tc-searchNoResultText">未找到相关结果</span>
+    </section>
+
+    <!--start手动添加医院-->
+    <section class="tc-searchAddBySelf" id="tc-searchAddHospital">
+        <div class="tc-searchAddTextArea">
+            <textarea name="hospital" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="tc-searchAddHosBtn">
+            <span>保存</span>
+        </div>
+    </section>
+</section>
+
+
+<script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<!--<script src="/js/plugins/firstLetter.js"></script>-->
+<!--<script src="/js/scene/patientConsult/scene.parientConsult.searchCountry.js"></script>-->
+
+</body>
+
+</html>

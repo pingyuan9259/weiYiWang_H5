@@ -1,0 +1,692 @@
+@charset "UTF-8";
+/**
+ * @Desc：直约手术状态条
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by lichenyang on 2017/2/28
+ */
+.statusBar {
+  font-size: 0px;
+  text-align: center;
+  padding-top: 0.42667rem; }
+  .statusBar dl {
+    position: relative;
+    display: inline-block;
+    line-height: 1; }
+    .statusBar dl:nth-child(1) {
+      color: #00BEAF; }
+      .statusBar dl:nth-child(1) dt {
+        background: url("/image/img00/directOperation/status_one.png") no-repeat center;
+        background-size: contain; }
+    .statusBar dl:nth-child(2) {
+      color: #E5E5E5; }
+      .statusBar dl:nth-child(2) dt {
+        background: url("/image/img00/directOperation/status_two.png") no-repeat center;
+        background-size: contain; }
+    .statusBar dl dt {
+      height: 0.34667rem; }
+    .statusBar dl dd {
+      padding-top: 0.16rem;
+      font-size: 12px;
+      line-height: 1; }
+      [data-dpr="2"] .statusBar dl dd {
+        font-size: 24px; }
+      [data-dpr="3"] .statusBar dl dd {
+        font-size: 36px; }
+  .statusBar dl:not(.statusBarOne) {
+    margin-left: 2.36rem; }
+    .statusBar dl:not(.statusBarOne)::before {
+      display: inline-block;
+      content: '';
+      width: 2.98667rem;
+      height: 0.01333rem;
+      border-top: 0.01333rem solid #8A8A8C;
+      position: absolute;
+      left: -2.66667rem;
+      top: 0.17333rem; }
+  .statusBar dl.finish {
+    color: #00BEAF; }
+    .statusBar dl.finish dt {
+      background: url("/image/img00/directOperation/status_finish.png") no-repeat center;
+      background-size: contain; }
+  .statusBar .statusBarTwo.current {
+    color: #00BEAF; }
+    .statusBar .statusBarTwo.current dt {
+      background: url("/image/img00/directOperation/status_two_current.png") no-repeat center;
+      background-size: contain; }
+  .statusBar dl.finish + dl::before {
+    border-top: 0.01333rem solid #a9e9e4; }
+
+/**
+ * @name:头部搜索选择公共样式
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/24
+ * @Dev: JuKun
+ */
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+.tc-mainInner .tc-searchCommFixedTop {
+  position: fixed;
+  width: 100%; }
+
+.tc-mainInner .tc-searchCommTop {
+  padding: 0.26667rem;
+  background-color: #F3F6F7;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+  .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #555555;
+    width: 100%;
+    height: 0.77333rem;
+    padding-left: 0.8rem;
+    margin: 0 auto;
+    outline: none;
+    border-style: none;
+    border-radius: 0.10667rem; }
+    [data-dpr="2"] .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+      font-size: 30px; }
+    [data-dpr="3"] .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+      font-size: 45px; }
+  .tc-mainInner .tc-searchCommTop .tc-searchBtnPic {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: url("/image/img00/patientConsult/inquire_search@2x.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0.53333rem;
+    top: 50%;
+    margin-top: -0.2rem; }
+
+/**
+* @Desc：
+* @Usage:
+* @Notify：
+* @Depend：
+*
+* Created by jukun on 2017/3/2
+*/
+.search-box {
+  overflow: hidden;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #fff; }
+  .search-box.show {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+
+.tc-searchMain {
+  margin-top: 1.3rem;
+  height: 100%;
+  overflow: auto; }
+  .tc-searchMain .main-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0; }
+    .tc-searchMain .main-header .tc-searchBackBtn {
+      font-size: 16px;
+      line-height: 0.8rem;
+      color: #000; }
+      [data-dpr="2"] .tc-searchMain .main-header .tc-searchBackBtn {
+        font-size: 32px; }
+      [data-dpr="3"] .tc-searchMain .main-header .tc-searchBackBtn {
+        font-size: 48px; }
+  .tc-searchMain .tc-searchContentInner .tc-searchDocArea {
+    padding: 0.16rem 0.53333rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #DFDFDF;
+    width: 100%;
+    background: #FFF; }
+    .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchDocAreaLeft {
+      display: inline-block;
+      width: 0.13333rem;
+      height: 0.24rem;
+      background: url("/image/img00/patientConsult/searchAreaLeft.png");
+      background-size: 100% 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+      font-size: 13px;
+      color: #909090;
+      padding-left: 0.13333rem; }
+      [data-dpr="2"] .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+        font-size: 26px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+        font-size: 39px; }
+      .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName.tc-selectIllnessName {
+        padding-left: 0; }
+  .tc-searchMain .tc-searchContentInner .searchResultTitle {
+    font-size: 14px;
+    color: #555555;
+    background: #F9FBFC;
+    padding: 0.13333rem 0 0.16rem 0.53333rem; }
+    [data-dpr="2"] .tc-searchMain .tc-searchContentInner .searchResultTitle {
+      font-size: 28px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchContentInner .searchResultTitle {
+      font-size: 42px; }
+  .tc-searchMain .tc-searchContentInner .searchResultItem {
+    font-size: 16px;
+    color: #222222;
+    display: block;
+    padding: 0.32rem 0.53333rem;
+    line-height: 0.42667rem; }
+    [data-dpr="2"] .tc-searchMain .tc-searchContentInner .searchResultItem {
+      font-size: 32px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchContentInner .searchResultItem {
+      font-size: 48px; }
+    .tc-searchMain .tc-searchContentInner .searchResultItem.selected {
+      background-color: #F9FBFB; }
+    .tc-searchMain .tc-searchContentInner .searchResultItem > em {
+      color: #00BEAF;
+      font-style: normal; }
+  .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness {
+    max-height: 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness .tc-searchDocKeyWord {
+      max-height: 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness .tc-searchDocListItem {
+      max-height: 100%; }
+  .tc-searchMain .tc-searchCommFixedBottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 1.30667rem;
+    background-color: #ffffff;
+    border-top: 1px solid #DFDFDF;
+    text-align: center;
+    font-size: 13px; }
+    [data-dpr="2"] .tc-searchMain .tc-searchCommFixedBottom {
+      font-size: 26px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchCommFixedBottom {
+      font-size: 39px; }
+    .tc-searchMain .tc-searchCommFixedBottom .tc-searchNoResult {
+      display: inline-block;
+      color: #B3B9C4; }
+    .tc-searchMain .tc-searchCommFixedBottom .tc-searchAddBtn {
+      display: inline-block;
+      color: #00BEAF;
+      padding: 0.16rem 0.24rem;
+      border-radius: 100px;
+      border: 1px solid #00BEAF;
+      margin: 0.32rem 0 0.32rem 0.16rem;
+      vertical-align: middle; }
+  .tc-searchMain .tc-searchCommNoResult {
+    text-align: center;
+    padding-top: 0.8rem; }
+    .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+      display: inline-block;
+      font-size: 15px;
+      color: #909090;
+      padding-top: 1.06667rem; }
+      [data-dpr="2"] .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+        font-size: 30px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+        font-size: 45px; }
+  .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+    font-size: 16px;
+    width: 8.90667rem;
+    height: 2.66667rem;
+    color: #555555;
+    padding: 0.53333rem;
+    background-color: #F9FBFB;
+    border-style: none;
+    line-height: 0.42667rem;
+    box-shadow: inset 0px -3px 4px 0 #F4F8FD; }
+    [data-dpr="2"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+      font-size: 32px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+      font-size: 48px; }
+  .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn {
+    padding-top: 1.33333rem; }
+    .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+      font-size: 16px;
+      color: #ffffff;
+      display: block;
+      width: 7.6rem;
+      height: 0.96rem;
+      line-height: 0.96rem;
+      text-align: center;
+      background-color: #00D6C6;
+      border-radius: 100px;
+      margin: 0 auto; }
+      [data-dpr="2"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+        font-size: 32px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+        font-size: 48px; }
+
+.searchTypeSelect {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 3rem;
+  padding: 0.13333rem 0 0.06667rem 0; }
+
+.searchTypeSelectItem {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  position: relative;
+  background-color: #f4f4f4;
+  padding-left: 0.13333rem;
+  padding-right: 0.13333rem;
+  border-right: 0.26667rem solid transparent;
+  border-left: 2rem solid transparent;
+  background-clip: padding-box; }
+  [data-dpr="2"] .searchTypeSelectItem {
+    font-size: 26px; }
+  [data-dpr="3"] .searchTypeSelectItem {
+    font-size: 39px; }
+  .searchTypeSelectItem:before {
+    content: attr(data-toolTips);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -1.86667rem;
+    top: 55%;
+    width: 1.38667rem;
+    margin-top: -0.42667rem;
+    height: 0.82667rem;
+    line-height: 0.82667rem;
+    background: transparent url("/images/img50/pages/discover/tips_bg.png") center center no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3598db; }
+    [data-dpr="2"] .searchTypeSelectItem:before {
+      font-size: 40px; }
+    [data-dpr="3"] .searchTypeSelectItem:before {
+      font-size: 60px; }
+
+.searchTypeSelectItem.selected {
+  color: #3598db; }
+  .searchTypeSelectItem.selected:before {
+    visibility: visible;
+    opacity: 1; }
+
+.commonHeader {
+  position: fixed;
+  width: 100%;
+  height: 1.17333rem;
+  background-color: #FFFFFF;
+  opacity: 1;
+  top: 0;
+  z-index: 5;
+  border-bottom: 0.01333rem solid #DFE2E7; }
+  .commonHeader .commonHeaderLeft a {
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url(../../../image/arrow_back.png) no-repeat;
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -0.4rem;
+    left: 0.13333rem; }
+  .commonHeader .commonHeaderCentre {
+    width: 100%;
+    height: 100%; }
+    .commonHeader .commonHeaderCentre p {
+      width: 5rem;
+      height: 1.17333rem;
+      line-height: 1.17333rem;
+      margin: 0 auto;
+      color: #333333;
+      font-size: 17px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center; }
+      [data-dpr="2"] .commonHeader .commonHeaderCentre p {
+        font-size: 34px; }
+      [data-dpr="3"] .commonHeader .commonHeaderCentre p {
+        font-size: 51px; }
+  .commonHeader .commonHeaderRight a {
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url(../../../image/img00/patientConsult/share_hide.png) no-repeat center;
+    background-size: 0.46667rem;
+    top: 50%;
+    margin-top: -0.4rem;
+    right: 0.13333rem; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.sticky-wrapper {
+  height: auto;
+  min-height: 100%; }
+
+.main-inner {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 1.53333rem; }
+
+.main-inner-content {
+  overflow: hidden;
+  position: relative; }
+
+.add-patient-content {
+  padding: 0 0.93333rem;
+  margin-top: 0.89333rem;
+  display: none; }
+  .add-patient-content-title {
+    text-align: center; }
+    .add-patient-content-title > h4 {
+      font-weight: normal;
+      color: #909090;
+      font-size: 14px; }
+      [data-dpr="2"] .add-patient-content-title > h4 {
+        font-size: 28px; }
+      [data-dpr="3"] .add-patient-content-title > h4 {
+        font-size: 42px; }
+      .add-patient-content-title > h4 > span {
+        vertical-align: middle; }
+      .add-patient-content-title > h4:before, .add-patient-content-title > h4:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.08rem;
+        height: 0.08rem;
+        border-radius: 50%;
+        background-color: #00D6C6;
+        margin: 0 0.18667rem; }
+  .add-patient-content .add-patient-content-form {
+    margin-top: 1.01333rem; }
+  .add-patient-content-item {
+    margin-bottom: 1.2rem;
+    font-size: 0; }
+    .add-patient-content-item > figcaption {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1.33333rem;
+      font-size: 15px; }
+      [data-dpr="2"] .add-patient-content-item > figcaption {
+        font-size: 30px; }
+      [data-dpr="3"] .add-patient-content-item > figcaption {
+        font-size: 45px; }
+    .add-patient-content-item > .add-patient-input {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 3.33333rem; }
+      .add-patient-content-item > .add-patient-input > input {
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: 16px;
+        color: #555; }
+        [data-dpr="2"] .add-patient-content-item > .add-patient-input > input {
+          font-size: 32px; }
+        [data-dpr="3"] .add-patient-content-item > .add-patient-input > input {
+          font-size: 48px; }
+      .add-patient-content-item > .add-patient-input > select {
+        min-height: 0.8rem;
+        font-size: 16px;
+        font-family: "microsoft yahei";
+        background: none;
+        border: none;
+        width: 100%; }
+        [data-dpr="2"] .add-patient-content-item > .add-patient-input > select {
+          font-size: 32px; }
+        [data-dpr="3"] .add-patient-content-item > .add-patient-input > select {
+          font-size: 48px; }
+    .add-patient-content-item .add-patient-sex-selector {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 16px;
+      margin-right: 1.06667rem; }
+      [data-dpr="2"] .add-patient-content-item .add-patient-sex-selector {
+        font-size: 32px; }
+      [data-dpr="3"] .add-patient-content-item .add-patient-sex-selector {
+        font-size: 48px; }
+      .add-patient-content-item .add-patient-sex-selector .add-patient-selector {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        background-color: #fff;
+        background: url("/image/img00/directOperation/select_no.png") no-repeat center;
+        background-size: 100% 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.26667rem; }
+      .add-patient-content-item .add-patient-sex-selector > span {
+        display: inline-block;
+        vertical-align: middle; }
+      .add-patient-content-item .add-patient-sex-selector.on .add-patient-selector {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        background: url("/image/img00/directOperation/select_yes.png") no-repeat center;
+        background-size: 100% 100%; }
+
+.disease-info {
+  display: none; }
+  .disease-info .disease-info-list {
+    padding: 1.6rem 0.64rem 0rem; }
+    .disease-info .disease-info-list .disease-info-item {
+      display: table;
+      font-size: 15px;
+      line-height: 1; }
+      [data-dpr="2"] .disease-info .disease-info-list .disease-info-item {
+        font-size: 30px; }
+      [data-dpr="3"] .disease-info .disease-info-list .disease-info-item {
+        font-size: 45px; }
+      .disease-info .disease-info-list .disease-info-item .disease-info-item-left {
+        display: table-cell;
+        width: 3.30667rem;
+        color: #222222; }
+        .disease-info .disease-info-list .disease-info-item .disease-info-item-left .tips {
+          vertical-align: top;
+          display: inline-block;
+          width: 0.37333rem;
+          height: 0.37333rem;
+          background: url("/image/img00/healthInfo/symptom_prompt@2x.png") no-repeat center;
+          background-size: contain;
+          margin-left: 0.13333rem; }
+      .disease-info .disease-info-list .disease-info-item .disease-info-item-right {
+        display: table-cell;
+        width: 5.4rem;
+        color: #CCCCCC;
+        position: absolute; }
+        .disease-info .disease-info-list .disease-info-item .disease-info-item-right.selected {
+          color: #555555; }
+        .disease-info .disease-info-list .disease-info-item .disease-info-item-right::after {
+          display: table;
+          content: '';
+          width: 0.16rem;
+          height: 0.26667rem;
+          position: absolute;
+          top: 0.06667rem;
+          right: 0;
+          background: url("/image/img00/healthInfo/right_icon.png") no-repeat center;
+          background-size: contain; }
+    .disease-info .disease-info-list .disease-info-item + .disease-info-item {
+      margin-top: 1.2rem; }
+  .disease-info .disease-info-prompt {
+    margin: 1.06667rem 0.64rem;
+    padding: 0.4rem;
+    background: #F9FBFB;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #AAAAAA;
+    line-height: 1.5; }
+    [data-dpr="2"] .disease-info .disease-info-prompt {
+      font-size: 28px; }
+    [data-dpr="3"] .disease-info .disease-info-prompt {
+      font-size: 42px; }
+    .disease-info .disease-info-prompt .go-consult {
+      color: #00BEAF;
+      border-bottom: 0.01333rem solid #00BEAF;
+      line-height: 1;
+      display: inline-block; }
+
+.add-patient-submit {
+  padding: 0 1.2rem;
+  margin-top: -1.53333rem;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .add-patient-submit .btn-primary {
+    width: 3.2rem; }
+  .add-patient-submit .cancel {
+    background-color: #DFDFDF; }
+  .add-patient-submit .delete {
+    background: #ffffff;
+    color: #00d6c6;
+    border: 1px solid #00d6c6; }
+  .add-patient-submit.off .btn-primary {
+    background-color: #DFDFDF; }
+  .add-patient-submit.off .delete {
+    background: #ffffff;
+    border: 1px solid #00d6c6; }
+  .add-patient-submit.none .btn-primary {
+    width: 100%; }
+
+.patient-list {
+  text-align: left;
+  font-size: 0; }
+
+.patient-list-item {
+  padding: 0 0.42667rem;
+  box-sizing: border-box;
+  margin-top: 0.8rem;
+  display: inline-block;
+  width: 33.3%;
+  text-align: center;
+  vertical-align: middle; }
+  .patient-list-item > figcaption {
+    text-align: center;
+    font-size: 14px;
+    min-width: 2.18667rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border: 0.02667rem solid #DFDFDF;
+    border-radius: 100px; }
+    [data-dpr="2"] .patient-list-item > figcaption {
+      font-size: 28px; }
+    [data-dpr="3"] .patient-list-item > figcaption {
+      font-size: 42px; }
+  .patient-list-item.on {
+    color: #fff; }
+    .patient-list-item.on > figcaption {
+      background-color: #00d6c6; }
+    .patient-list-item.on.patient-list-item-plus > figcaption {
+      background: url("/image/img00/patientConsult/add people_yet2@2x.png") no-repeat;
+      background-size: 100% 100%; }
+  .patient-list-item.patient-list-item-plus > figcaption {
+    border: none;
+    background: url("/image/img00/patientConsult/add people_nor2@2x.png") no-repeat;
+    background-size: 100% 100%; }
+
+.add-patient-save {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .add-patient-save .btn-primary {
+    width: 3.2rem;
+    border: 1px solid #00d6c6; }
+    .add-patient-save .btn-primary.cancel {
+      color: #00d6c6;
+      background-color: #fff; }
+  .add-patient-save.off .save {
+    background-color: #dfdfdf; }
+
+.horizontal-box {
+  padding: 1.33333rem 1.73333rem; }

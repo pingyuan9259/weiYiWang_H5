@@ -1,0 +1,21 @@
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/14
+ * @author: qiangkailiang
+ */
+
+@charset "utf-8";
+@import "../../library/_common-modules";
+@import "../../modules/_mainHeader";
+@import "../../modules/_imStyle";
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.main-inner{
+  width: 100%;
+  height: 100%;
+}

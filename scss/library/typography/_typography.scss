@@ -1,0 +1,74 @@
+//  @component-name: typography 
+//  @desc: 文本排版样式类模块
+@charset 'UTF-8';
+//@method-name:ellipsis
+//@desc:文本截断，包含一行与多行形式
+//@param:$lineNum:截断行数
+@mixin ellipsis($lineNum:null) {
+    @if $lineNum {
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $lineNum;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    @else {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+//@method-name:unstyled-link
+//@desc:取消a标签行为样式
+@mixin unstyled-link() {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+    -webkit-tap-highlight-color: transparent;
+    outline: medium;
+    &:active,
+    &:focus,
+    &:hover{
+        outline: none;
+    }
+}
+
+//@method-name:placeholder
+//@desc:修饰各浏览器下placeholder的样式
+//      具体修饰内容自行设定
+@mixin placeholder() {
+    $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+    @each $i in $placeholders {
+        &:#{$i}-placeholder {
+            @content;
+        }
+    }
+}
+//@method-name:link-colors
+//@desc:设置a标签各状态的颜色
+//依照LVHA的顺序进行设置，其中必须设置正常状态下颜色
+@mixin link-colors($normal, $link: null, $visited: null, $hover: null, $active: null) {
+    color: $normal;
+    @if $link {
+        &:link {
+            color: $link;
+        }
+    }
+    @if $visited {
+        &:visited {
+            color: $visited;
+        }
+    }
+    @if $hover {
+        &:hover {
+            color: $hover;
+        }
+    }
+    @if $active {
+        &:active {
+            color: $active;
+        }
+    }
+}

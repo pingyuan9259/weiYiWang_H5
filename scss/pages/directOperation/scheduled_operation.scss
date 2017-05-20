@@ -1,0 +1,223 @@
+@import "../../base.scss";
+
+@import "../../modules/_statusBar.scss";
+@import "../../modules/_searchCommTop";
+@import "../../modules/_searchResult";
+$main-color:#5BD7CF;
+
+//公共头部样式
+.commonHeader{
+  position: fixed;
+  width: 100%;
+  height: rem(88px);
+  background-color: #FFFFFF;
+  opacity: 1;
+  top:0;
+  z-index: 5;
+  border-bottom: rem(1px) solid #DFE2E7;
+  .commonHeaderLeft{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url(../../../image/arrow_back.png) no-repeat;
+      background-size: 100% 100%;
+      top: 50%;
+      margin-top: rem(-30px);
+      left: rem(10px);
+    }
+  }
+  .commonHeaderCentre{
+    width: 100%;
+    height: 100%;
+    p{
+      width: rem(375px);
+      height: rem(88px);
+      line-height: rem(88px);
+      margin: 0 auto;
+      color: #333333;
+      @include font-dpr(17px);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      text-align: center;
+    }
+  }
+  .commonHeaderRight{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url(/image/img00/patientConsult/share_hide.png) no-repeat center;
+      background-size: rem(35px);
+      top: 50%;
+      margin-top: rem(-30px);
+      right: rem(10px);
+    }
+  }
+}
+
+html,body{
+  height: 100%;
+}
+
+
+.sc-main{
+  min-height: 100%;
+  position: relative;
+  .sc-infoBox{
+    //height:100%;
+
+    //min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: rem(202px);
+  }
+
+  //获取信息列表
+  .sc-infoList{
+    padding: rem(60px) rem(48px) rem(90px);
+    .sc-infoItem{
+      display: table;
+      @include font-dpr(15px);
+      line-height: 1;
+      .sc-infoItemLeft{
+        display: table-cell;
+        width: rem(248px);
+        color: #222222;
+      }
+      .sc-infoItemRight{
+        display: table-cell;
+        width: rem(405px);
+        color: #CCCCCC;
+        position: absolute;
+        .show{
+          display: inline-block;
+          width: rem(386px);
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+          &.selected{
+            color: #555555;
+          }
+        }
+        &.hasAfter::after{
+          display: table;
+          content: '';
+          width: rem(12px);
+          height:rem(20px);
+          position: absolute;
+          top:rem(5px);
+          right: 0;
+          background: url("/image/img00/healthInfo/right_icon.png") no-repeat center;
+          background-size: contain;
+        }
+        &.hasSelect{
+          position: relative;
+          span{
+            position: absolute;
+            z-index: 1;
+
+          }
+          select{
+            border: none;
+            outline: none;
+            appearance:none;
+            background-color: #ffffff;
+            display: block;
+            color:  #CCCCCC;
+            width: rem(405px);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+          }
+        }
+      }
+    }
+    .sc-infoItem + .sc-infoItem{
+      margin-top: rem(90px);
+    }
+  }
+
+  //询问是否看过列表
+  .sc-infoAskConfirm{
+    padding: 0 rem(48px) rem(44px);
+    .sc-infoAskTitle{
+      @include font-dpr(15px);
+      line-height: 1;
+      color: #222222;
+    }
+    .sc-infoAskConfirmList{
+      @include clearfix();
+      margin-top: rem(60px);
+      &.on{
+        .sc-infoAskConfirmIcon{
+          background: url("/image/img00/directOperation/select_yes.png") no-repeat center;
+          background-size: contain;
+        }
+        span{
+          color: #00BEAF;
+        }
+      }
+      .sc-infoAskConfirmIcon{
+        float: left;
+        width: rem(30px);
+        height:rem(30px);
+        @include circle(rem(30px), #fff);
+        background: url("/image/img00/directOperation/select_no.png") no-repeat center;
+        background-size: contain;
+      }
+      span{
+        float:left;
+        margin-left: rem(18px);
+        @include font-dpr(15px);
+        color: #555555;
+        letter-spacing: 0px;
+        line-height: 1;
+      }
+    }
+  }
+
+  //展示选择医生
+  .sc-selectDoctor{
+    margin:rem(0px) rem(48px) rem(0px);
+    padding: rem(40px) rem(34px) rem(70px);
+    position: relative;
+    background-color: #F9FBFB;
+    display: none;
+    @include font-dpr(13px);
+    border-radius: rem(10px);
+    p{
+      color: #909090;
+    }
+    .modify{
+      position: absolute;
+      right: rem(40px);
+      bottom:rem(40px);
+      color: #00BEAF;
+      line-height: 1;
+      border-bottom: rem(1px) solid #00BEAF;
+    }
+  }
+
+  // 提交按钮固定在底部
+  .sc-infoBtn{
+    position: absolute;
+    height: rem(152px);
+    bottom:rem(0px);
+    button{
+      width:rem(570px);
+      background-color: $main-color;
+      color: #ffffff;
+      height:rem(72px);
+      @include font-dpr(15px);
+      border-radius: rem(36px);
+      margin-left: rem(90px);
+    }
+    button[disabled] {
+      background-color: #DFDFDF;
+    }
+  }
+}

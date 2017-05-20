@@ -1,0 +1,333 @@
+@charset "UTF-8";
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+/**
+ * @name:头部搜索选择公共样式
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/24
+ * @Dev: JuKun
+ */
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+.tc-mainInner .tc-searchCommFixedTop {
+  position: fixed;
+  width: 100%; }
+
+.tc-mainInner .tc-searchCommTop {
+  padding: 0.26667rem;
+  background-color: #F3F6F7;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+  .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #555555;
+    width: 100%;
+    height: 0.77333rem;
+    padding-left: 0.8rem;
+    margin: 0 auto;
+    outline: none;
+    border-style: none;
+    border-radius: 0.10667rem; }
+    [data-dpr="2"] .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+      font-size: 30px; }
+    [data-dpr="3"] .tc-mainInner .tc-searchCommTop .tc-searchCommInput {
+      font-size: 45px; }
+  .tc-mainInner .tc-searchCommTop .tc-searchBtnPic {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: url("/image/img00/patientConsult/inquire_search@2x.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0.53333rem;
+    top: 50%;
+    margin-top: -0.2rem; }
+
+/**
+* @Desc：
+* @Usage:
+* @Notify：
+* @Depend：
+*
+* Created by jukun on 2017/3/2
+*/
+.search-box {
+  overflow: hidden;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #fff; }
+  .search-box.show {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+
+.tc-searchMain {
+  margin-top: 1.3rem;
+  height: 100%;
+  overflow: auto; }
+  .tc-searchMain .main-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0; }
+    .tc-searchMain .main-header .tc-searchBackBtn {
+      font-size: 16px;
+      line-height: 0.8rem;
+      color: #000; }
+      [data-dpr="2"] .tc-searchMain .main-header .tc-searchBackBtn {
+        font-size: 32px; }
+      [data-dpr="3"] .tc-searchMain .main-header .tc-searchBackBtn {
+        font-size: 48px; }
+  .tc-searchMain .tc-searchContentInner .tc-searchDocArea {
+    padding: 0.16rem 0.53333rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #DFDFDF;
+    width: 100%;
+    background: #FFF; }
+    .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchDocAreaLeft {
+      display: inline-block;
+      width: 0.13333rem;
+      height: 0.24rem;
+      background: url("/image/img00/patientConsult/searchAreaLeft.png");
+      background-size: 100% 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+      font-size: 13px;
+      color: #909090;
+      padding-left: 0.13333rem; }
+      [data-dpr="2"] .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+        font-size: 26px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName {
+        font-size: 39px; }
+      .tc-searchMain .tc-searchContentInner .tc-searchDocArea .tc-searchAreaName.tc-selectIllnessName {
+        padding-left: 0; }
+  .tc-searchMain .tc-searchContentInner .searchResultTitle {
+    font-size: 14px;
+    color: #555555;
+    background: #F9FBFC;
+    padding: 0.13333rem 0 0.16rem 0.53333rem; }
+    [data-dpr="2"] .tc-searchMain .tc-searchContentInner .searchResultTitle {
+      font-size: 28px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchContentInner .searchResultTitle {
+      font-size: 42px; }
+  .tc-searchMain .tc-searchContentInner .searchResultItem {
+    font-size: 16px;
+    color: #222222;
+    display: block;
+    padding: 0.32rem 0.53333rem;
+    line-height: 0.42667rem; }
+    [data-dpr="2"] .tc-searchMain .tc-searchContentInner .searchResultItem {
+      font-size: 32px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchContentInner .searchResultItem {
+      font-size: 48px; }
+    .tc-searchMain .tc-searchContentInner .searchResultItem.selected {
+      background-color: #F9FBFB; }
+    .tc-searchMain .tc-searchContentInner .searchResultItem > em {
+      color: #00BEAF;
+      font-style: normal; }
+  .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness {
+    max-height: 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness .tc-searchDocKeyWord {
+      max-height: 100%; }
+    .tc-searchMain .tc-searchContentInner .tc-searchListBoxIllness .tc-searchDocListItem {
+      max-height: 100%; }
+  .tc-searchMain .tc-searchCommFixedBottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    height: 1.30667rem;
+    background-color: #ffffff;
+    border-top: 1px solid #DFDFDF;
+    text-align: center;
+    font-size: 13px; }
+    [data-dpr="2"] .tc-searchMain .tc-searchCommFixedBottom {
+      font-size: 26px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchCommFixedBottom {
+      font-size: 39px; }
+    .tc-searchMain .tc-searchCommFixedBottom .tc-searchNoResult {
+      display: inline-block;
+      color: #B3B9C4; }
+    .tc-searchMain .tc-searchCommFixedBottom .tc-searchAddBtn {
+      display: inline-block;
+      color: #00BEAF;
+      padding: 0.16rem 0.24rem;
+      border-radius: 100px;
+      border: 1px solid #00BEAF;
+      margin: 0.32rem 0 0.32rem 0.16rem;
+      vertical-align: middle; }
+  .tc-searchMain .tc-searchCommNoResult {
+    text-align: center;
+    padding-top: 0.8rem; }
+    .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+      display: inline-block;
+      font-size: 15px;
+      color: #909090;
+      padding-top: 1.06667rem; }
+      [data-dpr="2"] .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+        font-size: 30px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchCommNoResult .tc-searchNoResultText {
+        font-size: 45px; }
+  .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+    font-size: 16px;
+    width: 8.90667rem;
+    height: 2.66667rem;
+    color: #555555;
+    padding: 0.53333rem;
+    background-color: #F9FBFB;
+    border-style: none;
+    line-height: 0.42667rem;
+    box-shadow: inset 0px -3px 4px 0 #F4F8FD; }
+    [data-dpr="2"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+      font-size: 32px; }
+    [data-dpr="3"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddTextArea textarea {
+      font-size: 48px; }
+  .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn {
+    padding-top: 1.33333rem; }
+    .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+      font-size: 16px;
+      color: #ffffff;
+      display: block;
+      width: 7.6rem;
+      height: 0.96rem;
+      line-height: 0.96rem;
+      text-align: center;
+      background-color: #00D6C6;
+      border-radius: 100px;
+      margin: 0 auto; }
+      [data-dpr="2"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+        font-size: 32px; }
+      [data-dpr="3"] .tc-searchMain .tc-searchAddBySelf .tc-searchAddHosBtn span {
+        font-size: 48px; }
+
+.searchTypeSelect {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 3rem;
+  padding: 0.13333rem 0 0.06667rem 0; }
+
+.searchTypeSelectItem {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  position: relative;
+  background-color: #f4f4f4;
+  padding-left: 0.13333rem;
+  padding-right: 0.13333rem;
+  border-right: 0.26667rem solid transparent;
+  border-left: 2rem solid transparent;
+  background-clip: padding-box; }
+  [data-dpr="2"] .searchTypeSelectItem {
+    font-size: 26px; }
+  [data-dpr="3"] .searchTypeSelectItem {
+    font-size: 39px; }
+  .searchTypeSelectItem:before {
+    content: attr(data-toolTips);
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -1.86667rem;
+    top: 55%;
+    width: 1.38667rem;
+    margin-top: -0.42667rem;
+    height: 0.82667rem;
+    line-height: 0.82667rem;
+    background: transparent url("/images/img50/pages/discover/tips_bg.png") center center no-repeat;
+    background-size: 100% 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: #3598db; }
+    [data-dpr="2"] .searchTypeSelectItem:before {
+      font-size: 40px; }
+    [data-dpr="3"] .searchTypeSelectItem:before {
+      font-size: 60px; }
+
+.searchTypeSelectItem.selected {
+  color: #3598db; }
+  .searchTypeSelectItem.selected:before {
+    visibility: visible;
+    opacity: 1; }

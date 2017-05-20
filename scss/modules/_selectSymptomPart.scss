@@ -1,0 +1,309 @@
+/**
+ * @Desc：
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by qiangkailiang on 2017/2/23
+ */
+
+.body-picture {
+  margin-top: rem(75px);
+  &-content {
+    text-align: center;
+    position: relative;
+    & > img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+}
+
+.body-picture-overturn {
+  @include square(rem(108px));
+  background: url("/image/img00/patientConsult/body_overturn@1x.svg") no-repeat;
+  position: absolute;
+  right: rem(44px);
+  bottom: rem(88px);
+}
+.body-picture-img{
+  display: none;
+}
+.pain-point-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pain-point {
+  @include circle(rem(87px), transparent);
+  position: absolute;
+  -webkit-appearance: none;
+
+}
+
+//男 正面
+.man-front {
+  .body-picture-content {
+    width: 100%;
+
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 3rem;
+      top: 2.2rem;
+    }
+    &:nth-child(2) {
+      left: 5.8rem;
+      top: 2.2rem;
+    }
+    &:nth-child(3) {
+      left: 3.6rem;
+      top: 5.4rem;
+    }
+    &:nth-child(4) {
+      left: 5.2rem;
+      top: 5.4rem;
+    }
+    &:nth-child(5) {
+      left: 1.8rem;
+      top: 5.4rem;
+    }
+    &:nth-child(6) {
+      left: 7.1rem;
+      top: 5.4rem;
+    }
+    &:nth-child(7) {
+      left: 3.8rem;
+      top: 8.6rem;
+    }
+    &:nth-child(8) {
+      left: 5.1rem;
+      top: 8.6rem;
+    }
+    &:nth-child(9) {
+      left: 3.8rem;
+      top: 11.7rem;
+    }
+    &:nth-child(10) {
+      left: 5rem;
+      top: 11.7rem;
+    }
+  }
+}
+
+//男 反面
+.man-back {
+  .body-picture-content {
+    width: 100%;
+
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 4.45rem;
+      top: 1.2rem;
+    }
+    &:nth-child(2) {
+      left: 4.45rem;
+      top: 3rem;
+    }
+    &:nth-child(3) {
+      left: 4.45rem;
+      top: 4.8rem;
+    }
+    &:nth-child(4) {
+      left: 2.4rem;
+      top: 3.8rem;
+    }
+    &:nth-child(5) {
+      left: 6.5rem;
+      top: 3.8rem;
+    }
+  }
+}
+
+//女正面
+.woman-front {
+  .body-picture-content {
+    width: 100%;
+
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 3.3rem;
+      top: 2.2rem;
+    }
+    &:nth-child(2) {
+      left: 5.5rem;
+      top: 2.2rem;
+    }
+    &:nth-child(3) {
+      left: 3.7rem;
+      top: 5.5rem;
+    }
+    &:nth-child(4) {
+      left: 5.2rem;
+      top: 5.5rem;
+    }
+    &:nth-child(5) {
+      left: 2rem;
+      top: 5.9rem;
+    }
+    &:nth-child(6) {
+      left: 6.8rem;
+      top: 5.9rem;
+    }
+    &:nth-child(7) {
+      left: 3.8rem;
+      top: 9.2rem;
+    }
+    &:nth-child(8) {
+      left: 5rem;
+      top: 9.2rem;
+    }
+    &:nth-child(9) {
+      left: 4rem;
+      top: 11.8rem;
+    }
+    &:nth-child(10) {
+      left: 4.8rem;
+      top: 11.8rem;
+    }
+  }
+}
+
+//女 反面
+.woman-back {
+  .body-picture-content {
+    width: 100%;
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 4.45rem;
+      top: 1.5rem;
+    }
+    &:nth-child(2) {
+      left: 4.45rem;
+      top: 3.1rem;
+    }
+    &:nth-child(3) {
+      left: 4.45rem;
+      top: 4.9rem;
+    }
+    &:nth-child(4) {
+      left: 2.8rem;
+      top: 4.1rem;
+    }
+    &:nth-child(5) {
+      left: 6.1rem;
+      top: 4.1rem;
+    }
+  }
+}
+//儿童 正面
+.kid-front {
+  margin-top: 3rem;
+  .body-picture-content {
+    width: 100%;
+
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 3.4rem;
+      top: 2.4rem;
+    }
+    &:nth-child(2) {
+      left: 5.4rem;
+      top: 2.4rem;
+    }
+    &:nth-child(3) {
+      left: 3.8rem;
+      top: 4.5rem;
+    }
+    &:nth-child(4) {
+      left: 5.1rem;
+      top: 4.5rem;
+    }
+    &:nth-child(5) {
+      left: 2.6rem;
+      top: 4.7rem;
+    }
+    &:nth-child(6) {
+      left: 6.2rem;
+      top: 4.7rem;
+    }
+    &:nth-child(7) {
+      left: 3.7rem;
+      top: 6.5rem;
+    }
+    &:nth-child(8) {
+      left: 5.2rem;
+      top: 6.5rem;
+    }
+    &:nth-child(9) {
+      left: 3.6rem;
+      top: 7.8rem;
+    }
+    &:nth-child(10) {
+      left: 5.3rem;
+      top: 7.8rem;
+    }
+  }
+}
+//儿童 反面
+.kid-back {
+  margin-top: 3rem;
+  .body-picture-content {
+    width: 100%;
+
+  }
+  .pain-point {
+    &.on {
+      background: transparent url("/image/img00/patientConsult/body_activation@2x.png") no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(1) {
+      left: 4.45rem;
+      top: 1.9rem;
+    }
+    &:nth-child(2) {
+      left: 4.45rem;
+      top: 3.1rem;
+    }
+    &:nth-child(3) {
+      left: 4.45rem;
+      top: 4.4rem;
+    }
+    &:nth-child(4) {
+      left: 3.1rem;
+      top: 3.6rem;
+    }
+    &:nth-child(5) {
+      left: 5.8rem;
+      top: 3.6rem;
+    }
+  }
+}

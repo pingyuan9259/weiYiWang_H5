@@ -1,0 +1,197 @@
+/**
+* @Desc：
+* @Usage:
+* @Notify：
+* @Depend：
+*
+* Created by qiangkailiang on 2017/3/1
+*/
+
+
+//聊天区
+.main-message {
+  background-color: #f4f5f7;
+  width: 100%;
+  height:93%;
+  overflow: auto;
+}
+
+.main-message-box {
+  margin: rem(35px) 0;
+  padding: 0 rem(20px);
+  box-sizing: border-box;
+  font-size: 0;
+  @include clearfix();
+  &-item {
+
+    & > .main-message-img {
+      display: inline-block;
+      vertical-align: top;
+      & > img {
+        width: rem(60px);
+        height: rem(60px);
+        vertical-align: top;
+        border-radius: 50%;
+
+      }
+    }
+    & > .main-message-content {
+      display: inline-block;
+      vertical-align: top;
+      max-width: rem(510px);
+      padding: rem(20px) rem(30px);
+      margin: 0 rem(30px);
+      border-radius: rem(21px);
+      @include font-dpr(15px)
+    }
+    &.others-message {
+      float: left;
+      & > .main-message-content {
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+        border-top-left-radius: 0;
+        & > p{
+          word-break: break-all;
+        }
+      }
+    }
+    &.my-message {
+      float: right;
+      & > .main-message-content {
+        display: inline-block;
+        vertical-align: top;
+        background-color: #01d1c2;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
+
+//输入区
+.main-input-box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: rem(20px) rem(40px);
+  background-color: #fff;
+  border-top: 1px solid #000;
+  & > * {
+    display: inline-block;
+    vertical-align: bottom;
+
+  }
+  .main-input-box-textarea-inner {
+    box-sizing: border-box;
+    width: rem(460px);
+    .main-input-box-textarea {
+      height: rem(40px);
+      border-radius: rem(5000px);
+      width: 100%;
+      padding-left: rem(20px);
+      padding-top: rem(10px);
+      @include font-dpr(14px);
+      background: #F3F6F7;
+      border: 0 solid #E8ECEF;
+    }
+  }
+
+  .main-input-box-send {
+    @include font-dpr(15px);
+    color: #B6B6B6;
+
+    
+  }
+  .main-input-box-plus {
+    @include font-dpr(16px);
+  }
+}
+//病例单
+.message-result{
+  display: inline-block;
+  vertical-align: middle;
+  margin:0 rem(30px);
+
+}
+.message-result-item{
+  width:rem(510px);
+  border-radius: rem(22px);
+  &-title{
+    background-color: #01d1c2;
+    @include font-dpr(12px);
+    padding:rem(10px) rem(32px);
+    border-top-left-radius: rem(21px);
+  }
+  &-message{
+    border:rem(1px) solid #01d1c2;
+    .message-result-item-img{
+      display: inline-block;
+      vertical-align: top;
+      padding:rem(28px) rem(20px);
+      background: #e5faf8;
+
+      & > img{
+        width:rem(80px);
+        height:rem(92px);
+        vertical-align: top;
+      }
+    }
+    & > figcaption{
+      display: inline-block;
+      vertical-align: top;
+      padding:rem(34px) rem(24px) ;
+      & > p{
+        font-size: 0;
+        color: #909090;
+        span{
+          margin-right:rem(12px);
+          @include font-dpr(12px);
+        }
+      }
+      & > h2{
+        @include font-dpr(14px);
+        color: #222;
+        font-weight: normal;
+        margin-bottom:rem(6px);
+      }
+    }
+  }
+}
+//初诊结果
+.diagnosed-record{
+  .message-result-item-title{
+    border-top-right-radius: rem(21px);
+    border-top-left-radius: 0;
+    background: #A6C6EE;
+  }
+  .message-result-item-message{
+    border:rem(1px) solid #96C0F3;
+  }
+}
+//发送手术预约
+.direct-operation-btn{
+  @include circle(rem(80px),rgba(0,214,198,0.70));
+  position: absolute;
+  bottom:rem(120px);
+  right: rem(40px);
+  border: 0 solid rgba(1,209,194,0.17);
+  box-shadow: 0 rem(2px) rem(10px) 0 rgba(76,211,198,0.25);
+  z-index: 1;
+}
+
+//测试用，接收反馈
+
+
+
+
+.icon-im-plus{
+  @include circle(rem(50px),transparent);
+  background: url("/image/img00/patientConsult/add people_nor@2x.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  background-size:100% 100%;
+}

@@ -1,0 +1,29 @@
+/**
+ * @Desc：
+ * @Usage:
+ * @Notify：
+ * @Depend：
+ *
+ * Created by qiangkailiang on 2017/2/26
+ */
+//顶部提示
+.top-tips {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: rem(80px);
+  line-height: rem(80px);
+  text-align: center;
+  @include font-dpr(16px);
+  background: rgba(0, 214, 198, 0.85);
+  z-index: 2;
+  color: #fff;
+  transition: all 0.2s linear;
+  transform: translateY(-100%);
+  opacity: 0;
+  &.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

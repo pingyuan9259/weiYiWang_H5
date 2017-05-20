@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>患者咨询</title>
+    <script src="../../js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="../../css/pages/patientConsult/patient_consult.css">
+</head>
+<body>
+    <section class="pat-main">
+    	<!--导航栏-->
+    	<section class="pat-navbar">
+    		<section class="pat-navbar-item active">基本信息</section>
+    		<section class="pat-navbar-item">选择部位</section>
+    		<section class="pat-navbar-item">症状描述</section>
+    	</section>
+    	<!--基本信息-->
+    	<section class="pat-basicInfo" style="display: none;">
+	    	<!--问诊人列表-->
+    		<ul class="pat-patientList">
+    			<li class="pat-patientListItem active">自己</li>
+    			<li class="pat-patientListItem">马力</li>
+    			<li class="pat-patientListItem">侯志勇</li>
+    			<li class="pat-patientListItem">王岩</li>
+    			<li class="pat-patientListItem">添加+</li>
+    		</ul>
+    		<!--添加我关心的人-->
+    		<section class="pat-basAddMyCare" style="display: none;">
+	    		<p class="pat-basAddText">添加我关心的人</p>
+	    		<section class="pat-basAddMyCareForm">
+		    		<form>
+		    			<div class="pat-basAddMyCareList">
+		    				<div class="pat-basAddMyCareItem">
+		    					<div class="pat-basAddMyCareItem-l">
+		    						姓名
+		    					</div>
+		    					<div class="pat-basAddMyCareItem-r">
+		    						<input type="text"/>
+		    					</div>
+		    				</div>
+		    				<div class="pat-basAddMyCareItem">
+		    					<div class="pat-basAddMyCareItem-l">
+		    						年龄
+		    					</div>
+		    					<div class="pat-basAddMyCareItem-r">
+		    						<input type="text"/>
+		    					</div>
+		    				</div>
+		    				<div class="pat-basAddMyCareItem">
+		    					<div class="pat-basAddMyCareItem-l">
+		    						性别
+		    					</div>
+		    					<div class="pat-basAddMyCareItem-r">
+		    						<input type="text"/>
+		    					</div>
+		    				</div>
+		    			</div>		
+		    		</form>
+	    		</section>
+	    		<section class="pat-basAddMyCareSubmit">
+	    			<button>确定</button>
+	    		</section>
+    		</section>
+    	</section>
+    	<!--选择部位-->
+		<section class="pat-selectPart">
+			
+		</section>
+		<!--症状描述-->
+		<section class="pat-symptomDescription">
+			<section class="pat-symConfirm" style="display: none;">
+				<h3 class="pat-symConfirmTitle">请确认您选择的不适部位</h3>
+				<ul class="pat-symConfirmList">
+					<li class="pat-symConfirmItem"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖内侧</span></label></li>
+					<li class="pat-symConfirmItem"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖内侧</span></label></li>
+					<li class="pat-symConfirmItem"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖外侧</span></label></li>
+					<li class="pat-symConfirmItem"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖外侧</span></label></li>
+				</ul>
+				<section class="pat-symConfirmSubmit">
+	    			<button class="confirm">确定</button>
+	    			<button class="return">返回</button>
+	    		</section>
+			</section>
+			<!--问题-->
+			<section class="pat-symQuestionSelectBox">
+				<section class="pat-symQuestionSelect">
+					<h3 class="pat-symConfirmTitle">1、请确认您该部位的不适感觉<span>(可多选)</span></h3>
+					<ul class="pat-symQuestionList">
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖内侧</span></label>
+							<ul class="pat-symQuestionListTwo">
+								<li class="pat-symQuestionItemTwo"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖内侧</span></label></li>
+								<li class="pat-symQuestionItemTwo"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖内侧</span></label></li>
+								<li class="pat-symQuestionItemTwo"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖外侧</span></label></li>
+								<li class="pat-symQuestionItemTwo"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖外侧</span></label></li>
+							</ul>
+						</li>
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖内侧</span></label></li>
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>右膝盖外侧</span></label></li>
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>左膝盖外侧</span></label></li>
+					</ul>
+				</section>
+				<section class="pat-symQuestionSelect">
+					<h3 class="pat-symConfirmTitle">您最明显的感觉是什么？</h3>
+					<ul class="pat-symQuestionList">
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>疼痛</span></label></li>
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>麻木</span></label></li>
+						<li class="pat-symQuestionItem"><label><input type="radio" name="partConfirm" value="" /><span>僵硬</span></label></li>
+					</ul>
+				</section>
+				<section class="pat-symQuestionSubmit">
+	    			<button class="previous">返回</button>
+	    			<button class="next">下一题</button>
+	    		</section>
+			</section>
+		</section>
+    </section>
+</body>
+</html>

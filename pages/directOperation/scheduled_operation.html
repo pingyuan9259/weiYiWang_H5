@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>直约手术</title>
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/pages/directOperation/scheduled_operation.css">
+</head>
+<body>
+    <section class="sc-main he-main">
+        <!--头部-->
+        <!--<header class="commonHeader">-->
+            <!--<figure class="commonHeaderLeft">-->
+                <!--<a href=""></a>-->
+            <!--</figure>-->
+            <!--<figure class="commonHeaderCentre">-->
+                <!--<p>直约手术</p>-->
+            <!--</figure>-->
+            <!--<figure class="commonHeaderRight">-->
+                <!--<a href=""></a>-->
+            <!--</figure>-->
+        <!--</header>-->
+        <section class="sc-infoBox">
+            <!--状态栏-->
+            <header class="statusBar">
+                <dl class="statusBarOne finish">
+                    <dt></dt>
+                    <dd>预约手术</dd>
+                </dl>
+                <dl class="statusBarTwo current">
+                    <dt></dt>
+                    <dd>为谁预约</dd>
+                </dl>
+            </header>
+            <!--问题列表-->
+            <ul class="sc-infoList">
+                <li class="sc-infoItem" data-type="operationName" data-required="1" >
+                    <div class="sc-infoItemLeft"><span id="ev-ill">手术名称</span></div>
+                    <div class="sc-infoItemRight hasAfter operationName"><span class="show selected" data-id="1">关节炎</span></div>
+                </li>
+                <li class="sc-infoItem" data-type="expectedTime" data-required="1">
+                    <div class="sc-infoItemLeft"><span>期望手术时间</span></div>
+                    <div class="sc-infoItemRight hasSelect">
+                        <span class="show">尽快</span>
+                        <select>
+                            <option value="" style="display: none"></option>
+                            <option value="尽快" data-id="0">尽快</option>
+                            <option value="一周内" data-id="1">一周内</option>
+                            <option value="一周内" data-id="2">一月内</option>
+                            <option value="一周内" data-id="3">一年内</option>
+                            <option value="两周内" data-id="4">一年以上</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="sc-infoItem" data-type="area">
+                    <div class="sc-infoItemLeft"><span id="ev-area">期望手术地区</span></div>
+                    <div class="sc-infoItemRight hasAfter operationArea"><span class="show">省、市、区/县</span></div>
+                </li>
+            </ul>
+            <!--询问是否看过医生-->
+            <div class="sc-infoAskConfirm">
+                <p class="sc-infoAskTitle">你有心仪的医生么？</p>
+                <div class="sc-infoAskConfirmList on">
+                    <span class="sc-infoAskConfirmIcon">
+                    </span>
+                    <span>没有</span>
+                </div>
+                <div class="sc-infoAskConfirmList sc-infoAskConfirmYes">
+                    <span class="sc-infoAskConfirmIcon">
+                    </span>
+                    <span>有</span>
+                </div>
+            </div>
+            <!--选择医生的框框-->
+            <div class="sc-selectDoctor" data-type="doctorId">
+                <p>您已经选择医生为:医医生为医生为医生为医生为医生为师医生为-张医生为<span class="doctorName show">强</span></p>
+                <span class="modify">点击修改</span>
+            </div>
+
+        </section>
+
+        <!--提交按钮-->
+        <section class="sc-infoBtn">
+            <button id="infoBtn" disabled="disabled">提交</button>
+        </section>
+    </section>
+    <aside class="searchTypeSelect"></aside>
+
+    <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugins/plugins.firstLetter.js"></script>
+    <script src="/js/plugins/q.js"></script>
+    <script src="/js/modules/module.search.input.js"></script>
+    <script src="/js/modules/module.search.list.js"></script>
+    <script src="/js/scene/directOperation/scene.directOperation.scheduledOperation.js"></script>
+</body>
+</html>

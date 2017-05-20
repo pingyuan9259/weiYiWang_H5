@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/**
+ * @name:问诊单
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/27
+ * @author: JuKun
+ */
+/**
+ * @name:公用页头
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/20
+ * @author: qiangkailiang
+ */
+.main-header {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.26667rem 0.4rem;
+  border-bottom: 1px solid #d7dbde;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 2;
+  display: none; }
+  .main-header-item {
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center; }
+    .main-header-item:nth-last-child(1) {
+      text-align: right; }
+    .main-header-item:nth-child(1) {
+      text-align: left; }
+    .main-header-item > a {
+      font-size: 17px; }
+      [data-dpr="2"] .main-header-item > a {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > a {
+        font-size: 51px; }
+      .main-header-item > a.main-header-item-pre {
+        color: #333; }
+      .main-header-item > a > img {
+        width: 0.8rem;
+        height: 0.8rem;
+        vertical-align: top; }
+    .main-header-item > h3 {
+      font-size: 17px;
+      font-weight: normal;
+      color: #222; }
+      [data-dpr="2"] .main-header-item > h3 {
+        font-size: 34px; }
+      [data-dpr="3"] .main-header-item > h3 {
+        font-size: 51px; }
+
+.main-inner .main-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.main-inner .tc-baseInfo {
+  background-color: #ffffff;
+  width: 100%; }
+  .main-inner .tc-baseInfo .tc-baseInfoList {
+    padding: 0.53333rem 0 0.6rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+      margin-bottom: 0.50667rem;
+      font-size: 14px; }
+      [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+        font-size: 28px; }
+      [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem {
+        font-size: 42px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:after {
+        content: '';
+        display: table;
+        clear: both; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+        font-size: 15px;
+        box-sizing: border-box;
+        width: 3.14667rem;
+        padding: 0 0 0 0.64rem;
+        float: left;
+        box-sizing: border-box;
+        color: #909090; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+          font-size: 30px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft {
+          font-size: 45px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemLeft img {
+          display: block;
+          width: 1.6rem;
+          height: 1.6rem; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+        display: inline-block;
+        font-size: 16px;
+        color: #555555;
+        width: 6.05333rem; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseAreaRight {
+          font-size: 48px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+        display: inline-block;
+        font-size: 16px;
+        color: #555555;
+        width: 6.05333rem; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-caseTimeRight {
+          font-size: 48px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+        width: 6.8rem;
+        float: left;
+        color: #222222;
+        box-sizing: border-box;
+        padding-right: 0.46667rem;
+        line-height: 1.6rem;
+        font-size: 16px; }
+        [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight {
+          font-size: 48px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+          font-size: 17px; }
+          [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+            font-size: 34px; }
+          [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoName {
+            font-size: 51px; }
+        .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoSex {
+          font-size: 17px;
+          margin-left: 0.26667rem; }
+          [data-dpr="2"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoSex {
+            font-size: 34px; }
+          [data-dpr="3"] .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-baseInfoItemRight .tc-baseInfoSex {
+            font-size: 51px; }
+      .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem .tc-recommendUserMain {
+        line-height: 0.64rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:first-child {
+      margin-bottom: 0.70667rem; }
+    .main-inner .tc-baseInfo .tc-baseInfoList .tc-baseInfoItem:last-child {
+      margin-bottom: 0; }
+
+.main-inner .tc-caseContentBox {
+  background-color: #F3F6F7; }
+  .main-inner .tc-caseContentBox .tc-baseInfo {
+    margin-bottom: 0.18667rem; }
+  .main-inner .tc-caseContentBox .tc-module {
+    margin: 0.18667rem 0;
+    background-color: #ffffff; }
+    .main-inner .tc-caseContentBox .tc-module .title {
+      padding: 0.69333rem 0 0 0.53333rem; }
+      .main-inner .tc-caseContentBox .tc-module .title h3 {
+        position: relative;
+        font-weight: 100;
+        color: #555555;
+        line-height: 1;
+        font-size: 16px; }
+        [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .title h3 {
+          font-size: 32px; }
+        [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .title h3 {
+          font-size: 48px; }
+        .main-inner .tc-caseContentBox .tc-module .title h3:before {
+          position: absolute;
+          content: '';
+          width: 0.05333rem;
+          height: 0.37333rem;
+          left: -0.16rem;
+          top: 50%;
+          margin-top: -0.18667rem;
+          background-color: #4CD3C6; }
+    .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList {
+      padding: 0.8rem 0.64rem 1.22667rem; }
+      .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem {
+        font-size: 0; }
+        .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+          display: inline-block;
+          width: 2.4rem;
+          font-size: 15px;
+          color: #909090;
+          padding-right: 0.85333rem; }
+          [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+            font-size: 30px; }
+          [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft {
+            font-size: 45px; }
+          .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft i {
+            display: inline-block;
+            color: #bdbdbd;
+            font-size: 14px; }
+            [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft i {
+              font-size: 28px; }
+            [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemLeft i {
+              font-size: 42px; }
+        .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+          position: relative;
+          display: inline-block;
+          font-size: 16px;
+          width: 5.41333rem;
+          color: #555555;
+          vertical-align: top;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+            font-size: 32px; }
+          [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight {
+            font-size: 48px; }
+          .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem .tc-caseDescribeItemRight.hasAfter::after {
+            display: inline-block;
+            content: '';
+            width: 0.16rem;
+            height: 0.26667rem;
+            background: url("/image/img00/directOperation/right_icon.png") no-repeat center;
+            background-size: contain;
+            position: absolute;
+            right: 0rem;
+            top: 50%;
+            margin-top: -0.13333rem; }
+      .main-inner .tc-caseContentBox .tc-module .tc-caseDescribeList .tc-caseDescribeItem + .tc-caseDescribeItem {
+        margin-top: 1.13333rem; }
+    .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseDesOther {
+      font-size: 14px;
+      color: #555555; }
+      [data-dpr="2"] .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseDesOther {
+        font-size: 28px; }
+      [data-dpr="3"] .main-inner .tc-caseContentBox .tc-module .tc-caseOtherBox .tc-caseDesOther {
+        font-size: 42px; }

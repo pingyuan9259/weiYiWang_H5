@@ -1,0 +1,604 @@
+@charset "UTF-8";
+@import "../../library/common-modules";
+$main-color:#5BD7CF;
+
+//公共头部样式
+.commonHeader{
+  position: fixed;
+  width: 100%;
+  height: rem(88px);
+  background-color: #FFFFFF;
+  opacity: 1;
+  top:0;
+  z-index: 5;
+  border-bottom: rem(1px) solid #DFE2E7;
+  .commonHeaderLeft{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url(../../../image/arrow_back.png) no-repeat;
+      background-size: 100% 100%;
+      top: 50%;
+      margin-top: rem(-30px);
+      left: rem(10px);
+    }
+  }
+  .commonHeaderCentre{
+    width: 100%;
+    height: 100%;
+    p{
+      width: rem(375px);
+      height: rem(88px);
+      line-height: rem(88px);
+      margin: 0 auto;
+      color: #333333;
+      @include font-dpr(17px);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      text-align: center;
+    }
+  }
+  .commonHeaderRight{
+    a{
+      display: block;
+      position: absolute;
+      width: rem(60px);
+      height: rem(60px);
+      background: url("/image/img00/patientConsult/share_hide.png") no-repeat center;
+      background-size: rem(35px);
+      top: 50%;
+      margin-top: rem(-30px);
+      right: rem(10px);
+    }
+  }
+}
+
+.tc-main{
+  padding-top: rem(88px);
+  width: 100%;
+  background-color: #F2F2F2;
+  //本页面公共的样式
+  .tc-module{
+    margin: rem(14px) 0;
+    padding: 0 rem(40px);
+    background-color: #ffffff;
+    //border-radius: rem(20px);
+    .title{
+      padding-top: rem(50px);
+      h3{
+        position: relative;
+        font-weight: 100;
+        color: #555555;;
+        @include font-dpr(16px);
+        &:after{
+          position: absolute;
+          content: '';
+          width: rem(4px);
+          height:rem(24px);
+          left:rem(-8px);
+          top:50%;
+          margin-top: rem(-12px);
+          background-color: #4CD3C6;
+        }
+      }
+    }
+    .tc-recommendRightComm{
+      @include font-dpr(14px);
+      position: absolute;
+      right: 0;
+      top:0;
+      display: block;
+      width: rem(200px);
+      text-align: right;
+      color: #9798A6;
+      padding-right: rem(24px);
+      &:after{
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: 0;
+        margin-top: rem(-10px);
+        display: inline-block;
+        width: rem(20px);
+        height: rem(20px);
+        background: url("/image/img00/patientConsult/suggestion_enter@2x.png");
+        background-size: 100% 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+  .tc-boxTitle{
+    @include font-dpr(13px);
+    padding: rem(20px);
+    color: #AAAAAA;
+    background-color: #F9FBFB;
+    border-radius: 12px;
+    margin-top: rem(40px);
+    .tc-surgeryCheck{
+      @include font-dpr(13px);
+      color: #00BEAF;
+    }
+  }
+  .tc-recommendLoadMoreBtn{
+    padding-bottom:rem(40px);
+    img{
+      display: block;
+      width: rem(26px);
+      height: rem(26px);
+      margin: 0 auto;
+    }
+  }
+  //本页面地区本身的样式
+  .tc-baseInfo{
+    background-color: #ffffff;
+    width: 100%;
+    .tc-baseInfoList{
+      padding: rem(40px) 0 rem(45px);
+      .tc-baseInfoItem{
+        margin-bottom: rem(38px);
+        @include font-dpr(14px);
+        @include clearfix();
+        .tc-baseInfoItemLeft{
+          @include font-dpr(15px);
+          width:rem(240px);
+          padding:0 rem(48px);
+          float: left;
+          box-sizing: border-box;
+          color: #909090;
+          img{
+            display: block;
+            width: rem(120px);
+            height:rem(120px);
+            margin: 0 auto;
+          }
+        }
+        .tc-baseInfoItemRight{
+          width:rem(510px);
+          float: left;
+          position: relative;
+          color: #555555;
+          box-sizing: border-box;
+          padding-right: rem(35px);
+          @include font-dpr(16px);
+          .tc-baseInfoName{
+            @include font-dpr(17px);
+            display: block;
+            line-height: rem(34px);
+            margin-top: rem(44px);
+          }
+          .tc-baseInfoDate{
+            display: block;
+            @include font-dpr(13px);
+            line-height: rem(26px);
+            color: #909090;
+            margin-top: rem(16px);
+          }
+          .tc-goCase{
+            @include font-dpr(14px);
+            position: absolute;
+            right: rem(70px);
+            top:rem(46px);
+            color: #78849C;
+            line-height: rem(28px);
+            &::after{
+              display:inline-block;
+              content: "";
+              width: rem(12px);
+              height: rem(20px);
+              position: absolute;
+              top:50%;
+              margin-top: rem(-12px);
+              right: rem(-27px);
+              background: url("/image/img00/patientConsult/arrow_right.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+        }
+        .tc-recommendUserMain{
+          line-height: rem(48px);
+        }
+      }
+      .tc-baseInfoItem:first-child{
+        margin-bottom: rem(53px);
+      }
+      .tc-baseInfoItem:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  //推荐医生
+  .tc-recommendDoctorBox{
+    .tc-recommendDoctorList{
+      .tc-recommendDoctorItem{
+        &:last-child{
+          border-bottom: none;
+        }
+        @include clearfix();
+        margin-top: rem(50px);
+        padding-bottom: rem(48px);
+        border-bottom: 1px solid #F3F6F7;
+        .tc-recommendReason{
+          position: relative;
+          @include font-dpr(15px);
+          line-height: rem(30px);
+          color: #555555;
+          margin-bottom: rem(48px);
+          padding-left: rem(30px);
+          &:before{
+            position: absolute;
+            content: '';
+            left: 0;
+            width: rem(22px);
+            height: rem(20px);
+            top:50%;
+            margin-top: rem(-10px);
+            background: url("/image/img00/recoveryReport/suggestion_reason@2x.png") no-repeat center;
+            background-size: 100% 100%;
+
+          }
+        }
+        .tc-recommendDoctor-l{
+          float: left;
+          width:rem(100px);
+          img{
+            width: rem(76px);
+            height: rem(76px);
+          }
+          a{
+            display: inline-block;
+            width: rem(76px);
+            height: rem(76px);
+          }
+        }
+        .tc-recommendDoctor-r{
+          float: right;
+          width: rem(570px);
+          .tc-recommendDoctorInfo{
+            .tc-recommendDoctorName{
+              @include font-dpr(16px);
+              color: #222222;
+              padding-right: rem(28px);
+            }
+            .tc-recommendDoctorPost{
+              @include font-dpr(15px);
+              color: #777777;
+
+            }
+            .tc-recommendDoctorTipList{
+              @include clearfix();
+              span{
+                display: table;
+                @include font-dpr(12px);
+                color: #8DAED9;
+                float: left;
+                background-color: #EEF6FF;
+                padding:rem(8px) rem(16px);
+                margin-right: rem(16px);
+                margin-top: rem(24px);
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;;
+              }
+            }
+            .tc-recommendHospitalItem{
+              display: table;
+              .tc-recommendDoctorHospital{
+                @include font-dpr(15px);
+                display: block;
+                margin-top:rem(16px);
+                color: #555555;
+                width: rem(372px);
+                overflow: hidden; /*自动隐藏文字*/
+                text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                white-space: nowrap;/*强制不换行*/
+                margin-right: rem(28px);
+              }
+              .tc-recommendDoctorPostPosition{
+                display: table-cell;
+
+                @include font-dpr(14px);
+                color: #B3B9C4;
+              }
+            }
+          }
+          .tc-recommendDoctorGood{
+            @include font-dpr(15px);
+            color: #909090;
+            padding-top:rem(22px);
+            padding-bottom: rem(46px);
+          }
+          .tc-recommendDoctorOtherBox{
+            @include clearfix();
+            padding-bottom: rem(38px);
+            .tc-recommendMoney{
+              @include font-dpr(13px);
+              color: #B3B9C4;
+              float: left;
+              width: rem(350px);
+              height: rem(52px);
+              line-height: rem(52px);
+              .tc-recommendMoneyNum{
+                @include font-dpr(17px);
+                color: #FA787A;
+              }
+              .tc-recommendText{
+                margin-right: rem(28px);
+                margin-left: rem(-7px);
+                @include font-dpr(13px);
+                color: #B3B9C4;
+              }
+            }
+            .tc-recommend{
+              float: right;
+              .tc-recommendConsultNow{
+                @include font-dpr(13px);
+                position: relative;
+                width: rem(192px);
+                text-align: center;
+                color: #00BEAF;
+                padding: rem(10px) 0;
+                border:1px solid #00BEAF;
+                -webkit-border-radius: 24px;
+                -moz-border-radius: 24px;
+                border-radius: 24px;
+                span{
+                  @include font-dpr(11px);
+                  position: absolute;
+                  bottom: rem(-44px);
+                  left:0;
+                  width: 100%;
+                  color: #B3B9C4;
+                  i{
+                    color: #00BEAF;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .tc-lookBySelf{
+      text-align: center;
+      span{
+        position: relative;
+        @include font-dpr(14px);
+        color: #00BEAF;
+
+        display: block;
+        margin: 0 auto;
+        i{
+          position: absolute;
+          top: 50%;
+          margin-left: rem(10px);
+          margin-top: rem(-12px);
+          display: inline-block;
+          width: rem(20px);
+          height: rem(20px);
+          background: url("/image/img00/recoveryReport/dialog_overtime_arrow.png");
+          background-size: 100% 100%;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  //检查建议
+  .tc-suggestChecking{
+    .tc-suggestCheckingList{
+      @include clearfix();
+      padding-bottom: rem(16px);
+      padding-top: rem(24px);
+      .tc-suggestCheckingItem{
+        @include font-dpr(15px);
+        color: #222222;
+        float: left;
+        width: 50%;
+        padding:rem(24px) 0;
+        .tc-suggestCheckingOver{
+          @include font-dpr(14px);
+          color: #BDBDBD;
+        }
+        .tc-suggestCheckingWait{
+          @include font-dpr(14px);
+          color: #00BEAF;
+        }
+      }
+    }
+  }
+  //患教知识
+  .tc-teachingKnowledgeBox{
+
+    margin-bottom: rem(24px);
+    .tc-teachingKnowledgeList{
+      padding-top: rem(56px);
+      display: table;
+      .tc-tc-teachingKnowledgePic{
+        display: table-cell;
+        width: rem(210px);
+        height: rem(140px);
+        img{
+          width: 100%;
+          height:100%;
+        }
+      }
+      .tc-tc-teachingKnowledgeText{
+        display: table-cell;
+        vertical-align: top;
+        padding-left: rem(31px);
+        position: relative;
+        .tc-teachingKnowledgeTitle{
+          @include font-dpr(16px);
+          color: #555555;
+        }
+        .tc-teachingKnowledgeTime{
+          position: absolute;
+          bottom: rem(12px);
+          color: #CDCDCD;
+        }
+      }
+    }
+  }
+  //用药建议
+  .tc-medicineSuggested{
+    .tc-medicineSuggestedBox{
+      .tc-medicineSuggestedList{
+        padding-top:rem(16px);
+        padding-bottom: rem(8px);
+        .tc-medicineSuggestedItem{
+          display: table;
+          padding: rem(40px) 0;
+          .tc-medicineSuggested-l{
+            display: table-cell;
+            img{
+              width: rem(160px);
+              height: rem(160px);
+            }
+          }
+          .tc-medicineSuggested-r{
+            width: 100%;
+            display: table-cell;
+            vertical-align: top;
+            padding-left: rem(40px);
+            .tc-medicineName{
+              @include font-dpr(15px);
+              color: #222222;
+            }
+            .tc-drugInfo{
+              @include font-dpr(14px);
+              color: #909090;
+              margin-top: rem(20px);
+              .tc-medicineMade{
+                padding-right: rem(27px);
+              }
+            }
+            .tc-drugBuy{
+              @include font-dpr(14px);
+              color: #000;
+              margin-top: rem(20px);
+              .tc-drugPrice{
+                @include font-dpr(17px);
+                color: #FA787A;
+                margin-right: rem(16px);
+              }
+              .tc-drugNumCal{
+                @include font-dpr(13px);
+                color: #B3B9C4;
+              }
+              .tc-drugBuyBtn{
+                position: relative;
+                @include font-dpr(14px);
+                float: right;
+                color: #00BEAF;
+                display: table;
+                margin-top: rem(5px);
+                &:after{
+                  position: absolute;
+                  content: '';
+                  width: rem(26px);
+                  height: rem(26px);
+                  background: url("/image/img00/recoveryReport/suggestion_add@2x.png") no-repeat center;
+                  background-size: 100% 100%;
+                  left: rem(-30px);
+                  top: 50%;
+                  margin-top: rem(-16px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //外置建议
+  .tc-disposalAdvice{
+    .tc-disposalAdviceBox{
+      .tc-disposalAdviceList{
+        padding-top: rem(26px);
+        padding-bottom: rem(24px);
+        .tc-disposalAdviceItem{
+          padding:rem(24px) 0;
+          @include clearfix();
+          .tc-disposalAdvice-l{
+            float: left;
+            @include font-dpr(15px);
+            color: #222222;
+          }
+          .tc-disposalAdvice-r{
+            display: table;
+            position: relative;
+            @include font-dpr(14px);
+            color: #9798A6;
+            float: right;
+            padding-right: rem(18px);
+            &:after{
+              position: absolute;
+              content: '';
+              width: rem(8px);
+              height: rem(16px);
+              background: url("/image/img00/recoveryReport/suggestion_enter@2x.png");
+              background-size: 100% 100%;
+              right: 0;
+              top: 50%;
+              margin-top: rem(-6px);
+            }
+          }
+        }
+      }
+    }
+  }
+  //外置建议
+  .tc-surgery{
+    .tc-surgeryBox{
+      .tc-surgeryList{
+        padding-top: rem(15px);
+        padding-bottom: rem(17px);
+        .tc-surgeryItem{
+          padding:rem(15px) 0;
+          @include clearfix();
+          .tc-surgery-l{
+            @include font-dpr(15px);
+            float: left;
+            color: #222222;
+          }
+          .tc-surgery-r{
+            float: right;
+            @include font-dpr(13px);
+            color: #00BEAF;
+            padding:rem(7px) rem(25px);
+            border:1px solid #00BEAF;
+            border-radius: 30px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  //温馨提示
+  .tc-warmPrompt{
+    padding:rem(40px) rem(52px) rem(60px);
+    .tc-tc-warmPromptText{
+      @include font-dpr(12px);
+      color: #CCCCCC;
+      position: relative;
+      padding-left: rem(42px);
+      span{
+        display: inline-block;
+      }
+      &:after{
+        width: rem(32px);
+        height: rem(32px);
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        background: url("/image/img00/recoveryReport/suggestion_prompt@2x.png");
+        background-size: 100% 100%;
+      }
+    }
+  }
+}

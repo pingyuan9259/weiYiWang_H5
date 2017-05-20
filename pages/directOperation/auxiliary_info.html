@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>直约手术</title>
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/directOperation/auxiliary_info.css">
+</head>
+<body>
+    <section class="au-main">
+        <section class="au-infoBox">
+
+            <section class="symptom-desc-inner cureHistory" data-sort="">
+                <section class="symptom-desc-form au-cureHistory">
+                    <header class="symptom-desc-title">
+                        <p><span class="num"><em>6</em>/7</span>您有以下过往历史吗？若有，请详细填写，若无，可直接点击下一步<span class="tips">(可多选)</span></p>
+                    </header>
+                    <ul class="au-cureHisList">
+                        <li class="au-cureHisItem" data-type = "2" data-historyType = "0">
+                            <div class="au-cureHisItemTop">疾病史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                                <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：2016年 患冠心病 服用XX药物进行治疗，目前已好转"></textarea>
+                            </div>
+                        </li>
+                        <li class="au-cureHisItem" data-type = "3" data-historyType = "1">
+                            <div class="au-cureHisItemTop">手术史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                               <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：2015年5月 积水潭医院 关节镜手术"></textarea>
+                            </div>
+                        </li>
+                        <li class="au-cureHisItem" data-type = "4" data-historyType = "2">
+                            <div class="au-cureHisItemTop">药物史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                                <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：阿莫西林 一天三次 一次两粒"></textarea>
+                            </div>
+                        </li>
+                        <li class="au-cureHisItem" data-type = "4" data-historyType = "3">
+                            <div class="au-cureHisItemTop">外伤史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                                <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：2015年5月 跌倒 骨折"></textarea>
+                            </div>
+                        </li>
+                        <li class="au-cureHisItem" data-type = "4" data-historyType = "4">
+                            <div class="au-cureHisItemTop">过敏史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                                <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：对花粉过敏 对青霉素过敏"></textarea>
+                            </div>
+                        </li>
+                        <li class="au-cureHisItem" data-type = "4" data-historyType = "5">
+                            <div class="au-cureHisItemTop">疫区接触史</div>
+                            <div class="au-cureHisItemBottom util-selector mSelector">
+                                <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-historyid="0">其他</span>
+                            </div>
+                            <div class="au-cureHisItemInfo">
+                                <textarea class="" placeholder="填写示范：2015年5月 接触SARS疫区3天"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="symptom-desc-inner patientInfo" data-sort="">
+                <section class="symptom-desc-form">
+                    <header class="symptom-desc-title">
+                        <p><span class="num"><em>7</em>/7</span>为了方便患者就医，请您如实填写以下信息</p>
+                    </header>
+                    <ul class="au-perfectInfoList">
+                        <li class="au-perfectInfoItem" data-required="1" data-type="1" >
+                            <div class="au-perfectInfoItemLeft">患者真实姓名</div>
+                            <div class="au-perfectInfoItemRight">
+                                <input class="show" type="text" placeholder="马丁">
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="2" data-required="1">
+                            <div class="au-perfectInfoItemLeft">证件类型</div>
+                            <div class="au-perfectInfoItemRight hasSelect cardTypeBox">
+                                <span  class="show">身份证 / 军官证 / 护照</span>
+                                <select name="idCard" id="idCard" data-check="1">
+                                    <option value="" style="display: none;"></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="3" data-required="1">
+                            <div class="au-perfectInfoItemLeft">证件号码</div>
+                            <div class="au-perfectInfoItemRight">
+                                <input class="show" type="text" data-check="true">
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="4" data-required="1">
+                            <div class="au-perfectInfoItemLeft">联系电话</div>
+                            <div class="au-perfectInfoItemRight">
+                                <input class="show" type="number">
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="5" data-required="1">
+                            <div class="au-perfectInfoItemLeft">患者所在地</div>
+                            <div class="au-perfectInfoItemRight hasAfter">
+                                <input class="show" type="text" placeholder="省市地区/县" id="ev-go-to-select-city">
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="6" data-required="0">
+                            <div class="au-perfectInfoItemLeft">社保类型</div>
+                            <div class="au-perfectInfoItemRight hasSelect protectTypeBox">
+                                <span  class="show">选填</span>
+                                <select name="protectType" id="protectType" data-check="2">
+                                    <option value="" style="display: none;"></option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem" data-type="7" data-required="0">
+                            <div class="au-perfectInfoItemLeft">社保所在地</div>
+                            <div class="au-perfectInfoItemRight hasAfter">
+                                <input class="show" type="text" placeholder="选填" id="ev-go-to-select-perfect">
+                            </div>
+                        </li>
+                        <li class="au-perfectInfoItem">
+                            <div class="au-perfectInfoItemTop">备注</div>
+                            <div class="au-perfectInfoItemBottom remark">
+                                <textarea class="show" placeholder="您还有其他伴随症状或者嘱咐医生的么"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <!--<footer class="au-controller" data-sort="consult1">-->
+            <!--<a href="javascript:void(0)" class="btn-hollow prev">上一步</a>-->
+            <!--<a href="#!consult2" class="btn-primary next">下一步</a>-->
+        <!--</footer>-->
+        <!--<footer class="au-controller" data-sort="consult2">-->
+            <!--<a href="#!consult1" class="btn-hollow prev">上一步</a>-->
+
+            <!--<a href="#!consult3" class="btn-primary next">下一步</a>-->
+        <!--</footer>-->
+        <!--<footer class="au-controller" data-sort="consult3">-->
+            <!--<a href="#!consult2" class="btn-hollow prev">上一步</a>-->
+            <!--<a href="#!consult4" class="btn-primary next">下一步</a>-->
+        <!--</footer>-->
+        <!--<footer class="au-controller" data-sort="consult4">-->
+            <!--<a href="#!consult3" class="btn-hollow prev">上一步</a>-->
+            <!--<a href="#!consult5" class="btn-primary next">下一步</a>-->
+        <!--</footer>-->
+        <!--<footer class="au-controller" data-sort="consult5">-->
+            <!--<a href="#!consult4" class="btn-hollow prev">上一步</a>-->
+            <!--<a href="#!consult6" class="btn-primary next">下一步</a>-->
+        <!--</footer>-->
+        <footer class="au-controller cureHisControl" data-sort="">
+            <a href="javascript:void(0)" class="btn-hollow prev">上一步</a>
+            <a href="javascript:void(0)" class="btn-primary next">下一步</a>
+        </footer>
+        <footer class="au-controller infoControl" data-sort="">
+            <a href="javascript:void(0)" class="btn-hollow prev">上一步</a>
+            <a href="javascript:void(0)" class="btn-primary sure" id="saveInfoBtn">提交</a>
+        </footer>
+    </section>
+
+    <aside class="searchTypeSelect">
+
+    </aside>
+
+    <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/third-party/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+
+    <script src="/js/plugins/q.js"></script>
+    <script src="/js/plugins/plugins.validate.js"></script>
+    <script src="/js/plugins/plugins.selector.js"></script>
+
+    <script src="/js/modules/module.search.input.js"></script>
+    <script src="/js/modules/module.search.list.js"></script>
+
+    <script src="/js/scene/directOperation/scene.directOperation.auxiliaryInfo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+@charset "UTF-8";
+/**
+ * @name:问诊单
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/27
+ * @author: JuKun
+ */
+
+@import "../../modules/_mainHeader";
+
+.main-inner{
+  .main-header{
+    display: flex;
+  }
+  //本页面地区本身的样式
+  .tc-baseInfo{
+    background-color: #ffffff;
+    width: 100%;
+    .tc-baseInfoList{
+      padding: rem(40px) 0 rem(45px);
+      .tc-baseInfoItem{
+        margin-bottom: rem(38px);
+        @include font-dpr(14px);
+        @include clearfix();
+        .tc-baseInfoItemLeft{
+          @include font-dpr(15px);
+          width:rem(228px);
+          //padding:0 rem(48px);
+          padding-left:rem(48px);
+          padding-right:rem(60px);
+          float: left;
+          box-sizing: border-box;
+          color: #909090;
+          img{
+            display: block;
+            width: rem(120px);
+            height:rem(120px);
+            margin: 0 auto;
+          }
+          &.tc-caseAreaLeft{
+            padding-right: 0;
+            width: rem(236px);
+          }
+          &.tc-caseTimeLeft{
+            padding-right: 0;
+            width: rem(236px);
+          }
+        }
+        .tc-caseAreaRight{
+          display: inline-block;
+          @include font-dpr(16px);
+          color: #555555;
+          width: rem(454px);
+        }
+        .tc-caseTimeRight{
+          display: inline-block;
+          @include font-dpr(16px);
+          color: #555555;
+          width: rem(454px);
+        }
+        .tc-baseInfoItemRight{
+          width:rem(510px);
+          float: left;
+          position: relative;
+          color: #555555;
+          box-sizing: border-box;
+          padding-right: rem(35px);
+          @include font-dpr(16px);
+          .tc-baseInfoName{
+            @include font-dpr(17px);
+            display: block;
+            line-height: rem(34px);
+            margin-top: rem(44px);
+          }
+          .tc-baseInfoDate{
+            display: block;
+            @include font-dpr(13px);
+            line-height: rem(26px);
+            color: #909090;
+            margin-top: rem(16px);
+          }
+          //.tc-goCase{
+          //  @include font-dpr(14px);
+          //  position: absolute;
+          //  right: rem(70px);
+          //  top:rem(46px);
+          //  color: #78849C;
+          //  line-height: rem(28px);
+          //  &::after{
+          //    display:inline-block;
+          //    content: "";
+          //    width: rem(12px);
+          //    height: rem(20px);
+          //    position: absolute;
+          //    top:50%;
+          //    margin-top: rem(-14px);
+          //    right: rem(-27px);
+          //    background: url("/image/img00/patientConsult/arrow_right.png") no-repeat center;
+          //    background-size: 100% 100%;
+          //  }
+          //}
+
+        }
+        .tc-recommendUserMain{
+          line-height: rem(48px);
+        }
+      }
+      .tc-baseInfoItem:first-child{
+        margin-bottom: rem(53px);
+      }
+      .tc-baseInfoItem:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  //基本信息以下模块样式
+  .tc-caseContentBox{
+    background-color: #F3F6F7;
+    .tc-baseInfo{
+      margin-bottom: rem(14px);
+    }
+    .tc-module{
+      margin: rem(14px) 0;
+      padding: 0 rem(40px);
+      background-color: #ffffff;
+      //border-radius: rem(20px);
+      .title{
+        padding-top: rem(50px);
+        h3{
+          position: relative;
+          font-weight: 100;
+          color: #555555;;
+          @include font-dpr(16px);
+          &:after{
+            position: absolute;
+            content: '';
+            width: rem(4px);
+            height:rem(24px);
+            left:rem(-8px);
+            top:50%;
+            margin-top: rem(-12px);
+            background-color: #4CD3C6;
+          }
+        }
+      }
+      .tc-recommendRightComm{
+        @include font-dpr(14px);
+        position: absolute;
+        right: 0;
+        top:0;
+        display: block;
+        width: rem(200px);
+        text-align: right;
+        color: #9798A6;
+        padding-right: rem(24px);
+        &:after{
+          position: absolute;
+          content: '';
+          top: 50%;
+          right: 0;
+          margin-top: rem(-12px);
+          display: inline-block;
+          width: rem(12px);
+          height: rem(20px);
+          background: url("/image/img00/patientConsult/suggestion_enter@2x.png");
+          background-size: 100% 100%;
+          vertical-align: middle;
+        }
+      }
+      .tc-caseDescribeList{
+        padding-top: rem(10px);
+        padding-bottom: rem(44px);
+        .tc-caseDescribeItem{
+          padding:rem(38px) 0;
+          .tc-caseDescribeItemLeft{
+            position: relative;
+            display: inline-block;
+            width: rem(188px);
+            @include font-dpr(15px);
+            color: #909090;
+            padding-right: rem(68px);
+            .tc-caseDescribeUpTip{
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: -100%;
+              width: 100%;
+            }
+          }
+          .tc-caseDescribeItemRight{
+            position: relative;
+            display: inline-block;
+            @include font-dpr(16px);
+            width: rem(412px);
+            color: #555555;
+            vertical-align: top;
+            &.tc-caseDescribeItemMore:after{
+              display: inline-block;
+              position: absolute;
+              content: '';
+              width: rem(8px);
+              height: rem(16px);
+              background: url("/image/img00/recoveryReport/suggestion_enter@2x.png");
+              background-size: 100% 100%;
+              right: 0;
+              top:50%;
+              margin-top: rem(-8px);
+            }
+          }
+        }
+      }
+      //输入框
+      .tc-caseOtherBox{
+        text-align: center;
+        margin-top: rem(40px);
+        .tc-caseOtherList{
+          @include font-dpr(14px);
+          color: #555555;
+          padding:0 rem(8px);
+          text-align: left;
+        }
+      }
+    }
+  }
+}

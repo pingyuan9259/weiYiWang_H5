@@ -1,0 +1,75 @@
+/**
+ * @name:患者咨询进度条
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/21
+ * @author: qiangkailiang
+ */
+.patient-consult-rate{
+  padding:0 rem(48px);
+  display: flex;
+  justify-content: space-between;
+  margin-top:rem(34px);
+  position: relative;
+  box-sizing: border-box;
+  &:after{
+    content: '';
+    height:rem(1px);
+    background-color: #f0f0f0;
+    position: absolute;
+    left: rem(60px);
+    right: rem(60px);
+    top:50%;
+    margin-top:rem(-0.5px);
+    z-index: 1;
+  }
+  &-item{
+    $r:rem(30px);
+    @include circle($r,#e5e5e5);
+    @include font-dpr(12px);
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    border-left:rem(20px) solid #fff;
+    border-right:rem(20px) solid #fff;
+    &.complete{
+      background: url("/image/img00/patientConsult/inquiry_progress_complete@1x.svg") no-repeat;
+      span{
+        display: none;
+      }
+    }
+    &:before{
+      content: '为谁咨询';
+      position: absolute;
+      @include font-dpr(13px);
+      color: #ccc;
+      display: block;
+      bottom: 0;
+      width:rem(150px);
+      text-align: center;
+      left: 50%;
+      margin-left:rem(-75px);
+      margin-bottom:rem(-40px);
+    }
+
+    &:nth-child(2){
+      &:before{
+        content: '选择部位';
+      }
+    }
+    &:nth-child(3){
+      &:before{
+        content: '描述症状';
+      }
+    }
+    &.on{
+      background-color: #00d6c6;
+      &:before{
+        color: #00beaf;
+      }
+    }
+
+  }
+}

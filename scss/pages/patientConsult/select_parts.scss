@@ -1,0 +1,25 @@
+/**
+ * @name:
+ * @desc:
+ * @example:
+ * @depend:
+ * @date: 2017/2/21
+ * @author: qiangkailiang
+ */
+@import "../../library/_common-modules";
+@import "../../modules/_mainHeader";
+@import "../../modules/_patientConsultRate";
+@import "../../modules/_topTips";
+@import "../../modules/_selectSymptomPart";
+@import "../../modules/_modalBox";
+@import "../../modules/_buttonModule";
+html,body{
+  overflow: hidden;
+}
+.main-inner{
+  overflow: hidden;
+
+}
+.main-inner-content {
+}
+

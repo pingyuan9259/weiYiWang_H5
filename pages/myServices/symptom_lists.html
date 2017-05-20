@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问诊单</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/myServices/symptom_lists.css">
+</head>
+<body>
+    <section class="main-inner symptom-list">
+        <section class="tc-caseContentBox">
+            <!--基本信息-->
+            <section id="ev-baseInfo" class="tc-baseInfo" data-patientId="">
+                <ul class="tc-baseInfoList">
+                    <li class="tc-baseInfoItem">
+                        <div class="tc-baseInfoItemLeft">
+                            <img src="/image/img00/patientConsult/person_icon.png" alt="">
+                            <span class="tc-personIcon"></span>
+                        </div>
+                        <div class="tc-baseInfoItemRight" data-patientName="">
+                            <span class="tc-baseInfoName">李铁根<i>&nbsp;男</i></span>
+                        </div>
+                    </li>
+                    <li class="tc-baseInfoItem">
+                        <div class="tc-baseInfoItemLeft tc-caseAreaLeft">
+                            <span>问诊日期</span>
+                        </div>
+                        <div class=" tc-caseAreaRight">
+                            <span>2016年12月28日</span>
+                        </div></li>
+                    <li class="tc-baseInfoItem">
+                        <div class="tc-baseInfoItemLeft tc-caseTimeLeft">
+                            <span>主诉</span>
+                        </div>
+                        <div class="tc-caseTimeRight">
+                            <span>哈哈哈哈啊哈哈哈哈哈哈</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--症状描述-->
+            <section id="ev-mainSymptom" class="tc-caseDescribe tc-module">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>症状描述</h3>
+                </section>
+                <ul class="tc-caseDescribeList">
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">主要不适部位</span><span class="tc-caseDescribeItemRight tc-noRevice" id="ev-parts">双膝</span>
+                    </li>
+                    <li class="tc-caseDescribeItem" data-type="1">
+                        <span class="tc-caseDescribeItemLeft">主要症状</span><span class="tc-caseDescribeItemRight">疼痛-放射痛</span>
+                    </li>
+                    <li class="tc-caseDescribeItem" data-type="2">
+                        <span class="tc-caseDescribeItemLeft">影响生活和工作程度</span><span class="tc-caseDescribeItemRight">中度影响</span></li>
+                    <li class="tc-caseDescribeItem" data-type="3">
+                        <span class="tc-caseDescribeItemLeft">持续时间</span><span class="tc-caseDescribeItemRight">一年以上-间歇出现</span>
+                    </li>
+                </ul>
+            </section>
+            <!--伴随症状-->
+            <section id="ev-accoSymptom" class="tc-caseDescribe tc-module">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>伴随症状</h3>
+                </section>
+                <ul class="tc-caseDescribeList">
+                    <li class="tc-caseDescribeItem" data-type="1">
+                        <span class="tc-caseDescribeItemLeft">主要不适部位</span><span class="tc-caseDescribeItemRight">双膝</span>
+                    </li>
+                    <li class="tc-caseDescribeItem" data-type="1">
+                        <span class="tc-caseDescribeItemLeft">主要症状</span><span class="tc-caseDescribeItemRight">疼痛-放射痛</span>
+                    </li>
+                    <li class="tc-caseDescribeItem" data-type="2">
+                        <span class="tc-caseDescribeItemLeft">影响生活和工作程度</span><span class="tc-caseDescribeItemRight">中度影响</span></li>
+                    <li class="tc-caseDescribeItem" data-type="3">
+                        <span class="tc-caseDescribeItemLeft">持续时间</span><span class="tc-caseDescribeItemRight">一年以上-间歇出现</span>
+                    </li>
+                </ul>
+            </section>
+            <!--现病史-->
+            <section id="ev-nowHistory" class="tc-caseDescribe tc-module">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>现状史</h3>
+                </section>
+                <ul class="tc-caseDescribeList">
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">曾就诊医院</span><span class="tc-caseDescribeItemRight" id="ev-choose-hospital">河北省三元</span>
+                    </li>
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">确诊疾病名称</span><span class="tc-caseDescribeItemRight" id="ev-choose-disease">膝关节炎</span>
+                    </li>
+                    <li class="tc-caseDescribeItem ev-datumUpload">
+                        <span class="tc-caseDescribeItemLeft">检查资料</span><span class="tc-caseDescribeItemRight" id="ev-to-upload">已上传</span>
+                    </li>
+                </ul>
+            </section>
+            <!--既往史-->
+            <section id="ev-pastHistory" class="tc-caseDescribe tc-module">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>既往史</h3>
+                </section>
+                <ul class="tc-caseDescribeList">
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">疾病史</span><span class="tc-caseDescribeItemRight">高血压</span>
+                    </li>
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">外伤史</span><span class="tc-caseDescribeItemRight">2015年5月 跌伤</span>
+                    </li>
+                </ul>
+            </section>
+            <!--基本信息-->
+            <section id="ev-baseInform" class="tc-caseDescribe tc-module">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>基本信息</h3>
+                </section>
+                <ul class="tc-caseDescribeList">
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">患者算在地</span><span class="tc-caseDescribeItemRight">河北衡水</span>
+                    </li>
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">手机号码</span><span class="tc-caseDescribeItemRight">135629416548</span>
+                    </li>
+                    <li class="tc-caseDescribeItem ev-getSocialInsurance">
+                        <span class="tc-caseDescribeItemLeft">社保类型</span><span class="tc-caseDescribeItemRight">诚征职工</span></li>
+                    <li class="tc-caseDescribeItem">
+                        <span class="tc-caseDescribeItemLeft">社保所在地</span><span class="tc-caseDescribeItemRight">河北衡水</span>
+                    </li>
+                </ul>
+            </section>
+            <!--备注-->
+            <section id="ev-comment" class="tc-caseDescribe tc-module tc-comment">
+                <section class="tc-caseDescribeTitle title">
+                    <h3>备注</h3>
+                </section>
+                <ul class="tc-caseDescribeList tc-caseOtherBox">
+                    <textarea class="tc-caseDesOther" name="" id="" cols="30" rows="10"></textarea>
+                </ul>
+            </section>
+            <!--提交复诊-->
+            <section class="submit_symptom_box"><button class="submit_symptom">提交复诊</button></section>
+        </section>
+    </section>
+    <!--症状修改弹层-->
+    <section class="sticky-wrapper" style="display:none;">
+        <section class="main-inner">
+            <section class="main-inner-content">
+                <section id="ev-choiceList" class="symptom-desc-inner">
+                    <section class="symptom-desc-form">
+                        <header class="symptom-desc-title">
+                            <p>您选择的部位有何不适？<span class="tips">(可多选)</span></p>
+                        </header>
+                        <section class="util-selector mSelector" >
+                            <section class="symptom-desc-item multiple-choices selected" data-role="selector" data-id="1">
+                                <p><i class=" icon-select"></i><span>疼痛<i class="icon-arrow"></i></span>
+                                </p>
+                                <section class="symptom-desc-form symptom-desc-second-form" data-role="selector">
+                                    <header class="symptom-desc-title">
+                                        <h4>以下哪种最符合您的疼痛感觉(可多选)</h4>
+                                    </header>
+                                    <section class="util-selector mSelector">
+                                        <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="12">
+                                            <p><i class=" icon-select"></i><span>喵</span>
+                                            </p>
+                                        </section>
+                                        <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="13">
+                                            <p><i class=" icon-select"></i><span>放射痛<i class="icon-pain-detail"></i></span>
+                                                <section class="symptom-detail-desc">
+                                                    <figure>
+                                                        <img src="/image/img00/patientConsult/pain_detail.png" alt="">
+                                                    </figure>
+                                                    <figcaption>放射痛：病人除感觉患病器官的局部疼痛外，尚可感到远离该器官的某部体表或深部组织疼痛，这种疼痛称为放射痛。
+                                                    </figcaption>
+                                                </section>
+                                            </p>
+                                        </section>
+                                        <section class="symptom-desc-item multiple-choices" data-role="selector">
+                                            <p><i class=" icon-select"></i><span>肿胀</span></p>
+                                        </section>
+                                    </section>
+                                    <section class="util-selector mSelector">
+                                        <header class="symptom-desc-title">
+                                            <h4>以下哪种情况符合您的疼痛程度)</h4>
+                                        </header>
+                                        <section class="symptom-desc-item multiple-choices" data-role="selector">
+                                            <p><i class=" icon-select"></i><span>肿胀</span></p>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="2">
+                                <p><i class=" icon-select"></i><span>肿胀</span></p>
+                            </section>
+                            <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="3">
+                                <p><i class=" icon-select"></i><span>肿胀</span></p>
+                            </section>
+                            <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="4">
+                                <p><i class=" icon-select"></i><span>肿胀</span></p>
+                            </section>
+                            <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="5">
+                                <p><i class=" icon-select"></i><span>肿胀</span></p>
+                            </section>
+                            <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="6">
+                                <p><i class=" icon-select"></i><span>疼痛</span></p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+    <!--症状修改弹层结束-->
+    <!--既往史修改弹层-->
+    <section class="au-main" style="display:none;">
+        <section class="au-infoBox">
+            <section class="symptom-desc-form au-cureHistory" style="display:none;">
+                <header class="symptom-desc-title">
+                    <p>您有以下过往历史吗？<span class="tips">(可多选)</span></p>
+                </header>
+                <ul class="au-cureHisList">
+                    <li class="au-cureHisItem" data-historyType = "0">
+                        <div class="au-cureHisItemTop">疾病史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                    <li class="au-cureHisItem" data-historyType = "1">
+                        <div class="au-cureHisItemTop">手术史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                    <li class="au-cureHisItem" data-historyType = "2">
+                        <div class="au-cureHisItemTop">药物史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7" data-historyId = "777">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                    <li class="au-cureHisItem" data-historyType = "3">
+                        <div class="au-cureHisItemTop">外伤史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7" data-historyId = "777">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                    <li class="au-cureHisItem" data-historyType = "4">
+                        <div class="au-cureHisItemTop">过敏史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                    <li class="au-cureHisItem" data-historyType = "5">
+                        <div class="au-cureHisItemTop">疫区接触史</div>
+                        <div class="au-cureHisItemBottom util-selector mSelector">
+                            <span class="symptom-desc-item symptom-desc-item-tag" data-role="selector" data-id = "7">其他</span>
+                        </div>
+                        <div class="au-cureHisItemInfo">
+                            <textarea class="" placeholder="我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人我们是共产主义接班人"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="symptom-desc-form au-baseInform" style="display:none;">
+                <header class="symptom-desc-title">
+                    <p>为了方便患者就医，请您如实填写以下信息</p>
+                </header>
+                <ul class="au-perfectInfoList">
+                    <li class="au-perfectInfoItem" data-required="1" data-type="1">
+                        <div class="au-perfectInfoItemLeft">患者真实姓名</div>
+                        <div class="au-perfectInfoItemRight">
+                            <input class="show" type="text" placeholder="马丁" readonly>
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="2" data-required="1">
+                        <div class="au-perfectInfoItemLeft">证件类型</div>
+                        <div class="au-perfectInfoItemRight hasSelect cardTypeBox">
+                            <input class="show" type="text" readonly>
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="3" data-required="1">
+                        <div class="au-perfectInfoItemLeft">证件号码</div>
+                        <div class="au-perfectInfoItemRight">
+                            <input class="show" type="text" data-check="true" readonly>
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="4" data-required="1">
+                        <div class="au-perfectInfoItemLeft">联系电话</div>
+                        <div class="au-perfectInfoItemRight">
+                            <input class="show ev-isHasInform" type="number">
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="5" data-required="1">
+                        <div class="au-perfectInfoItemLeft">患者所在地</div>
+                        <div class="au-perfectInfoItemRight">
+                            <span class="show ev-change-city ev-isHasInform" id="ev-choose-homeadd"></span>
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="6" data-required="0">
+                        <div class="au-perfectInfoItemLeft">社保类型</div>
+                        <div class="au-perfectInfoItemRight hasSelect protectTypeBox">
+                            <span class="show au-protectType ev-isHasInform"></span>
+                            <select name="protectType" id="protectType" data-check="2">
+                            </select>
+                        </div>
+                    </li>
+                    <li class="au-perfectInfoItem" data-type="7" data-required="0">
+                        <div class="au-perfectInfoItemLeft">社保所在地</div>
+                        <div class="au-perfectInfoItemRight">
+                            <span class="show ev-change-city ev-isHasInform" id="ev-choose-socialadd"></span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    <!--既往史修改结束-->
+    <!--取消、确认按钮-->
+    <footer class="symptom-desc-controller">
+        <a href="javascript:;" class="btn-hollow">取消</a>
+        <a href="javascript:;" class="btn-primary">确定</a>
+    </footer>
+    <!--取消、确认按钮结束-->
+    <!--城市侧边栏-->
+    <aside class="searchTypeSelect"></aside>
+    <!--城市侧边栏结束-->
+
+
+    <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/third-party/fastclick.js"></script>
+    <script src="/js/common.js"></script>
+
+
+    <script src="/js/third-party/q.js"></script>
+    <script src="/js/plugins/plugins.firstLetter.js"></script>
+    <script src="/js/plugins/plugins.validate.js"></script>
+
+    <script src="/js/modules/module.search.input.js"></script>
+    <script src="/js/modules/module.search.list.js"></script>
+
+    <script src="/js/scene/myServices/scene.myServices.symptomLists.js"></script>
+</body>
+</html>

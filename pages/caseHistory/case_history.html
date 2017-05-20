@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问诊单</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/js/third-party/flexible.js"></script>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/patientConsult/symptom_desc.css">
+    <link rel="stylesheet" href="/css/pages/recoveryReport/case_history.css">
+</head>
+<body>
+      <section class="main-inner">
+          <section class="tc-caseContentBox">
+              <!--基本信息-->
+              <section class="tc-baseInfo">
+                  <ul class="tc-baseInfoList">
+                      <li class="tc-baseInfoItem">
+                          <div class="tc-baseInfoItemLeft">
+                              <img src="/image/img00/patientConsult/person_icon.png" alt="">
+                              <span class="tc-personIcon"></span>
+                          </div>
+                          <div class="tc-baseInfoItemRight">
+                              <span class="tc-baseInfoName">李铁根<i>&nbsp;男</i></span>
+                          </div>
+                      </li>
+                      <li class="tc-baseInfoItem">
+                          <div class="tc-baseInfoItemLeft tc-caseAreaLeft">
+                              <span>问诊日期</span>
+                          </div>
+                          <div class=" tc-caseAreaRight">
+                              <span>2016年12月28日</span>
+                          </div></li>
+                      <li class="tc-baseInfoItem">
+                          <div class="tc-baseInfoItemLeft tc-caseTimeLeft">
+                              <span>主诉</span>
+                          </div>
+                          <div class="tc-caseTimeRight">
+                              <span>哈哈哈哈啊哈哈哈哈哈哈</span>
+                          </div>
+                      </li>
+                  </ul>
+              </section>
+              <!--症状描述-->
+              <section class="tc-caseDescribe tc-module">
+                  <section class="tc-caseDescribeTitle title">
+                      <h3>症状描述</h3>
+                  </section>
+                  <ul class="tc-caseDescribeList">
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">主要不适部位</span><span class="tc-caseDescribeItemRight tc-noRevice" id="ev-parts">双膝</span>
+                      </li>
+                      <li class="tc-caseDescribeItem" data-type="1">
+                          <span class="tc-caseDescribeItemLeft">主要症状</span><span class="tc-caseDescribeItemRight">疼痛-放射痛</span>
+                      </li>
+                      <li class="tc-caseDescribeItem" data-type="2">
+                          <span class="tc-caseDescribeItemLeft">影响生活和工作程度</span><span class="tc-caseDescribeItemRight">中度影响</span></li>
+                      <li class="tc-caseDescribeItem" data-type="3">
+                          <span class="tc-caseDescribeItemLeft">持续时间</span><span class="tc-caseDescribeItemRight">一年以上-间歇出现</span>
+                      </li>
+                  </ul>
+              </section>
+              <!--伴随症状-->
+              <section class="tc-caseDescribe tc-module">
+                  <section class="tc-caseDescribeTitle title">
+                      <h3>伴随症状</h3>
+                  </section>
+                  <ul class="tc-caseDescribeList">
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">主要不适部位</span><span class="tc-caseDescribeItemRight">双膝</span>
+                      </li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">主要症状</span><span class="tc-caseDescribeItemRight">疼痛-放射痛</span>
+                      </li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">影响生活和工作程度</span><span class="tc-caseDescribeItemRight">中度影响</span></li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">持续时间</span><span class="tc-caseDescribeItemRight">一年以上-间歇出现</span>
+                      </li>
+                  </ul>
+              </section>
+              <!--现状史-->
+              <section class="tc-caseDescribe tc-module">
+                  <section class="tc-caseDescribeTitle title">
+                      <h3>现状史</h3>
+                  </section>
+                  <ul class="tc-caseDescribeList">
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">主要不适部位</span><span class="tc-caseDescribeItemRight">双膝</span>
+                      </li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">主要症状</span><span class="tc-caseDescribeItemRight">疼痛-放射痛</span>
+                      </li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">影响生活和工作程度</span><span class="tc-caseDescribeItemRight">中度影响</span></li>
+                      <li class="tc-caseDescribeItem">
+                          <span class="tc-caseDescribeItemLeft">持续时间</span><span class="tc-caseDescribeItemRight">一年以上-间歇出现</span>
+                      </li>
+                  </ul>
+              </section>
+              <!--备注-->
+              <section class="tc-caseDescribe tc-module">
+                  <section class="tc-caseDescribeTitle title">
+                      <h3>备注</h3>
+                  </section>
+                  <ul class="tc-caseDescribeList tc-caseOtherBox">
+                      <textarea class="tc-caseDesOther" name="" id="" cols="30" rows="10"></textarea>
+                  </ul>
+              </section>
+          </section>
+      </section>
+      <section id="ev-choiceList" class="symptom-desc-inner active" data-sort="consult1">
+          <section class="symptom-desc-form">
+              <header class="symptom-desc-title">
+                  <p>您选择的部位有何不适？<span class="tips">(可多选)</span></p>
+              </header>
+              <section class="util-selector mSelector" >
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="1">
+                      <p><i class=" icon-select"></i><span>疼痛<i></i></span></p>
+                  </section>
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="2">
+                      <p><i class=" icon-select"></i><span>肿胀</span></p>
+                  </section>
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="3">
+                      <p><i class=" icon-select"></i><span>肿胀</span></p>
+                  </section>
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="4">
+                      <p><i class=" icon-select"></i><span>肿胀</span></p>
+                  </section>
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="5">
+                      <p><i class=" icon-select"></i><span>肿胀</span></p>
+                  </section>
+                  <section class="symptom-desc-item multiple-choices" data-role="selector" data-id="6">
+                      <p><i class=" icon-select"></i><span>疼痛</span></p>
+                  </section>
+              </section>
+          </section>
+      </section>
+</body>
+</html>
